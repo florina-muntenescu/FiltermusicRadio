@@ -1,0 +1,55 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+apply plugin: 'com.github.ben-manes.versions'
+
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:+'
+
+        classpath 'com.github.ben-manes:gradle-versions-plugin:0.5-beta-6'
+        classpath 'org.codehaus.groovy:groovy-backports-compat23:2.3.5'
+    }
+}
+
+android {
+    compileSdkVersion 20
+    buildToolsVersion "20.0.0"
+
+    defaultConfig {
+        applicationId "filtermusic.net"
+        minSdkVersion 15
+        targetSdkVersion 20
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        debug {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            runProguard true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:support-v4:20.0.0'
+    compile 'com.google.guava:guava:18.0'
+    compile 'com.squareup.retrofit:retrofit:1.6.1'
+    compile 'com.netflix.rxjava:rxjava-core:0.20.4'
+    compile 'com.netflix.rxjava:rxjava-android:0.20.4'
+    compile('org.simpleframework:simple-xml:2.7.+'){
+        exclude module: 'stax'
+        exclude module: 'stax-api'
+        exclude module: 'xpp3'
+    }
+
+}

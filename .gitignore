@@ -1,0 +1,30 @@
+# Built application files
+*.apk
+*.ap_
+
+# Files for the Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+# Pootle updated files:
+Payleven/**/res/values-*/*strings.xml
+
+# Idea / AS (cf. https://intellij-support.jetbrains.com/entries/23393067 )
+.idea/
+*.iml
+
+# Gradle files
+.gradle/
+gradle.properties
+build/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+#Log Files
+*.log
