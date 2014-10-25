@@ -12,6 +12,7 @@ import java.util.Map;
 
 import filtermusic.net.FiltermusicApplication;
 import filtermusic.net.communication.FiltermusicApi;
+import filtermusic.net.data.DataProvider;
 import filtermusic.net.model.Category;
 import filtermusic.net.model.Radio;
 import rx.Observable;
@@ -22,14 +23,23 @@ import rx.schedulers.Schedulers;
 /**
  * Created by android on 10/18/14.
  */
-public class UiController {
+public class UiController implements DataProvider.DataUpdatedListener{
+
+    public interface DataListener{
+        void onCategoriesUpdated(List<Category> categories);
+    }
+
     private static final String LOG_TAG = UiController.class.getSimpleName();
 
     private static UiController mInstance;
 
     private Context mContext;
 
+    private DataProvider mDataProvider;
     private List<Category> mCategories = new ArrayList<Category>();
+
+    private DataListener mDataListener;
+
 
     public static UiController getInstance(){
         if(mInstance == null){
@@ -40,6 +50,7 @@ public class UiController {
 
     private UiController() {
         mContext = FiltermusicApplication.getInstance().getApplicationContext();
+        mDataProvider = new DataProvider(mContext);
         syncRadios();
     }
 
@@ -60,29 +71,14 @@ public class UiController {
             Category category = new Category(key, categoryMap.get(key));
             mCategories.add(category);
         }
+
+        if(mDataListener != null){
+            mDataListener.onCategoriesUpdated(mCategories);
+        }
     }
 
     private void syncRadios() {
-        FiltermusicApi api = new FiltermusicApi(mContext);
-        Observable<List<Radio>> apiObservable = api.createFromRestAdapter().getRadios();
-        apiObservable.subscribeOn(Schedulers.newThread())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Subscriber<List<Radio>>() {
-                    @Override
-                    public void onCompleted() {
-
-                    }
-
-                    @Override
-                    public void onError(Throwable e) {
-                    }
-
-                    @Override
-                    public void onNext(List<Radio> radios) {
-                        Log.d(LOG_TAG, "radios: " + radios.size());
-                        updateCategories(ImmutableList.copyOf(radios));
-                    }
-                });
+       mDataProvider.getDataFromServer(this);
     }
 
     public List<Category> getCategories() {
@@ -93,6 +89,28 @@ public class UiController {
         if(mCategories.size() > 0){
             return mCategories.get(0).getRadioList();
         }
-        return null;
+        Radio radio = new Radio("a","b", "c", "d", "e", "f");
+        List<Radio> radios = new ArrayList<Radio>();
+        radios.add(radio);
+        return radios;
+    }
+
+    public void setDataListener(DataListener dataListener) {
+        mDataListener = dataListener;
+    }
+
+    @Override
+    public void onRadioListUpdated(List<Radio> radios) {
+        updateCategories(ImmutableList.copyOf(radios));
+    }
+
+    @Override
+    public void onFavoritesUpdated(List<Radio> radios) {
+
+    }
+
+    @Override
+    public void onLastPlayedUpdated(List<Radio> radios) {
+
     }
 }

@@ -17,7 +17,7 @@ buildscript {
 
 android {
     compileSdkVersion 20
-    buildToolsVersion "20.0.0"
+    buildToolsVersion '20.0.0'
 
     defaultConfig {
         applicationId "filtermusic.net"
@@ -46,10 +46,5 @@ dependencies {
     compile 'com.squareup.retrofit:retrofit:1.6.1'
     compile 'com.netflix.rxjava:rxjava-core:0.20.4'
     compile 'com.netflix.rxjava:rxjava-android:0.20.4'
-    compile('org.simpleframework:simple-xml:2.7.+'){
-        exclude module: 'stax'
-        exclude module: 'stax-api'
-        exclude module: 'xpp3'
-    }
-
+    compile files('libs/butterknife-5.1.2.jar')
 }

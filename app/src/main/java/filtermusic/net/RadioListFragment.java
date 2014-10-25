@@ -150,4 +150,5 @@ public class RadioListFragment extends ListFragment {
 
         mActivatedPosition = position;
     }
+
 }
