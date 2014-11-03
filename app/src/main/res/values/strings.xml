@@ -4,4 +4,10 @@
     <string name="app_name">FiltermusicRadio</string>
     <string name="title_radio_detail">Radio Detail</string>
 
+    <string name="categories_tab">Categories</string>
+    <string name="favorites_tab">Favorites</string>
+    <string name="recent_tab">Recently played</string>
+    <string name="error_unable_to_retrieve">Looks like we\'re unable to get the list of radios.</string>
+    <string name="favorites_suggestion">Star your favorite radios to see them here</string>
+    <string name="recent_radios">Your recently played radios will be visible here</string>
 </resources>

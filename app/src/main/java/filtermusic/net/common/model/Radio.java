@@ -1,4 +1,4 @@
-package filtermusic.net.model;
+package filtermusic.net.common.model;
 
 /**
  * Example of a Radio item in XML

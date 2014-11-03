@@ -1,4 +1,4 @@
-package filtermusic.net.model;
+package filtermusic.net.common.model;
 
 import java.util.List;
 

@@ -16,13 +16,13 @@ import android.widget.TextView;
 import java.io.IOException;
 import java.util.HashMap;
 
-import filtermusic.net.model.Radio;
-import filtermusic.net.ui.controller.UiController;
+import filtermusic.net.common.model.Radio;
+import filtermusic.net.categories.CategoriesController;
 
 
 /**
  * A fragment representing a single Radio detail screen.
- * This fragment is either contained in a {@link RadioListActivity}
+ * This fragment is either contained in a {@link CategoriesListActivity}
  * in two-pane mode (on tablets) or a {@link RadioDetailActivity}
  * on handsets.
  */
@@ -57,8 +57,8 @@ public class RadioDetailFragment extends Fragment {
             // Load the dummy content specified by the fragment
             // arguments. In a real-world scenario, use a Loader
             // to load content from a content provider.
-            if(!UiController.getInstance().getRadiosForFirstCatgory().isEmpty()) {
-                mItem = UiController.getInstance().getRadiosForFirstCatgory().get(getArguments().getInt(ARG_ITEM_ID));
+            if(!CategoriesController.getInstance().getRadiosForFirstCatgory().isEmpty()) {
+                mItem = CategoriesController.getInstance().getRadiosForFirstCatgory().get(getArguments().getInt(ARG_ITEM_ID));
             }
         }
         mContext = getActivity().getBaseContext();

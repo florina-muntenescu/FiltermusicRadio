@@ -1,7 +1,6 @@
-package filtermusic.net.ui.controller;
+package filtermusic.net.categories;
 
 import android.content.Context;
-import android.util.Log;
 
 import com.google.common.collect.ImmutableList;
 
@@ -11,27 +10,22 @@ import java.util.List;
 import java.util.Map;
 
 import filtermusic.net.FiltermusicApplication;
-import filtermusic.net.communication.FiltermusicApi;
-import filtermusic.net.data.DataProvider;
-import filtermusic.net.model.Category;
-import filtermusic.net.model.Radio;
-import rx.Observable;
-import rx.Subscriber;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.schedulers.Schedulers;
+import filtermusic.net.common.data.DataProvider;
+import filtermusic.net.common.model.Category;
+import filtermusic.net.common.model.Radio;
 
 /**
  * Created by android on 10/18/14.
  */
-public class UiController implements DataProvider.DataUpdatedListener{
+public class CategoriesController implements DataProvider.DataUpdatedListener{
 
     public interface DataListener{
         void onCategoriesUpdated(List<Category> categories);
     }
 
-    private static final String LOG_TAG = UiController.class.getSimpleName();
+    private static final String LOG_TAG = CategoriesController.class.getSimpleName();
 
-    private static UiController mInstance;
+    private static CategoriesController mInstance;
 
     private Context mContext;
 
@@ -41,14 +35,14 @@ public class UiController implements DataProvider.DataUpdatedListener{
     private DataListener mDataListener;
 
 
-    public static UiController getInstance(){
+    public static CategoriesController getInstance(){
         if(mInstance == null){
-            mInstance = new UiController();
+            mInstance = new CategoriesController();
         }
         return mInstance;
     }
 
-    private UiController() {
+    private CategoriesController() {
         mContext = FiltermusicApplication.getInstance().getApplicationContext();
         mDataProvider = new DataProvider(mContext);
         syncRadios();

@@ -4,7 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import filtermusic.net.ui.controller.UiController;
+import filtermusic.net.categories.CategoriesListFragment;
+import filtermusic.net.categories.CategoriesController;
 
 
 /**
@@ -16,15 +17,15 @@ import filtermusic.net.ui.controller.UiController;
  * item details side-by-side using two vertical panes.
  * <p>
  * The activity makes heavy use of fragments. The list of items is a
- * {@link RadioListFragment} and the item details
+ * {@link filtermusic.net.categories.CategoriesListFragment} and the item details
  * (if present) is a {@link RadioDetailFragment}.
  * <p>
  * This activity also implements the required
- * {@link RadioListFragment.Callbacks} interface
+ * {@link filtermusic.net.categories.CategoriesListFragment.Callbacks} interface
  * to listen for item selections.
  */
-public class RadioListActivity extends Activity
-        implements RadioListFragment.Callbacks {
+public class CategoriesListActivity extends Activity
+        implements CategoriesListFragment.Callbacks {
 
     /**
      * Whether or not the activity is in two-pane mode, i.e. running on a tablet
@@ -32,7 +33,7 @@ public class RadioListActivity extends Activity
      */
     private boolean mTwoPane;
 
-    private UiController mUiController;
+    private CategoriesController mUiController;
 
 
     @Override
@@ -41,7 +42,7 @@ public class RadioListActivity extends Activity
         setContentView(R.layout.activity_radio_list);
 
 
-        mUiController = UiController.getInstance();
+        mUiController = CategoriesController.getInstance();
 
         if (findViewById(R.id.radio_detail_container) != null) {
             // The detail container view will be present only in the
@@ -52,7 +53,7 @@ public class RadioListActivity extends Activity
 
             // In two-pane mode, list items should be given the
             // 'activated' state when touched.
-            ((RadioListFragment) getFragmentManager()
+            ((CategoriesListFragment) getFragmentManager()
                     .findFragmentById(R.id.radio_list))
                     .setActivateOnItemClick(true);
         }
@@ -61,7 +62,7 @@ public class RadioListActivity extends Activity
     }
 
     /**
-     * Callback method from {@link RadioListFragment.Callbacks}
+     * Callback method from {@link CategoriesListFragment.Callbacks}
      * indicating that the item with the given ID was selected.
      */
     @Override

@@ -1,25 +1,26 @@
-package filtermusic.net;
+package filtermusic.net.categories;
 
 import android.app.Activity;
 import android.app.ListFragment;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import filtermusic.net.model.Radio;
-import filtermusic.net.ui.controller.UiController;
+import java.util.List;
+
+import filtermusic.net.R;
+import filtermusic.net.common.model.Category;
 
 /**
  * A list fragment representing a list of Categories. This fragment
  * also supports tablet devices by allowing list items to be given an
  * 'activated' state upon selection. This helps indicate which item is
- * currently being viewed in a {@link RadioDetailFragment}.
+ * currently being viewed in a {@link filtermusic.net.RadioDetailFragment}.
  * <p/>
  * Activities containing this fragment MUST implement the {@link Callbacks}
  * interface.
  */
-public class RadioListFragment extends ListFragment {
+public class CategoriesListFragment extends ListFragment implements CategoriesController.DataListener{
 
     /**
      * The serialization (saved instance state) Bundle key representing the
@@ -60,24 +61,22 @@ public class RadioListFragment extends ListFragment {
         }
     };
 
+    private CategoriesAdapter mCategoriesAdapter;
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
      */
-    public RadioListFragment() {
+    public CategoriesListFragment() {
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        mCategoriesAdapter = new CategoriesAdapter(getActivity(), R.layout.category_item, CategoriesController.getInstance().getCategories());
+        CategoriesController.getInstance().setDataListener(this);
 
-        // TODO: replace with a real list adapter.
-        setListAdapter(new ArrayAdapter<Radio>(
-                getActivity(),
-                android.R.layout.simple_list_item_activated_1,
-                android.R.id.text1,
-                UiController.getInstance().getRadiosForFirstCatgory()));
+       setListAdapter(mCategoriesAdapter);
     }
 
     @Override
@@ -151,4 +150,7 @@ public class RadioListFragment extends ListFragment {
         mActivatedPosition = position;
     }
 
+    @Override
+    public void onCategoriesUpdated(List<Category> categories) {
+    }
 }

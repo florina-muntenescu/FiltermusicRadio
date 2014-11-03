@@ -23,7 +23,7 @@
 
     <fragment
         android:id="@+id/radio_list"
-        android:name="filtermusic.net.RadioListFragment"
+        android:name="filtermusic.net.categories.CategoriesListFragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"

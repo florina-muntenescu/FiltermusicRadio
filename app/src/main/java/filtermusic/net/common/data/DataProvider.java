@@ -1,4 +1,4 @@
-package filtermusic.net.data;
+package filtermusic.net.common.data;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -8,8 +8,8 @@ import com.google.common.collect.ImmutableList;
 
 import java.util.List;
 
-import filtermusic.net.communication.FiltermusicApi;
-import filtermusic.net.model.Radio;
+import filtermusic.net.common.communication.FiltermusicApi;
+import filtermusic.net.common.model.Radio;
 import rx.Observable;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;

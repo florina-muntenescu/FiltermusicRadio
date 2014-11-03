@@ -1,4 +1,4 @@
-package filtermusic.net.parser;
+package filtermusic.net.common.communication;
 
 import android.support.annotation.NonNull;
 import android.util.Xml;
@@ -12,7 +12,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
-import filtermusic.net.model.Radio;
+import filtermusic.net.common.model.Radio;
 import retrofit.converter.ConversionException;
 import retrofit.converter.Converter;
 import retrofit.mime.TypedInput;

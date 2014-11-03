@@ -6,14 +6,12 @@ import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.view.MenuItem;
 
-import filtermusic.net.ui.controller.UiController;
-
 
 /**
  * An activity representing a single Radio detail screen. This
  * activity is only used on handset devices. On tablet-size devices,
  * item details are presented side-by-side with a list of items
- * in a {@link RadioListActivity}.
+ * in a {@link CategoriesListActivity}.
  * <p>
  * This activity is mostly just a 'shell' activity containing nothing
  * more than a {@link RadioDetailFragment}.
@@ -63,7 +61,7 @@ public class RadioDetailActivity extends Activity {
             //
             // http://developer.android.com/design/patterns/navigation.html#up-vs-back
             //
-            NavUtils.navigateUpTo(this, new Intent(this, RadioListActivity.class));
+            NavUtils.navigateUpTo(this, new Intent(this, CategoriesListActivity.class));
             return true;
         }
         return super.onOptionsItemSelected(item);

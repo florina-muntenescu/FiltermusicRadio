@@ -7,7 +7,7 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 
-import filtermusic.net.model.Radio;
+import filtermusic.net.common.model.Radio;
 import filtermusic.net.parser.FeedXmlParser;
 
 /**

@@ -1,4 +1,4 @@
-package filtermusic.net.ui.views;
+package filtermusic.net.common.ui;
 
 import android.content.Context;
 import android.util.AttributeSet;

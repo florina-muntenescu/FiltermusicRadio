@@ -1,9 +1,8 @@
-package filtermusic.net.communication;
+package filtermusic.net.common.communication;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
 
-import filtermusic.net.parser.FeedXmlParser;
 import filtermusic.net.util.DebugUtil;
 import retrofit.RestAdapter;
 

@@ -1,4 +1,4 @@
-package filtermusic.net.ui.adapters;
+package filtermusic.net.categories;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -12,7 +12,7 @@ import java.util.List;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import filtermusic.net.R;
-import filtermusic.net.model.Category;
+import filtermusic.net.common.model.Category;
 
 /**
  * Adapter for the list of categories
@@ -23,26 +23,36 @@ public class CategoriesAdapter extends ArrayAdapter<Category> {
 
     public CategoriesAdapter(Context context, int resource) {
         super(context, resource);
+        init(context);
     }
 
     public CategoriesAdapter(Context context, int resource, int textViewResourceId) {
         super(context, resource, textViewResourceId);
+        init(context);
     }
 
     public CategoriesAdapter(Context context, int resource, Category[] objects) {
         super(context, resource, objects);
+        init(context);
     }
 
     public CategoriesAdapter(Context context, int resource, int textViewResourceId, Category[] objects) {
         super(context, resource, textViewResourceId, objects);
+        init(context);
     }
 
     public CategoriesAdapter(Context context, int resource, List<Category> objects) {
         super(context, resource, objects);
+        init(context);
     }
 
     public CategoriesAdapter(Context context, int resource, int textViewResourceId, List<Category> objects) {
         super(context, resource, textViewResourceId, objects);
+        init(context);
+    }
+
+    private void init(Context context){
+        mLayoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     @Override public View getView(int position, View view, ViewGroup parent) {
@@ -50,21 +60,19 @@ public class CategoriesAdapter extends ArrayAdapter<Category> {
         if (view != null) {
             holder = (ViewHolder) view.getTag();
         } else {
-            view = mLayoutInflater.inflate(R.layout.whatever, parent, false);
+            view = mLayoutInflater.inflate(R.layout.category_item, parent, false);
             holder = new ViewHolder(view);
             view.setTag(holder);
         }
 
-        holder.name.setText("John Doe");
-        // etc...
+        Category category = getItem(position);
+        holder.name.setText(category.getGenre());
 
         return view;
     }
 
     static class ViewHolder {
         @InjectView(R.id.title) TextView name;
-        @InjectView(R.id.job_title)
-        TextView jobTitle;
 
         public ViewHolder(View view) {
             ButterKnife.inject(this, view);

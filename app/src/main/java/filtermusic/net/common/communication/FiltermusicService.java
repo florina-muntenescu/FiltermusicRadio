@@ -1,8 +1,8 @@
-package filtermusic.net.communication;
+package filtermusic.net.common.communication;
 
 import java.util.List;
 
-import filtermusic.net.model.Radio;
+import filtermusic.net.common.model.Radio;
 import retrofit.http.*;
 import rx.Observable;
 
