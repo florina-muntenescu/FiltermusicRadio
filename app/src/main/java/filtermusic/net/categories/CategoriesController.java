@@ -15,7 +15,9 @@ import filtermusic.net.common.model.Category;
 import filtermusic.net.common.model.Radio;
 
 /**
- * Created by android on 10/18/14.
+ * Controls the data that is displayed in the categories fragment
+ * Retrieves data from the server or DB when needed and notifies the
+ * data listeners when data is updated.
  */
 public class CategoriesController implements DataProvider.DataUpdatedListener{
 

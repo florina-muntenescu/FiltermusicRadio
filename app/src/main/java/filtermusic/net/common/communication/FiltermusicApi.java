@@ -7,7 +7,7 @@ import filtermusic.net.util.DebugUtil;
 import retrofit.RestAdapter;
 
 /**
- * Created by android on 10/18/14.
+ * Handles the retrieval of data from backend
  */
 public class FiltermusicApi {
 

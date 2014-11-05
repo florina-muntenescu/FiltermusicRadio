@@ -2,6 +2,7 @@ package filtermusic.net;
 
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -9,12 +10,16 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import filtermusic.net.categories.CategoriesFragment;
 import filtermusic.net.favorites.FavoritesFragment;
 import filtermusic.net.recents.RecentsFragment;
 
 /**
- * Created by android on 10/27/14.
+ * Main activity of this app.
+ * Holds the tabs and the player
  */
 public class TabsActivity extends FragmentActivity implements ActionBar.TabListener {
 
@@ -24,21 +29,26 @@ public class TabsActivity extends FragmentActivity implements ActionBar.TabListe
      * derivative, which will keep every loaded fragment in memory. If this becomes too memory
      * intensive, it may be best to switch to a {@link android.support.v4.app.FragmentStatePagerAdapter}.
      */
-    AppSectionsPagerAdapter mAppSectionsPagerAdapter;
+    private AppSectionsPagerAdapter mAppSectionsPagerAdapter;
 
     /**
      * The {@link ViewPager} that will display the three primary sections of the app, one at a
      * time.
      */
-    ViewPager mViewPager;
+    private ViewPager mViewPager;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        List<Tab> tabs = new ArrayList<Tab>();
+        tabs.add(new Tab(CategoriesFragment.class.getName(), getString(R.string.categories_tab)));
+        tabs.add(new Tab(FavoritesFragment.class.getName(), getString(R.string.favorites_tab)));
+        tabs.add(new Tab(RecentsFragment.class.getName(), getString(R.string.recent_tab)));
+
         // Create the adapter that will return a fragment for each of the three primary sections
         // of the app.
-        mAppSectionsPagerAdapter = new AppSectionsPagerAdapter(getSupportFragmentManager());
+        mAppSectionsPagerAdapter = new AppSectionsPagerAdapter(getSupportFragmentManager(), tabs, this);
 
         // Set up the action bar.
         final ActionBar actionBar = getActionBar();
@@ -96,32 +106,33 @@ public class TabsActivity extends FragmentActivity implements ActionBar.TabListe
      */
     public static class AppSectionsPagerAdapter extends FragmentPagerAdapter {
 
-        public AppSectionsPagerAdapter(FragmentManager fm) {
+        private final List<Tab> mTabs;
+        private final Context mContext;
+
+        public AppSectionsPagerAdapter(FragmentManager fm, final List<Tab> tabs, final Context context) {
             super(fm);
+            mTabs = tabs;
+            mContext = context;
         }
 
         @Override
-        public Fragment getItem(int i) {
-            switch (i) {
-                case 0:
-                    return new CategoriesFragment();
-                case 1:
-                    return new FavoritesFragment();
-                case 2:
-                    return new RecentsFragment();
-            }
-            return null;
+        public Fragment getItem(int position) {
+            return Fragment.instantiate(mContext, mTabs.get(position).getFragmentClass());
         }
 
         @Override
         public int getCount() {
-            return 3;
+            return mTabs.size();
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
-            return "Page" + position;
+            return mTabs.get(position).getTabTitle();
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
 }

@@ -16,7 +16,8 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
 /**
- * Created by android on 10/24/14.
+ * Provides the data either from the server or from database
+ * Updates the database when needed
  */
 public class DataProvider {
     private static final String LOG_TAG = DataProvider.class.getSimpleName();

@@ -13,40 +13,41 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import filtermusic.net.R;
 import filtermusic.net.common.model.Category;
+import filtermusic.net.common.model.Radio;
 
 /**
- * Adapter for the list of categories
+ * Adapter for the list of radios
  */
-/*package*/ class CategoriesAdapter extends ArrayAdapter<Category> {
+public class RadiosAdapter extends ArrayAdapter<Radio> {
 
     private LayoutInflater mLayoutInflater;
 
-    public CategoriesAdapter(Context context, int resource) {
+    public RadiosAdapter(Context context, int resource) {
         super(context, resource);
         init(context);
     }
 
-    public CategoriesAdapter(Context context, int resource, int textViewResourceId) {
+    public RadiosAdapter(Context context, int resource, int textViewResourceId) {
         super(context, resource, textViewResourceId);
         init(context);
     }
 
-    public CategoriesAdapter(Context context, int resource, Category[] objects) {
+    public RadiosAdapter(Context context, int resource, Radio[] objects) {
         super(context, resource, objects);
         init(context);
     }
 
-    public CategoriesAdapter(Context context, int resource, int textViewResourceId, Category[] objects) {
+    public RadiosAdapter(Context context, int resource, int textViewResourceId, Radio[] objects) {
         super(context, resource, textViewResourceId, objects);
         init(context);
     }
 
-    public CategoriesAdapter(Context context, int resource, List<Category> objects) {
+    public RadiosAdapter(Context context, int resource, List<Radio> objects) {
         super(context, resource, objects);
         init(context);
     }
 
-    public CategoriesAdapter(Context context, int resource, int textViewResourceId, List<Category> objects) {
+    public RadiosAdapter(Context context, int resource, int textViewResourceId, List<Radio> objects) {
         super(context, resource, textViewResourceId, objects);
         init(context);
     }
@@ -60,19 +61,19 @@ import filtermusic.net.common.model.Category;
         if (view != null) {
             holder = (ViewHolder) view.getTag();
         } else {
-            view = mLayoutInflater.inflate(R.layout.category_item, parent, false);
+            view = mLayoutInflater.inflate(R.layout.radio_list_item, parent, false);
             holder = new ViewHolder(view);
             view.setTag(holder);
         }
 
-        Category category = getItem(position);
-        holder.name.setText(category.getGenre());
+        Radio radio = getItem(position);
+        holder.title.setText(radio.getTitle());
 
         return view;
     }
 
     static class ViewHolder {
-        @InjectView(R.id.title) TextView name;
+        @InjectView(R.id.radio_title) TextView title;
 
         public ViewHolder(View view) {
             ButterKnife.inject(this, view);

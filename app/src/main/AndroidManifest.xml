@@ -19,14 +19,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".RadioDetailActivity"
-            android:label="@string/title_radio_detail"
-            android:parentActivityName=".CategoriesListActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".RadioListActivity" />
-        </activity>
     </application>
 
 </manifest>
