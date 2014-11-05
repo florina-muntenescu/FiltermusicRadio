@@ -12,15 +12,9 @@ import filtermusic.net.R;
 import filtermusic.net.common.model.Category;
 
 /**
- * A list fragment representing a list of Categories. This fragment
- * also supports tablet devices by allowing list items to be given an
- * 'activated' state upon selection. This helps indicate which item is
- * currently being viewed in a {@link filtermusic.net.RadioDetailFragment}.
- * <p/>
- * Activities containing this fragment MUST implement the {@link Callbacks}
- * interface.
+ * A list fragment representing a list of Categories.
  */
-public class CategoriesListFragment extends ListFragment implements CategoriesController.DataListener{
+public class CategoriesListFragment extends ListFragment{
 
     /**
      * The serialization (saved instance state) Bundle key representing the
@@ -74,7 +68,6 @@ public class CategoriesListFragment extends ListFragment implements CategoriesCo
         super.onCreate(savedInstanceState);
 
         mCategoriesAdapter = new CategoriesAdapter(getActivity(), R.layout.category_item, CategoriesController.getInstance().getCategories());
-        CategoriesController.getInstance().setDataListener(this);
 
        setListAdapter(mCategoriesAdapter);
     }
@@ -150,7 +143,4 @@ public class CategoriesListFragment extends ListFragment implements CategoriesCo
         mActivatedPosition = position;
     }
 
-    @Override
-    public void onCategoriesUpdated(List<Category> categories) {
-    }
 }
