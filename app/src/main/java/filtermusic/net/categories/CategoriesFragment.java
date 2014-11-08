@@ -109,5 +109,19 @@ public class CategoriesFragment extends Fragment implements CategoriesController
         mViewFlipper.setDisplayedChild(pageIndex);
     }
 
+    public void onBackPressed(){
+        int currentPage = mViewFlipper.getDisplayedChild();
+        switch (currentPage){
+            case RADIOS_VIEW_INDEX:
+                flipToPage(CATEGORIES_VIEW_INDEX);
+                break;
+            case RADIO_DETAIL_VIEW_INDEX:
+                flipToPage(RADIOS_VIEW_INDEX);
+                break;
+            case PROGRESS_VIEW_INDEX:
+            case CATEGORIES_VIEW_INDEX:
+                getActivity().finish();
+        }
+    }
 
 }

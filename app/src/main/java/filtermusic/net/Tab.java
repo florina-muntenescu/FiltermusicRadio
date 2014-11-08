@@ -7,6 +7,7 @@ public class Tab {
 
     private String mFragmentClass;
     private String mTabTitle;
+    private String mFragmentTag;
 
     public Tab(String fragmentClass, String tabTitle) {
         mFragmentClass = fragmentClass;
@@ -19,5 +20,13 @@ public class Tab {
 
     public String getTabTitle() {
         return mTabTitle;
+    }
+
+    public String getFragmentTag() {
+        return mFragmentTag;
+    }
+
+    public void setFragmentTag(String fragmentTag) {
+        mFragmentTag = fragmentTag;
     }
 }

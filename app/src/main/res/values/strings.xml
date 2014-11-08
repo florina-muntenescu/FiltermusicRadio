@@ -2,12 +2,19 @@
 <resources>
 
     <string name="app_name">FiltermusicRadio</string>
-    <string name="title_radio_detail">Radio Detail</string>
 
-    <string name="categories_tab">Categories</string>
-    <string name="favorites_tab">Favorites</string>
-    <string name="recent_tab">Recently played</string>
     <string name="error_unable_to_retrieve">Looks like we\'re unable to get the list of radios.</string>
+
+
+    <!--categories tab-->
+    <string name="categories_tab">Categories</string>
+    <string name="no_stations">%d Stations</string>
+    <!--favorites tab-->
+    <string name="favorites_tab">Favorites</string>
     <string name="favorites_suggestion">Star your favorite radios to see them here</string>
+
+    <!--recently played tab-->
+    <string name="recent_tab">Played</string>
     <string name="recent_radios">Your recently played radios will be visible here</string>
+
 </resources>

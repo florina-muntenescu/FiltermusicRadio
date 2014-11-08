@@ -20,6 +20,7 @@ import filtermusic.net.common.model.Category;
 /*package*/ class CategoriesAdapter extends ArrayAdapter<Category> {
 
     private LayoutInflater mLayoutInflater;
+    private Context mContext;
 
     public CategoriesAdapter(Context context, int resource) {
         super(context, resource);
@@ -52,6 +53,7 @@ import filtermusic.net.common.model.Category;
     }
 
     private void init(Context context){
+        mContext = context;
         mLayoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
@@ -65,14 +67,16 @@ import filtermusic.net.common.model.Category;
             view.setTag(holder);
         }
 
-        Category category = getItem(position);
+        final Category category = getItem(position);
         holder.name.setText(category.getGenre());
-
+        final String noStations = mContext.getString(R.string.no_stations, category.getRadioList().size());
+        holder.stations.setText(noStations);
         return view;
     }
 
     static class ViewHolder {
         @InjectView(R.id.title) TextView name;
+        @InjectView(R.id.stations) TextView stations;
 
         public ViewHolder(View view) {
             ButterKnife.inject(this, view);

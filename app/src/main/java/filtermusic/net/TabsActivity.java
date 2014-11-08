@@ -86,6 +86,7 @@ public class TabsActivity extends FragmentActivity implements ActionBar.TabListe
         }
     }
 
+
     @Override
     public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
     }
@@ -98,6 +99,22 @@ public class TabsActivity extends FragmentActivity implements ActionBar.TabListe
 
     @Override
     public void onTabReselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(0 == mViewPager.getCurrentItem()) {
+            CategoriesFragment categoriesFragment = (CategoriesFragment) findFragmentByPosition(0);
+            categoriesFragment.onBackPressed();
+        }else{
+            super.onBackPressed();
+        }
+    }
+
+    public Fragment findFragmentByPosition(int position) {
+        return getSupportFragmentManager().findFragmentByTag(
+                "android:switcher:" + mViewPager.getId() + ":"
+                        + mAppSectionsPagerAdapter.getItemId(position));
     }
 
     /**
@@ -131,8 +148,4 @@ public class TabsActivity extends FragmentActivity implements ActionBar.TabListe
         }
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-    }
 }
