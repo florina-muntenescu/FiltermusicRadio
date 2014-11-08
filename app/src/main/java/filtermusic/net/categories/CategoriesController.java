@@ -81,16 +81,6 @@ public class CategoriesController implements DataProvider.DataUpdatedListener{
         return mCategories;
     }
 
-    public List<Radio> getRadiosForFirstCatgory(){
-        if(mCategories.size() > 0){
-            return mCategories.get(0).getRadioList();
-        }
-        Radio radio = new Radio("a","b", "c", "d", "e", "f");
-        List<Radio> radios = new ArrayList<Radio>();
-        radios.add(radio);
-        return radios;
-    }
-
     public void setDataListener(DataListener dataListener) {
         mDataListener = dataListener;
     }

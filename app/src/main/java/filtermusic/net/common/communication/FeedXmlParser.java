@@ -114,7 +114,7 @@ import retrofit.mime.TypedOutput;
             }
         }
 
-        return new Radio(title, url, genre, description, category, imageUrl);
+        return new Radio(title, url, genre, description, category, imageUrl, false, null);
     }
 
     // Processes tags in the feed.

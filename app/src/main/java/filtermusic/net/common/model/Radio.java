@@ -1,5 +1,7 @@
 package filtermusic.net.common.model;
 
+import java.util.Date;
+
 /**
  * Example of a Radio item in XML
  * <p/>
@@ -29,15 +31,23 @@ public class Radio {
     private String mDescription;
     private String mCategory;
     private String mImageUrl;
+    private boolean mIsFavorite;
+    private Date mPlayedDate;
 
 
-    public Radio(String title, String URL, String genre, String description, String category, String imageUrl) {
+    public Radio() {
+        // all persisted classes must define a no-arg constructor with at least package visibility
+    }
+
+    public Radio(String title, String URL, String genre, String description, String category, String imageUrl, boolean isFavorite, Date playedDate) {
         mTitle = title;
         mURL = URL;
         mGenre = genre;
         mDescription = description;
         mCategory = category;
         mImageUrl = imageUrl;
+        mIsFavorite = isFavorite;
+        mPlayedDate = playedDate;
     }
 
     public String getTitle() {
@@ -62,5 +72,13 @@ public class Radio {
 
     public String getImageUrl() {
         return mImageUrl;
+    }
+
+    public boolean isFavorite() {
+        return mIsFavorite;
+    }
+
+    public Date getPlayedDate() {
+        return mPlayedDate;
     }
 }

@@ -6,14 +6,10 @@
               android:layout_height="match_parent">
     <TextView
         android:id="@+id/title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/item_margin"/>
+        style="@style/title_text"/>
 
     <TextView
         android:id="@+id/stations"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/item_margin"/>
+        style="@style/content_text"/>
 
 </LinearLayout>
