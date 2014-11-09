@@ -1,4 +1,4 @@
-package filtermusic.net.common.ui;
+package filtermusic.net.player;
 
 import android.content.Context;
 import android.util.AttributeSet;

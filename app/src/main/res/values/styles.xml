@@ -1,10 +1,10 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="android:Theme.Holo">
+    <style name="AppTheme" parent="Theme.AppCompat">
     </style>
 
-    <style name="ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+    <style name="ActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="android:icon">@drawable/filtemusic_logo</item>
     </style>
 

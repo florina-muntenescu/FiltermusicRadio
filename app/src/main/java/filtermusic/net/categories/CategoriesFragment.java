@@ -85,6 +85,7 @@ public class CategoriesFragment extends Fragment implements CategoriesController
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // open the radio details
                 Radio radio = mLastOpenedCategory.getRadioList().get(position);
+                mRadioDetailView.setRadio(radio);
                 flipToPage(RADIO_DETAIL_VIEW_INDEX);
             }
         });

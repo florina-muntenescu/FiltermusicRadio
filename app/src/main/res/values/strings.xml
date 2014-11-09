@@ -17,4 +17,14 @@
     <string name="recent_tab">Played</string>
     <string name="recent_radios">Your recently played radios will be visible here</string>
 
+    <!--about tab-->
+    <string name="about_tab">About</string>
+    <string name="visit_us">Visit us at:</string>
+    <string name="url">filtermusic.net</string>
+    <string name="contact">Contact</string>
+    <string name="email">info@filtermusic.net</string>
+    <string name="description">Filtermusic is updated (almost daily) with radio stations that stream in high quality (128Kbps)
+        and play only music; you won\'t find a radio here where people having lenghty discussions
+        (just in case these are the radio stations you are especially looking for, some can be found at the \"Various/Independent\" section).\n
+        All streams presented have been filtered especially for electronic &amp; dance music from thousands of stations all over the Internet.</string>
 </resources>

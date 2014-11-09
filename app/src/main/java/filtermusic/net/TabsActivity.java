@@ -1,18 +1,19 @@
 package filtermusic.net;
 
-import android.app.ActionBar;
-import android.app.FragmentTransaction;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import filtermusic.net.about.AboutFragment;
 import filtermusic.net.categories.CategoriesFragment;
 import filtermusic.net.favorites.FavoritesFragment;
 import filtermusic.net.recents.RecentsFragment;
@@ -21,7 +22,7 @@ import filtermusic.net.recents.RecentsFragment;
  * Main activity of this app.
  * Holds the tabs and the player
  */
-public class TabsActivity extends FragmentActivity implements ActionBar.TabListener {
+public class TabsActivity extends ActionBarActivity implements ActionBar.TabListener {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide fragments for each of the
@@ -45,13 +46,15 @@ public class TabsActivity extends FragmentActivity implements ActionBar.TabListe
         tabs.add(new Tab(CategoriesFragment.class.getName(), getString(R.string.categories_tab)));
         tabs.add(new Tab(FavoritesFragment.class.getName(), getString(R.string.favorites_tab)));
         tabs.add(new Tab(RecentsFragment.class.getName(), getString(R.string.recent_tab)));
+        tabs.add(new Tab(AboutFragment.class.getName(), getString(R.string.about_tab)));
 
         // Create the adapter that will return a fragment for each of the three primary sections
         // of the app.
         mAppSectionsPagerAdapter = new AppSectionsPagerAdapter(getSupportFragmentManager(), tabs, this);
 
         // Set up the action bar.
-        final ActionBar actionBar = getActionBar();
+        final ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayShowTitleEnabled(false);
 
         // Specify that the Home/Up button should not be enabled, since there is no hierarchical
         // parent.
@@ -89,6 +92,7 @@ public class TabsActivity extends FragmentActivity implements ActionBar.TabListe
 
     @Override
     public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
+
     }
 
     @Override
@@ -103,10 +107,10 @@ public class TabsActivity extends FragmentActivity implements ActionBar.TabListe
 
     @Override
     public void onBackPressed() {
-        if(0 == mViewPager.getCurrentItem()) {
+        if (0 == mViewPager.getCurrentItem()) {
             CategoriesFragment categoriesFragment = (CategoriesFragment) findFragmentByPosition(0);
             categoriesFragment.onBackPressed();
-        }else{
+        } else {
             super.onBackPressed();
         }
     }
