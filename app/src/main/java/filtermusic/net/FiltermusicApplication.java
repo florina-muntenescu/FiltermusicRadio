@@ -18,4 +18,5 @@ public class FiltermusicApplication extends Application {
         super.onCreate();
         instance = this;
     }
+
 }

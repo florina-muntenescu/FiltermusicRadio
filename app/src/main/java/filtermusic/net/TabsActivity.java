@@ -1,6 +1,7 @@
 package filtermusic.net;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -15,7 +16,10 @@ import java.util.List;
 
 import filtermusic.net.about.AboutFragment;
 import filtermusic.net.categories.CategoriesFragment;
+import filtermusic.net.common.model.Radio;
 import filtermusic.net.favorites.FavoritesFragment;
+import filtermusic.net.player.MediaPlayerService;
+import filtermusic.net.player.PlayerController;
 import filtermusic.net.recents.RecentsFragment;
 
 /**
@@ -87,6 +91,7 @@ public class TabsActivity extends ActionBarActivity implements ActionBar.TabList
                             .setText(mAppSectionsPagerAdapter.getPageTitle(i))
                             .setTabListener(this));
         }
+
     }
 
 

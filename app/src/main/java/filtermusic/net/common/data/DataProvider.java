@@ -6,6 +6,7 @@ import android.util.Log;
 
 import com.google.common.collect.ImmutableList;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import filtermusic.net.common.communication.FiltermusicApi;
@@ -22,9 +23,11 @@ import rx.schedulers.Schedulers;
 public class DataProvider {
     private static final String LOG_TAG = DataProvider.class.getSimpleName();
 
-    public interface DataUpdatedListener{
+    public interface DataUpdatedListener {
         public void onRadioListUpdated(final List<Radio> radios);
+
         public void onFavoritesUpdated(final List<Radio> radios);
+
         public void onLastPlayedUpdated(final List<Radio> radios);
     }
 
@@ -34,7 +37,7 @@ public class DataProvider {
         mContext = context;
     }
 
-    public void getDataFromServer(final @NonNull DataUpdatedListener listener){
+    public void getDataFromServer(final @NonNull DataUpdatedListener listener) {
         FiltermusicApi api = new FiltermusicApi(mContext);
         Observable<List<Radio>> apiObservable = api.createFromRestAdapter().getRadios();
         apiObservable.subscribeOn(Schedulers.newThread())
@@ -57,4 +60,13 @@ public class DataProvider {
                 });
 
     }
+
+    public void retrieveFavorites(final @NonNull DataUpdatedListener listener) {
+        listener.onFavoritesUpdated(new ArrayList<Radio>());
+    }
+
+    public void retrieveLastPlayed(final @NonNull DataUpdatedListener listener) {
+        listener.onLastPlayedUpdated(new ArrayList<Radio>());
+    }
+
 }

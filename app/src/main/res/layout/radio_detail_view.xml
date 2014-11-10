@@ -6,7 +6,7 @@
               android:orientation="vertical"
               android:weightSum="10">
 
-    <RelativeLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="5"
@@ -18,7 +18,16 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:src="@drawable/station_image"/>
-    </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/play_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom|right"
+            android:src="@drawable/play_circle"
+            android:layout_margin="@dimen/item_margin"
+            android:background="@android:color/white"/>
+    </FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,15 +39,22 @@
             android:id="@+id/radio_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="test"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="test"/>
 
         <TextView
             android:id="@+id/radio_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="test"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="test"/>
+
+        <ImageView
+            android:id="@+id/star_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/star_outline"
+            android:background="@android:color/white"/>
 
     </LinearLayout>
 </LinearLayout>

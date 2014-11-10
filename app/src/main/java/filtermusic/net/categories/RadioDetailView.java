@@ -13,20 +13,26 @@ import com.squareup.picasso.Picasso;
 
 import filtermusic.net.R;
 import filtermusic.net.common.model.Radio;
+import filtermusic.net.player.PlayerController;
 
 /**
  * View holding the details for a radio and that gives the user the possibility of playing that radio
  * and saving the radio as favorite
  */
-public class RadioDetailView extends LinearLayout{
+public class RadioDetailView extends LinearLayout {
 
     private ImageView mRadioImage;
     private TextView mRadioTitle;
     private TextView mRadioDescription;
 
+    private ImageView mPlayButton;
+    private ImageView mStarButton;
+
     private Radio mRadio;
 
     private Context mContext;
+
+    private PlayerController mPlayerController;
 
     public RadioDetailView(Context context) {
         super(context);
@@ -44,10 +50,13 @@ public class RadioDetailView extends LinearLayout{
     }
 
 
-    private void initUI(final Context context){
+    private void initUI(final Context context) {
         setOrientation(VERTICAL);
 
         mContext = context;
+
+        mPlayerController = PlayerController.getInstance();
+
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View rootView = inflater.inflate(R.layout.radio_detail_view, this, true);
@@ -55,14 +64,24 @@ public class RadioDetailView extends LinearLayout{
         mRadioImage = (ImageView) rootView.findViewById(R.id.radio_image);
         mRadioTitle = (TextView) rootView.findViewById(R.id.radio_title);
         mRadioDescription = (TextView) rootView.findViewById(R.id.radio_description);
+
+        mPlayButton = (ImageView) rootView.findViewById(R.id.play_button);
+        mPlayButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mPlayerController.radioSelected(mRadio);
+            }
+        });
+        mStarButton = (ImageView) rootView.findViewById(R.id.star_button);
+
     }
 
-    public void setRadio(@NonNull Radio radio){
+    public void setRadio(@NonNull Radio radio) {
         mRadio = radio;
         updateUI();
     }
 
-    private void updateUI(){
+    private void updateUI() {
 
         Picasso.with(mContext)
                 .load(mRadio.getImageUrl())
