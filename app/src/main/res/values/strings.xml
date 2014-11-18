@@ -27,4 +27,8 @@
         and play only music; you won\'t find a radio here where people having lenghty discussions
         (just in case these are the radio stations you are especially looking for, some can be found at the \"Various/Independent\" section).\n
         All streams presented have been filtered especially for electronic &amp; dance music from thousands of stations all over the Internet.</string>
+
+
+    <!--player view-->
+    <string name="no_radio_selected">Choose a radio station</string>
 </resources>

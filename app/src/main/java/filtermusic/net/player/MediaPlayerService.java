@@ -1,9 +1,5 @@
 package filtermusic.net.player;
 
-/**
- * Created by android on 11/10/14.
- */
-
 import android.app.Service;
 import android.content.Intent;
 import android.os.Binder;
@@ -27,6 +23,7 @@ public class MediaPlayerService
 
     private MediaPlayerThread mMediaPlayerThread = new MediaPlayerThread(this);
     private final Binder mBinder = new MediaPlayerBinder();
+    private Radio mRadio;
 
     private List<IMediaPlayerServiceListener> mListeners = new ArrayList<IMediaPlayerServiceListener>();
 
@@ -84,6 +81,7 @@ public class MediaPlayerService
 
     /**
      * Removes a listener of this service
+     *
      * @param listener - The listener of this service, which implements the {@link IMediaPlayerServiceListener} interface
      */
     public void removeListener(IMediaPlayerServiceListener listener) {
@@ -91,8 +89,9 @@ public class MediaPlayerService
     }
 
 
-    public void initializePlayer(final Radio station) {
-        mMediaPlayerThread.initializePlayer(station);
+    public void initializePlayer(final Radio radio) {
+        mRadio = radio;
+        mMediaPlayerThread.initializePlayer(radio);
     }
 
     public void startMediaPlayer() {
@@ -133,7 +132,7 @@ public class MediaPlayerService
     @Override
     public void onInitializePlayerStart() {
         for (IMediaPlayerServiceListener client : mListeners) {
-            client.onInitializePlayerStart();
+            client.onInitializePlayerStart(mRadio);
         }
     }
 
@@ -159,7 +158,8 @@ public class MediaPlayerService
      */
     @Override
     public void onTaskRemoved(Intent rootIntent) {
+        Log.d(MediaPlayerService.class.getSimpleName(), "on task removed");
         stopMediaPlayer();
-        stopSelf();
+        this.unRegister();
     }
 }

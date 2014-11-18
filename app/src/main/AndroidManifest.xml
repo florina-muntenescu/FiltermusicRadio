@@ -4,7 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET"/>
-    used for keeping the processor from sleeping
+    <!--used for keeping the processor from sleeping-->
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
 
     <application

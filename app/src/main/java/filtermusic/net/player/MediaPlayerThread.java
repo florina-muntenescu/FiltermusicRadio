@@ -43,6 +43,9 @@ public class MediaPlayerThread
     public void initializePlayer(final Radio station) {
         mClient.onInitializePlayerStart();
 
+        if(mMediaPlayer.isPlaying()){
+            mMediaPlayer.reset();
+        }
         mMediaPlayer = new StatefulMediaPlayer(station);
 
         mMediaPlayer.setOnBufferingUpdateListener(this);
@@ -100,7 +103,9 @@ public class MediaPlayerThread
      * Stops the contained StatefulMediaPlayer.
      */
     public void stopMediaPlayer() {
-        mMediaPlayer.stop();
+//        if(mMediaPlayer.isPlaying()) {
+//            mMediaPlayer.stop();
+//        }
         mMediaPlayer.release();
         mWifiLock.release();
     }

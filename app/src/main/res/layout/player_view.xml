@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
-<ImageView
-    android:id="@+id/radio_image"
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    android:src="@drawable/station_image"/>
+              android:layout_height="match_parent"
+              android:background="#333333"
+              android:orientation="horizontal"
+              android:weightSum="10">
+
+    <ImageView
+        android:id="@+id/radio_image"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/station_image"
+        android:layout_weight="2"/>
+
+    <TextView
+        style="@style/title_text"
+        android:id="@+id/radio_title"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="6"
+        android:gravity="center"
+        android:text="@string/no_radio_selected"
+        />
+
+    <ImageView
+        android:id="@+id/play_button"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/play_circle"
+        android:layout_weight="2"/>
 </LinearLayout>

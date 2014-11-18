@@ -27,11 +27,12 @@ public class PlayerController {
 
     private Context mContext;
 
+    private List<IMediaPlayerServiceListener> mServiceListeners;
     private static PlayerController mInstance;
 
 
-    public static PlayerController getInstance(){
-        if(null == mInstance){
+    public static PlayerController getInstance() {
+        if (null == mInstance) {
             mInstance = new PlayerController();
         }
         return mInstance;
@@ -39,6 +40,7 @@ public class PlayerController {
 
     private PlayerController() {
         mContext = FiltermusicApplication.getInstance().getApplicationContext();
+        mServiceListeners = new ArrayList<IMediaPlayerServiceListener>();
         bindToService();
     }
 
@@ -106,7 +108,9 @@ public class PlayerController {
 
             //send this instance to the service, so it can make callbacks on this instance as a client
             mBound = true;
-
+            for(IMediaPlayerServiceListener listener : mServiceListeners){
+                mService.addListener(listener);
+            }
 //            //Set play/pause button to reflect state of the service's contained player
 //            final ToggleButton playPauseButton = (ToggleButton) findViewById(R.id.playPauseButton);
 //            playPauseButton.setChecked(mService.getMediaPlayer().isPlaying());
@@ -155,15 +159,25 @@ public class PlayerController {
      * @param listener The listener of this service, which implements the  {@link IMediaPlayerServiceListener}  interface
      */
     public void addListener(IMediaPlayerServiceListener listener) {
-        mService.addListener(listener);
+        if(mService != null) {
+            mService.addListener(listener);
+        }else{
+            mServiceListeners.add(listener);
+        }
+
     }
 
     /**
      * Removes a listener of this service
+     *
      * @param listener - The listener of this service, which implements the {@link IMediaPlayerServiceListener} interface
      */
     public void removeListener(IMediaPlayerServiceListener listener) {
-        mService.removeListener(listener);
+        if(mService != null) {
+            mService.removeListener(listener);
+        }else{
+            mServiceListeners.add(listener);
+        }
     }
 
     /**
