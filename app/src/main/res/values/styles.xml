@@ -2,10 +2,17 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat">
+        <item name="android:actionBarTabStyle">@style/ActionBar.Tab</item>
     </style>
 
     <style name="ActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="android:icon">@drawable/filtemusic_logo</item>
+        <item name="android:actionBarTabStyle">@style/ActionBar.Tab</item>
+    </style>
+
+    <style name="ActionBar.Tab">
+        <item name="android:background">@drawable/tab_bar_background</item>
+        <item name="android:gravity">center</item>
     </style>
 
     <style name="title_text">

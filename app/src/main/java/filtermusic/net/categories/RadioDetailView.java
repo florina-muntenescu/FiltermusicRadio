@@ -2,6 +2,7 @@ package filtermusic.net.categories;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.text.Html;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -89,6 +90,6 @@ public class RadioDetailView extends LinearLayout {
                 .into(mRadioImage);
 
         mRadioTitle.setText(mRadio.getTitle());
-        mRadioDescription.setText(mRadio.getDescription());
+        mRadioDescription.setText(Html.fromHtml(mRadio.getDescription()));
     }
 }

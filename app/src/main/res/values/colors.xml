@@ -2,4 +2,5 @@
 <resources>
     <color name="title_text_color">@android:color/white</color>
     <color name="content_text_color">@android:color/darker_gray</color>
+    <color name="app_color">#165EF6</color>
 </resources>

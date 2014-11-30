@@ -1,6 +1,7 @@
 package filtermusic.net;
 
 import android.content.Context;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -57,6 +58,10 @@ public class TabsActivity extends ActionBarActivity implements ActionBar.TabList
         // Set up the action bar.
         final ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayShowTitleEnabled(false);
+        actionBar.setDisplayHomeAsUpEnabled(false);
+        actionBar.setDisplayShowHomeEnabled(false);
+
+        actionBar.setBackgroundDrawable(null);
 
         // Specify that the Home/Up button should not be enabled, since there is no hierarchical
         // parent.
@@ -64,6 +69,7 @@ public class TabsActivity extends ActionBarActivity implements ActionBar.TabList
 
         // Specify that we will be displaying tabs in the action bar.
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+
 
         // Set up the ViewPager, attaching the adapter and setting up a listener for when the
         // user swipes between sections.
