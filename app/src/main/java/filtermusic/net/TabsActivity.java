@@ -1,7 +1,6 @@
 package filtermusic.net;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -16,10 +15,7 @@ import java.util.List;
 
 import filtermusic.net.about.AboutFragment;
 import filtermusic.net.categories.CategoriesFragment;
-import filtermusic.net.common.model.Radio;
 import filtermusic.net.favorites.FavoritesFragment;
-import filtermusic.net.player.MediaPlayerService;
-import filtermusic.net.player.PlayerController;
 import filtermusic.net.recents.RecentsFragment;
 
 /**
@@ -30,9 +26,10 @@ public class TabsActivity extends ActionBarActivity implements ActionBar.TabList
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide fragments for each of the
-     * three primary sections of the app. We use a {@link android.support.v4.app.FragmentPagerAdapter}
+     * three primary sections of the app. We use a {@link FragmentPagerAdapter}
      * derivative, which will keep every loaded fragment in memory. If this becomes too memory
-     * intensive, it may be best to switch to a {@link android.support.v4.app.FragmentStatePagerAdapter}.
+     * intensive, it may be best to switch to a
+     * {@link android.support.v4.app.FragmentStatePagerAdapter}.
      */
     private AppSectionsPagerAdapter mAppSectionsPagerAdapter;
 
@@ -54,7 +51,8 @@ public class TabsActivity extends ActionBarActivity implements ActionBar.TabList
 
         // Create the adapter that will return a fragment for each of the three primary sections
         // of the app.
-        mAppSectionsPagerAdapter = new AppSectionsPagerAdapter(getSupportFragmentManager(), tabs, this);
+        mAppSectionsPagerAdapter = new AppSectionsPagerAdapter(getSupportFragmentManager(), tabs,
+                this);
 
         // Set up the action bar.
         final ActionBar actionBar = getSupportActionBar();
@@ -113,6 +111,7 @@ public class TabsActivity extends ActionBarActivity implements ActionBar.TabList
     @Override
     public void onBackPressed() {
         if (0 == mViewPager.getCurrentItem()) {
+            // if we're in the categories fragment let it control the back
             CategoriesFragment categoriesFragment = (CategoriesFragment) findFragmentByPosition(0);
             categoriesFragment.onBackPressed();
         } else {
@@ -126,14 +125,10 @@ public class TabsActivity extends ActionBarActivity implements ActionBar.TabList
                         + mAppSectionsPagerAdapter.getItemId(position));
     }
 
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-    }
 
     /**
-     * A {@link android.support.v4.app.FragmentPagerAdapter} that returns a fragment corresponding to one of the primary
-     * sections of the app.
+     * A {@link android.support.v4.app.FragmentPagerAdapter} that returns a fragment corresponding
+     * to one of the primary sections of the app.
      */
     public static class AppSectionsPagerAdapter extends FragmentPagerAdapter {
 

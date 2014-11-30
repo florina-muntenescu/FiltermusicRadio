@@ -39,7 +39,8 @@ public class Radio {
         // all persisted classes must define a no-arg constructor with at least package visibility
     }
 
-    public Radio(String title, String URL, String genre, String description, String category, String imageUrl, boolean isFavorite, Date playedDate) {
+    public Radio(String title, String URL, String genre, String description, String category,
+                 String imageUrl, boolean isFavorite, Date playedDate) {
         mTitle = title;
         mURL = URL;
         mGenre = genre;

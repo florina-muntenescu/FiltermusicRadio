@@ -14,7 +14,8 @@ import filtermusic.net.R;
  */
 public class RecentsFragment extends Fragment {
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.recents_fragment, container, false);
 
 

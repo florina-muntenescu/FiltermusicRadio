@@ -3,7 +3,7 @@ package filtermusic.net.common.communication;
 import android.content.Context;
 import android.support.annotation.NonNull;
 
-import filtermusic.net.util.DebugUtil;
+import filtermusic.net.BuildConfig;
 import retrofit.RestAdapter;
 
 /**
@@ -33,7 +33,7 @@ public class FiltermusicApi {
     }
 
     private void setRestAdapterLogLevel(final @NonNull RestAdapter restAdapter) {
-        if (DebugUtil.isDebugMode(mApplicationContext)) {
+        if (BuildConfig.DEBUG) {
             // use a special log level only when in debug mode
             restAdapter.setLogLevel(DEBUG_DEFAULT_LOG_LEVEL);
         }

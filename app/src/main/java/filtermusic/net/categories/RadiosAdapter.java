@@ -12,7 +12,6 @@ import java.util.List;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import filtermusic.net.R;
-import filtermusic.net.common.model.Category;
 import filtermusic.net.common.model.Radio;
 
 /**
@@ -22,41 +21,17 @@ public class RadiosAdapter extends ArrayAdapter<Radio> {
 
     private LayoutInflater mLayoutInflater;
 
-    public RadiosAdapter(Context context, int resource) {
-        super(context, resource);
-        init(context);
-    }
-
-    public RadiosAdapter(Context context, int resource, int textViewResourceId) {
-        super(context, resource, textViewResourceId);
-        init(context);
-    }
-
-    public RadiosAdapter(Context context, int resource, Radio[] objects) {
-        super(context, resource, objects);
-        init(context);
-    }
-
-    public RadiosAdapter(Context context, int resource, int textViewResourceId, Radio[] objects) {
-        super(context, resource, textViewResourceId, objects);
-        init(context);
-    }
-
     public RadiosAdapter(Context context, int resource, List<Radio> objects) {
         super(context, resource, objects);
         init(context);
     }
 
-    public RadiosAdapter(Context context, int resource, int textViewResourceId, List<Radio> objects) {
-        super(context, resource, textViewResourceId, objects);
-        init(context);
-    }
-
-    private void init(Context context){
+    private void init(Context context) {
         mLayoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
-    @Override public View getView(int position, View view, ViewGroup parent) {
+    @Override
+    public View getView(int position, View view, ViewGroup parent) {
         ViewHolder holder;
         if (view != null) {
             holder = (ViewHolder) view.getTag();
@@ -73,7 +48,8 @@ public class RadiosAdapter extends ArrayAdapter<Radio> {
     }
 
     static class ViewHolder {
-        @InjectView(R.id.radio_title) TextView title;
+        @InjectView(R.id.radio_title)
+        TextView title;
 
         public ViewHolder(View view) {
             ButterKnife.inject(this, view);

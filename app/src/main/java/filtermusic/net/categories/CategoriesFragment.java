@@ -18,7 +18,8 @@ import filtermusic.net.common.model.Category;
 import filtermusic.net.common.model.Radio;
 
 /**
- * Holds a view flipper where the user can browse between categories and radios corresponding to categories
+ * Holds a view flipper where the user can browse between categories and radios corresponding to
+ * categories
  */
 public class CategoriesFragment extends Fragment implements CategoriesController.DataListener {
 
@@ -41,13 +42,10 @@ public class CategoriesFragment extends Fragment implements CategoriesController
 
     private List<Category> mCategories = new ArrayList<Category>();
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.categories_fragment, container, false);
 
         setupUI(rootView);
@@ -77,7 +75,8 @@ public class CategoriesFragment extends Fragment implements CategoriesController
         mCategoriesList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                List<Radio> radios = mCategoriesController.selectCategory(mCategories.get(position));
+                List<Radio> radios = mCategoriesController.selectCategory(
+                        mCategories.get(position));
                 updateRadioList(radios);
 
                 flipToPage(RADIOS_VIEW_INDEX);
@@ -116,7 +115,8 @@ public class CategoriesFragment extends Fragment implements CategoriesController
 
     private void updateCategories(List<Category> categories) {
         mCategories = categories;
-        CategoriesAdapter categoriesAdapter = new CategoriesAdapter(getActivity(), R.layout.category_item, mCategories);
+        CategoriesAdapter categoriesAdapter = new CategoriesAdapter(getActivity(),
+                R.layout.category_item, mCategories);
         mCategoriesList.setAdapter(categoriesAdapter);
     }
 
@@ -152,6 +152,7 @@ public class CategoriesFragment extends Fragment implements CategoriesController
     /**
      * Update the content displayed based on the page index of the view flipper that is currently
      * visible
+     *
      * @param pageIndex the page index of the view flipper
      */
     private void updateContent(int pageIndex) {

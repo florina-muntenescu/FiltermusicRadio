@@ -19,9 +19,9 @@ import filtermusic.net.common.model.Radio;
  * Retrieves data from the server or DB when needed and notifies the
  * data listeners when data is updated.
  */
-public class CategoriesController implements DataProvider.DataUpdatedListener{
+public class CategoriesController implements DataProvider.DataUpdatedListener {
 
-    public interface DataListener{
+    public interface DataListener {
         void onCategoriesUpdated(List<Category> categories);
     }
 
@@ -40,8 +40,8 @@ public class CategoriesController implements DataProvider.DataUpdatedListener{
     private Category mLastSelectedCategory;
 
 
-    public static CategoriesController getInstance(){
-        if(mInstance == null){
+    public static CategoriesController getInstance() {
+        if (mInstance == null) {
             mInstance = new CategoriesController();
         }
         return mInstance;
@@ -59,7 +59,7 @@ public class CategoriesController implements DataProvider.DataUpdatedListener{
 
     }
 
-    public Radio selectRadio(int radioIndex){
+    public Radio selectRadio(int radioIndex) {
         mLastSelectedRadio = mLastSelectedCategory.getRadioList().get(radioIndex);
         return mLastSelectedRadio;
     }
@@ -72,31 +72,31 @@ public class CategoriesController implements DataProvider.DataUpdatedListener{
         return mLastSelectedCategory;
     }
 
-    private void updateCategories(ImmutableList<Radio> radioImmutableList){
+    private void updateCategories(ImmutableList<Radio> radioImmutableList) {
         mCategories.clear();
         Map<String, List<Radio>> categoryMap = new HashMap<String, List<Radio>>();
-        for(Radio radio : radioImmutableList){
-            if(categoryMap.containsKey(radio.getGenre())){
+        for (Radio radio : radioImmutableList) {
+            if (categoryMap.containsKey(radio.getGenre())) {
                 categoryMap.get(radio.getGenre()).add(radio);
-            }else{
+            } else {
                 List<Radio> radios = new ArrayList<Radio>();
                 radios.add(radio);
                 categoryMap.put(radio.getGenre(), radios);
             }
         }
 
-        for(String key : categoryMap.keySet()){
+        for (String key : categoryMap.keySet()) {
             Category category = new Category(key, categoryMap.get(key));
             mCategories.add(category);
         }
 
-        if(mDataListener != null){
+        if (mDataListener != null) {
             mDataListener.onCategoriesUpdated(mCategories);
         }
     }
 
     private void syncRadios() {
-       mDataProvider.getDataFromServer(this);
+        mDataProvider.getDataFromServer(this);
     }
 
     public List<Category> getCategories() {
