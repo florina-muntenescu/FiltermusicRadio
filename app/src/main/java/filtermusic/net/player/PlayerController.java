@@ -21,7 +21,7 @@ import filtermusic.net.common.model.Radio;
 public class PlayerController {
 
     private StatefulMediaPlayer mMediaPlayer;
-    private Radio mSelectedStream;
+    private Radio mSelectedRadio;
     private MediaPlayerService mService;
     private boolean mBound;
 
@@ -42,6 +42,10 @@ public class PlayerController {
         mContext = FiltermusicApplication.getInstance().getApplicationContext();
         mServiceListeners = new ArrayList<IMediaPlayerServiceListener>();
         bindToService();
+    }
+
+    public Radio getSelectedRadio() {
+        return mSelectedRadio;
     }
 
     /**
@@ -69,8 +73,8 @@ public class PlayerController {
         if (mBound) {
             mMediaPlayer = mService.getMediaPlayer();
         }
-        mSelectedStream = radio;
-        mService.initializePlayer(mSelectedStream);
+        mSelectedRadio = radio;
+        mService.initializePlayer(mSelectedRadio);
     }
 
     public void pause() {
@@ -84,7 +88,7 @@ public class PlayerController {
         if (mMediaPlayer.isStopped()
                 || mMediaPlayer.isCreated()
                 || mMediaPlayer.isEmpty()) {
-            mService.initializePlayer(mSelectedStream);
+            mService.initializePlayer(mSelectedRadio);
         }
 
         //prepared, paused -> resume play
@@ -121,7 +125,7 @@ public class PlayerController {
 //                for (int i = 0; i < CONSTANTS.ALl_STATIONS.length; i++) {
 //                    if (mService.getMediaPlayer().getStreamStation().equals(CONSTANTS.ALl_STATIONS[i])) {
 //                        stationPicker.setSelection(i);
-//                        mSelectedStream = (StreamStation) stationPicker.getItemAtPosition(i);
+//                        mSelectedRadio = (StreamStation) stationPicker.getItemAtPosition(i);
 //                    }
 //
 //                }

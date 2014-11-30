@@ -24,6 +24,8 @@ public class CategoriesFragment extends Fragment implements CategoriesController
 
     private static final String LOG_TAG = CategoriesFragment.class.getSimpleName();
 
+    private static final String LAST_OPENED_VIEW = "last_opened_view";
+
     private static final int PROGRESS_VIEW_INDEX = 0;
     private static final int CATEGORIES_VIEW_INDEX = 1;
     private static final int RADIOS_VIEW_INDEX = 2;
@@ -39,13 +41,9 @@ public class CategoriesFragment extends Fragment implements CategoriesController
 
     private List<Category> mCategories = new ArrayList<Category>();
 
-    private Category mLastOpenedCategory;
-
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setRetainInstance(true);
     }
 
     @Override
@@ -60,6 +58,13 @@ public class CategoriesFragment extends Fragment implements CategoriesController
         if (!mCategoriesController.getCategories().isEmpty()) {
             onCategoriesUpdated(mCategoriesController.getCategories());
         }
+
+        if (savedInstanceState != null && savedInstanceState.containsKey(LAST_OPENED_VIEW)) {
+            int lastOpenedView = savedInstanceState.getInt(LAST_OPENED_VIEW);
+            updateContent(lastOpenedView);
+            flipToPage(lastOpenedView);
+
+        }
         return rootView;
     }
 
@@ -72,11 +77,10 @@ public class CategoriesFragment extends Fragment implements CategoriesController
         mCategoriesList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                flipToPage(RADIOS_VIEW_INDEX);
+                List<Radio> radios = mCategoriesController.selectCategory(mCategories.get(position));
+                updateRadioList(radios);
 
-                mLastOpenedCategory = mCategories.get(position);
-                RadiosAdapter radiosAdapter = new RadiosAdapter(getActivity(), R.layout.radio_list_item, mLastOpenedCategory.getRadioList());
-                mRadiosList.setAdapter(radiosAdapter);
+                flipToPage(RADIOS_VIEW_INDEX);
             }
         });
 
@@ -84,16 +88,26 @@ public class CategoriesFragment extends Fragment implements CategoriesController
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // open the radio details
-                Radio radio = mLastOpenedCategory.getRadioList().get(position);
-                mRadioDetailView.setRadio(radio);
+                Radio radio = mCategoriesController.selectRadio(position);
+                updateRadio(radio);
                 flipToPage(RADIO_DETAIL_VIEW_INDEX);
             }
         });
     }
 
+    private void updateRadioList(List<Radio> radios) {
+        RadiosAdapter radiosAdapter = new RadiosAdapter(getActivity(),
+                R.layout.radio_list_item, radios);
+
+        mRadiosList.setAdapter(radiosAdapter);
+    }
+
+    private void updateRadio(Radio radio) {
+        mRadioDetailView.setRadio(radio);
+    }
+
     @Override
     public void onCategoriesUpdated(List<Category> categories) {
-
         updateCategories(categories);
         if (PROGRESS_VIEW_INDEX == mViewFlipper.getDisplayedChild()) {
             flipToPage(CATEGORIES_VIEW_INDEX);
@@ -106,23 +120,50 @@ public class CategoriesFragment extends Fragment implements CategoriesController
         mCategoriesList.setAdapter(categoriesAdapter);
     }
 
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(LAST_OPENED_VIEW, mViewFlipper.getDisplayedChild());
+    }
+
     private void flipToPage(int pageIndex) {
         mViewFlipper.setDisplayedChild(pageIndex);
     }
 
-    public void onBackPressed(){
+    public void onBackPressed() {
         int currentPage = mViewFlipper.getDisplayedChild();
-        switch (currentPage){
+        int newPage = currentPage;
+        switch (currentPage) {
             case RADIOS_VIEW_INDEX:
-                flipToPage(CATEGORIES_VIEW_INDEX);
+                newPage = CATEGORIES_VIEW_INDEX;
                 break;
             case RADIO_DETAIL_VIEW_INDEX:
-                flipToPage(RADIOS_VIEW_INDEX);
+                newPage = RADIOS_VIEW_INDEX;
                 break;
             case PROGRESS_VIEW_INDEX:
             case CATEGORIES_VIEW_INDEX:
                 getActivity().finish();
         }
+        updateContent(newPage);
+        flipToPage(newPage);
+
     }
 
+    /**
+     * Update the content displayed based on the page index of the view flipper that is currently
+     * visible
+     * @param pageIndex the page index of the view flipper
+     */
+    private void updateContent(int pageIndex) {
+        switch (pageIndex) {
+            case RADIOS_VIEW_INDEX:
+                updateRadioList(mCategoriesController.getLastSelectedCategory().getRadioList());
+                break;
+            case RADIO_DETAIL_VIEW_INDEX:
+                updateRadio(mCategoriesController.getLastSelectedRadio());
+                break;
+            default:
+                updateCategories(mCategoriesController.getCategories());
+        }
+    }
 }

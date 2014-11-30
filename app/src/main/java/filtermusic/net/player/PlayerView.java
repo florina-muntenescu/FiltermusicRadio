@@ -53,6 +53,10 @@ public class PlayerView extends LinearLayout implements IMediaPlayerServiceListe
 
         mRadioImage = ButterKnife.findById(rootView, R.id.radio_image);
         mRadioTitle = ButterKnife.findById(rootView, R.id.radio_title);
+
+        if(mPlayerController.getSelectedRadio() != null){
+            setRadio(mPlayerController.getSelectedRadio());
+        }
     }
 
     public void setRadio(Radio radio) {

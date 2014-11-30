@@ -36,6 +36,9 @@ public class CategoriesController implements DataProvider.DataUpdatedListener{
 
     private DataListener mDataListener;
 
+    private Radio mLastSelectedRadio;
+    private Category mLastSelectedCategory;
+
 
     public static CategoriesController getInstance(){
         if(mInstance == null){
@@ -48,6 +51,25 @@ public class CategoriesController implements DataProvider.DataUpdatedListener{
         mContext = FiltermusicApplication.getInstance().getApplicationContext();
         mDataProvider = new DataProvider(mContext);
         syncRadios();
+    }
+
+    public List<Radio> selectCategory(Category category) {
+        mLastSelectedCategory = category;
+        return mLastSelectedCategory.getRadioList();
+
+    }
+
+    public Radio selectRadio(int radioIndex){
+        mLastSelectedRadio = mLastSelectedCategory.getRadioList().get(radioIndex);
+        return mLastSelectedRadio;
+    }
+
+    public Radio getLastSelectedRadio() {
+        return mLastSelectedRadio;
+    }
+
+    public Category getLastSelectedCategory() {
+        return mLastSelectedCategory;
     }
 
     private void updateCategories(ImmutableList<Radio> radioImmutableList){

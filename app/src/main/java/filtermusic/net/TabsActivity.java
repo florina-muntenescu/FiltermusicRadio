@@ -126,6 +126,11 @@ public class TabsActivity extends ActionBarActivity implements ActionBar.TabList
                         + mAppSectionsPagerAdapter.getItemId(position));
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+    }
+
     /**
      * A {@link android.support.v4.app.FragmentPagerAdapter} that returns a fragment corresponding to one of the primary
      * sections of the app.
