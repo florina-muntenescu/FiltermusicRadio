@@ -35,7 +35,7 @@ public class FiltermusicApi {
     private void setRestAdapterLogLevel(final @NonNull RestAdapter restAdapter) {
         if (BuildConfig.DEBUG) {
             // use a special log level only when in debug mode
-            restAdapter.setLogLevel(DEBUG_DEFAULT_LOG_LEVEL);
+//            restAdapter.setLogLevel(DEBUG_DEFAULT_LOG_LEVEL);
         }
     }
 }

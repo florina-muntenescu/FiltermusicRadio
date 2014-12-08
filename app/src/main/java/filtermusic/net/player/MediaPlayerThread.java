@@ -24,6 +24,8 @@ public class MediaPlayerThread
         OnPreparedListener,
         OnErrorListener {
 
+    private static final String LOG_TAG = MediaPlayerThread.class.getSimpleName();
+
     private StatefulMediaPlayer mMediaPlayer = new StatefulMediaPlayer();
     private IMediaPlayerThreadClient mClient;
     private WifiManager.WifiLock mWifiLock;
@@ -41,7 +43,6 @@ public class MediaPlayerThread
      * @param station The Radio representing the station to play
      */
     public void initializePlayer(final Radio station) {
-        mClient.onInitializePlayerStart();
 
         if(mMediaPlayer.isPlaying()){
             mMediaPlayer.reset();
@@ -57,26 +58,6 @@ public class MediaPlayerThread
 
     }
 
-    /**
-     * Initializes a StatefulMediaPlayer for streaming playback of the provided stream url
-     *
-     * @param streamUrl The URL of the stream to play.
-     */
-    public void initializePlayer(String streamUrl) {
-
-        mMediaPlayer = new StatefulMediaPlayer();
-        mMediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
-        try {
-            mMediaPlayer.setDataSource(streamUrl);
-        } catch (Exception e) {
-            Log.e("MediaPlayerThread", "error setting data source");
-            mMediaPlayer.setState(StatefulMediaPlayer.MPStates.ERROR);
-        }
-        mMediaPlayer.setOnBufferingUpdateListener(this);
-        mMediaPlayer.setOnInfoListener(this);
-        mMediaPlayer.setOnPreparedListener(this);
-        mMediaPlayer.prepareAsync();
-    }
 
     /**
      * Starts the contained StatefulMediaPlayer and foregrounds the service to support
@@ -87,6 +68,8 @@ public class MediaPlayerThread
 
         mMediaPlayer.start();
         mWifiLock.acquire();
+
+        mClient.onPlaying();
     }
 
     /**
@@ -95,6 +78,8 @@ public class MediaPlayerThread
     public void pauseMediaPlayer() {
         Log.d("MediaPlayerThread", "pauseMediaPlayer() called");
         mMediaPlayer.pause();
+
+        mClient.onStop();
         mWifiLock.release();
 
     }
@@ -107,7 +92,12 @@ public class MediaPlayerThread
 //            mMediaPlayer.stop();
 //        }
         mMediaPlayer.release();
-        mWifiLock.release();
+
+        mClient.onStop();
+
+        if(mWifiLock.isHeld()) {
+            mWifiLock.release();
+        }
     }
 
     public void resetMediaPlayer() {
@@ -116,7 +106,7 @@ public class MediaPlayerThread
 
     @Override
     public void onBufferingUpdate(MediaPlayer player, int percent) {
-
+        Log.d(LOG_TAG, "buffering " + percent);
     }
 
     @Override
@@ -133,8 +123,8 @@ public class MediaPlayerThread
 
     @Override
     public void onPrepared(MediaPlayer player) {
-        mClient.onInitializePlayerSuccess();
-
+        startMediaPlayer();
+        Log.d(LOG_TAG, "prepared ");
     }
 
     /**

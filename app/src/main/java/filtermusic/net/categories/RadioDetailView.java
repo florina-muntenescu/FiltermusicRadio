@@ -14,13 +14,14 @@ import com.squareup.picasso.Picasso;
 
 import filtermusic.net.R;
 import filtermusic.net.common.model.Radio;
+import filtermusic.net.player.IMediaPlayerServiceListener;
 import filtermusic.net.player.PlayerController;
 
 /**
  * View holding the details for a radio and that gives the user the possibility of playing that radio
  * and saving the radio as favorite
  */
-public class RadioDetailView extends LinearLayout {
+public class RadioDetailView extends LinearLayout implements IMediaPlayerServiceListener {
 
     private ImageView mRadioImage;
     private TextView mRadioTitle;
@@ -50,6 +51,9 @@ public class RadioDetailView extends LinearLayout {
         initUI(context);
     }
 
+    public boolean isRadioPlaying(@NonNull final Radio radio) {
+        return mRadio == radio;
+    }
 
     private void initUI(final Context context) {
         setOrientation(VERTICAL);
@@ -57,6 +61,7 @@ public class RadioDetailView extends LinearLayout {
         mContext = context;
 
         mPlayerController = PlayerController.getInstance();
+        mPlayerController.addListener(this);
 
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -70,11 +75,28 @@ public class RadioDetailView extends LinearLayout {
         mPlayButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                mPlayerController.radioSelected(mRadio);
+                boolean isPlaying = mPlayerController.isRadioPlaying(mRadio);
+                if (!isPlaying) {
+                    mPlayerController.play(mRadio);
+                } else {
+                    mPlayerController.pause();
+                }
             }
         });
-        mStarButton = (ImageView) rootView.findViewById(R.id.star_button);
 
+
+        mStarButton = (ImageView) rootView.findViewById(R.id.star_button);
+        mStarButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                mRadio.setFavorite(!mRadio.isFavorite());
+
+                int star = mRadio.isFavorite() ? R.drawable.star : R.drawable.star_outline;
+                mStarButton.setImageResource(star);
+
+            }
+        });
     }
 
     public void setRadio(@NonNull Radio radio) {
@@ -91,5 +113,42 @@ public class RadioDetailView extends LinearLayout {
 
         mRadioTitle.setText(mRadio.getTitle());
         mRadioDescription.setText(Html.fromHtml(mRadio.getDescription()));
+
+        int star = mRadio.isFavorite() ? R.drawable.star : R.drawable.star_outline;
+        mStarButton.setImageResource(star);
+
+        if (mPlayerController.isRadioPlaying(mRadio)) {
+            mPlayButton.setImageResource(R.drawable.pause_circle_fill);
+        } else {
+            mPlayButton.setImageResource(R.drawable.play_circle);
+        }
+    }
+
+
+    @Override
+    protected void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+        mPlayerController.removeListener(this);
+    }
+
+    @Override
+    public void onInitializePlayerStart(Radio radio) {
+
+    }
+
+    @Override
+    public void onPlaying(Radio radio) {
+        mPlayButton.setImageResource(R.drawable.pause_circle_fill);
+    }
+
+    @Override
+    public void onError() {
+        mPlayButton.setImageResource(R.drawable.play_circle);
+
+    }
+
+    @Override
+    public void onStop() {
+        mPlayButton.setImageResource(R.drawable.play_circle);
     }
 }

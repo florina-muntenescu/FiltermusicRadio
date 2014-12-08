@@ -14,8 +14,12 @@ public interface IMediaPlayerThreadClient
     /**
      * A callback made by a MediaPlayerThread onto its clients to indicate that a player was successfully initialized.
      */
-    public void onInitializePlayerSuccess();
+    public void onPlaying();
 
+    /**
+     * A callback made by a MediaPlayerThread onto its clients to indicate that a player has stopped.
+     */
+    public void onStop();
     /**
      *  A callback made by a MediaPlayerThread onto its clients to indicate that a player encountered an error.
      */

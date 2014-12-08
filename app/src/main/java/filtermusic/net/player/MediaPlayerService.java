@@ -2,6 +2,7 @@ package filtermusic.net.player;
 
 import android.app.Service;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Binder;
 import android.os.IBinder;
 import android.util.Log;
@@ -98,6 +99,11 @@ public class MediaPlayerService
         mMediaPlayerThread.startMediaPlayer();
     }
 
+    public boolean isPlaying(){
+        StatefulMediaPlayer player = mMediaPlayerThread.getMediaPlayer();
+        return player!= null && player.isStarted();
+    }
+
     /**
      * Pauses playback
      */
@@ -131,17 +137,20 @@ public class MediaPlayerService
 
     @Override
     public void onInitializePlayerStart() {
+        startMediaPlayer();
+    }
+
+    @Override
+    public void onPlaying() {
         for (IMediaPlayerServiceListener client : mListeners) {
-            client.onInitializePlayerStart(mRadio);
+            client.onPlaying(mRadio);
         }
     }
 
     @Override
-    public void onInitializePlayerSuccess() {
-        startMediaPlayer();
-
+    public void onStop() {
         for (IMediaPlayerServiceListener client : mListeners) {
-            client.onInitializePlayerSuccess();
+            client.onStop();
         }
     }
 

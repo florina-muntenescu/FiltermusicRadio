@@ -27,7 +27,6 @@
         <service
             android:name=".player.MediaPlayerService">
         </service>
-
         <receiver android:name=".player.MusicIntentReceiver">
             <intent-filter>
                 <action android:name="android.media.AUDIO_BECOMING_NOISY"/>

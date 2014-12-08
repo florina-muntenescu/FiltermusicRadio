@@ -82,4 +82,30 @@ public class Radio {
     public Date getPlayedDate() {
         return mPlayedDate;
     }
+
+    public void setFavorite(boolean isFavorite) {
+        mIsFavorite = isFavorite;
+    }
+
+    public void setPlayedDate(Date playedDate) {
+        mPlayedDate = playedDate;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        Radio radio = (Radio)o;
+        if(this.getTitle().equals(radio.getTitle())
+                && this.getDescription().equals(radio.getDescription())
+                && this.getCategory().equals(radio.getCategory())
+                && this.getGenre().equals(radio.getGenre())
+                && this.getImageUrl().equals(radio.getImageUrl())){
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
 }

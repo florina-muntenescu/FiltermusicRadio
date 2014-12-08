@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.IBinder;
+import android.support.annotation.NonNull;
 import android.util.Log;
 
 import java.util.ArrayList;
@@ -20,7 +21,11 @@ import filtermusic.net.common.model.Radio;
  */
 public class PlayerController {
 
-    private StatefulMediaPlayer mMediaPlayer;
+    public interface PlayerListener{
+        void onPlay(Radio radio);
+        void onStop();
+    }
+
     private Radio mSelectedRadio;
     private MediaPlayerService mService;
     private boolean mBound;
@@ -44,6 +49,13 @@ public class PlayerController {
         bindToService();
     }
 
+    public boolean isRadioPlaying(@NonNull final Radio radio){
+        if(mSelectedRadio != null && mSelectedRadio.equals(radio)
+                && mService.isPlaying()){
+            return true;
+        }
+        return false;
+    }
     public Radio getSelectedRadio() {
         return mSelectedRadio;
     }
@@ -69,33 +81,23 @@ public class PlayerController {
 
     }
 
-    public void radioSelected(Radio radio) {
-        if (mBound) {
-            mMediaPlayer = mService.getMediaPlayer();
+    public void play(Radio radio){
+        if(mSelectedRadio != null && radio.equals(mSelectedRadio) && !mService.isPlaying()){
+            mService.startMediaPlayer();
+        }else{
+            newRadioSelected(radio);
         }
+    }
+
+    private void newRadioSelected(Radio radio) {
         mSelectedRadio = radio;
         mService.initializePlayer(mSelectedRadio);
     }
 
     public void pause() {
-        if (mMediaPlayer.isStarted()) {
+        if (mService.getMediaPlayer().isStarted()) {
             mService.pauseMediaPlayer();
         }
-    }
-
-    public void play() {
-        // STOPPED, CREATED, EMPTY, -> initialize
-        if (mMediaPlayer.isStopped()
-                || mMediaPlayer.isCreated()
-                || mMediaPlayer.isEmpty()) {
-            mService.initializePlayer(mSelectedRadio);
-        }
-
-        //prepared, paused -> resume play
-        else if (mMediaPlayer.isPrepared() || mMediaPlayer.isPaused()) {
-            mService.startMediaPlayer();
-        }
-
     }
 
     /**
@@ -115,22 +117,6 @@ public class PlayerController {
             for(IMediaPlayerServiceListener listener : mServiceListeners){
                 mService.addListener(listener);
             }
-//            //Set play/pause button to reflect state of the service's contained player
-//            final ToggleButton playPauseButton = (ToggleButton) findViewById(R.id.playPauseButton);
-//            playPauseButton.setChecked(mService.getMediaPlayer().isPlaying());
-//
-//            //Set station Picker to show currently set stream station
-//            Spinner stationPicker = (Spinner) findViewById(R.id.stationPicker);
-//            if (mService.getMediaPlayer() != null && mService.getMediaPlayer().getStreamStation() != null) {
-//                for (int i = 0; i < CONSTANTS.ALl_STATIONS.length; i++) {
-//                    if (mService.getMediaPlayer().getStreamStation().equals(CONSTANTS.ALl_STATIONS[i])) {
-//                        stationPicker.setSelection(i);
-//                        mSelectedRadio = (StreamStation) stationPicker.getItemAtPosition(i);
-//                    }
-//
-//                }
-//            }
-
         }
 
         @Override

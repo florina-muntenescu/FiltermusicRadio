@@ -25,6 +25,7 @@ public class PlayerView extends LinearLayout implements IMediaPlayerServiceListe
 
     private ImageView mRadioImage;
     private TextView mRadioTitle;
+    private ImageView mPlayPauseButton;
 
 
     public PlayerView(Context context) {
@@ -53,6 +54,7 @@ public class PlayerView extends LinearLayout implements IMediaPlayerServiceListe
 
         mRadioImage = ButterKnife.findById(rootView, R.id.radio_image);
         mRadioTitle = ButterKnife.findById(rootView, R.id.radio_title);
+        mPlayPauseButton = ButterKnife.findById(rootView, R.id.play_pause_button);
 
         if(mPlayerController.getSelectedRadio() != null){
             setRadio(mPlayerController.getSelectedRadio());
@@ -69,17 +71,30 @@ public class PlayerView extends LinearLayout implements IMediaPlayerServiceListe
     }
 
     @Override
-    public void onInitializePlayerStart(Radio radio) {
-        setRadio(radio);
+    protected void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+        mPlayerController.removeListener(this);
     }
 
     @Override
-    public void onInitializePlayerSuccess() {
+    public void onInitializePlayerStart(Radio radio) {
+        setRadio(radio);
 
+    }
+
+    @Override
+    public void onPlaying(Radio radio) {
+        setRadio(radio);
+        mPlayPauseButton.setImageResource(R.drawable.pause);
     }
 
     @Override
     public void onError() {
 
+    }
+
+    @Override
+    public void onStop() {
+        mPlayPauseButton.setImageResource(R.drawable.play_arrow);
     }
 }
