@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">FiltermusicRadio</string>
+    <string name="app_name">filtermusic</string>
 
     <string name="error_unable_to_retrieve">Looks like we\'re unable to get the list of radios.</string>
 

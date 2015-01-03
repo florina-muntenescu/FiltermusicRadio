@@ -23,7 +23,7 @@ import retrofit.mime.TypedOutput;
  * Given an InputStream representation of a feed, it returns a List of entries,
  * where each list element represents a single entry (radio station) in the XML feed.
  */
-/*package*/ class FeedXmlParser implements Converter {
+public class FeedXmlParser implements Converter {
     // We don't use namespaces
     private static final String ns = null;
 

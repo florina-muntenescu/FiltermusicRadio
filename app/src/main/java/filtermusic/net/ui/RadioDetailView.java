@@ -1,4 +1,4 @@
-package filtermusic.net.categories;
+package filtermusic.net.ui;
 
 import android.content.Context;
 import android.support.annotation.NonNull;

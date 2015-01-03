@@ -1,0 +1,2549 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<rss version="2.0" xml:base="http://filtermusic.net/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"> 
+<channel> 
+<title>filtermusic</title>
+ <description>Internet radio stations</description>
+ <link>http://filtermusic.net/</link>
+ <atom:link rel="self" href="http://filtermusic.net/ios-feed" />
+ <item> <title>DI.fm - House</title>
+ <serverURL>http://pub8.di.fm:80/di_house</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/difm-house-music.jpg" length="21593" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>Silky, sexy, deep house music, straight from the heart of New York City!</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Insomnia fm</title>
+ <serverURL>http://208.43.9.96:8092</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/insomniafm_0.jpg" length="36246" type="image/jpeg" />
+ <musicgenre>Techno / Trance</musicgenre>
+ <description>All sorts of electronic music as well as laid back tunes.&amp;nbsp;</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Soma fm cliqhop</title>
+ <serverURL>http://xstream1.somafm.com:8062</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/cliqhop.jpg" length="42336" type="image/jpeg" />
+ <musicgenre>Electronica / Industrial</musicgenre>
+ <description>Blips&amp;#39;n&amp;#39;beeps backed mostly w/beats. Intelligent Dance Music.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Bass drive</title>
+ <serverURL>http://amsterdam2.shouthost.com.streams.bassdrive.com:8000</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/bassdrive.jpg" length="37665" type="image/jpeg" />
+ <musicgenre>Breaks / DrumnBass</musicgenre>
+ <description>BassDrive is a 24/7 drum and bass radio station, featuring live shows with guest DJs, as well as broadcasts from venues all over the world which represent the best of drum and bass &amp;amp; jungle music. BassDrive is also a new record label, promoting US drum and bass. BassDrive internet radio, offers superior sound quality, in comparison to other online drum n bass and techno radio stations.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>MTH-house</title>
+ <serverURL>http://house.mthn.net:8500</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/mth-house.jpg" length="18961" type="image/jpeg" />
+ <musicgenre>Hits / Mainstream</musicgenre>
+ <description>mth.House is an Internet community which deals with all aspects of house music. The focus of the community radio is to offer to it&amp;#39;s listeners 24/7, the finest house music.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>One Love Hip Hop</title>
+ <serverURL>http://listen.radionomy.com/one-love-hip-hop-radio</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/onelovehiphopradio.jpg" length="29872" type="image/jpeg" />
+ <musicgenre>HipHop / RnB</musicgenre>
+ <description>Created exclusively to promote Real Hip Hop music, beeing influenced from the Underground, Jazz, Soul, West, East, Colombia &amp;amp; Latin Rap.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Raggakings</title>
+ <serverURL>http://war.str3am.com:7970</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/raggakings.jpg" length="23755" type="image/jpeg" />
+ <musicgenre>Reggae / Dub / Dancehall</musicgenre>
+ <description>Raggakings: reggae and dancehall radio.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Generation Soul Disco Funk</title>
+ <serverURL>http://streaming304.radionomy.com:80/GENERATIONSOULDISCOFUNK-MP3</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/GenerationDiscoFunk-radio.jpg" length="15874" type="image/jpeg" />
+ <musicgenre>Funk / Soul / Disco</musicgenre>
+ <description>Soul, disco, funk Paris style!</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>SomaFM Beat Blender</title>
+ <serverURL>http://xstream1.somafm.com:8388</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/blender.gif" length="18804" type="image/gif" />
+ <musicgenre>Lounge Grooves</musicgenre>
+ <description>A late night blend of deep-house and downtempo chill.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>SomaFM Space station</title>
+ <serverURL>http://xstream1.somafm.com:8000</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/somafm-space-station.jpg" length="26715" type="image/jpeg" />
+ <musicgenre>Downtempo / Ambient</musicgenre>
+ <description>Tune in, turn on, space out. Spaced-out ambient and mid-tempo electronica.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Oxigen</title>
+ <serverURL>http://188.132.238.2:4530</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Oxigen-radio.jpg" length="22575" type="image/jpeg" />
+ <musicgenre>Various / Independent</musicgenre>
+ <description>Launched in 1996, Radio Oxi-Gen, broadcasts soul, jazz, funk, trip-hop, latin, bossa nova, dub, deep house, hip-hop, indie, folk and ethnic with a downtempo twist.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Fantasy radio</title>
+ <serverURL>http://italo.live-streams.nl:80/live</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/fantasy-radio.jpg" length="13760" type="image/jpeg" />
+ <musicgenre>60s / 70s / 80s / 90s</musicgenre>
+ <description>Italo Disco website, that streams live Italo Disco Music.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Concertzender</title>
+ <serverURL>http://streams.greenhost.nl:8080/concertzenderlive</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/concertzender.jpg" length="18829" type="image/jpeg" />
+ <musicgenre>Eclectic</musicgenre>
+ <description>Authentic jazz music with rare historical recordings from the Netherlands.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Swiss Classic</title>
+ <serverURL>http://stream.srg-ssr.ch/m/rsc_de/mp3_128</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radioswissclassic.jpg" length="25434" type="image/jpeg" />
+ <musicgenre>Classical</musicgenre>
+ <description>Radio Swiss Classic: a non-stop classical music station.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Sonicuniverse</title>
+ <serverURL>http://xstream1.somafm.com:8600</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/sonicuniverse.jpg" length="16441" type="image/jpeg" />
+ <musicgenre>Jazz</musicgenre>
+ <description>NuJazz meets avant-garde EuroJazz. Transcending the world of jazz with experimental takes on tradition.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Soma FM Indie Pop Rocks</title>
+ <serverURL>http://xstream1.somafm.com:8090</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/SomaFMIndiePopRocks.jpg" length="4884" type="image/jpeg" />
+ <musicgenre>Rock / Metal</musicgenre>
+ <description>New and favorite classic indie pop tracks.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>TeenTaal</title>
+ <serverURL>http://www.radioteentaal.com:8000</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radioteentaal.jpg" length="17386" type="image/jpeg" />
+ <musicgenre>International / Ethnic</musicgenre>
+ <description>TeenTaal radio: Live Radio from Paris, with 100% Indian &amp;amp; Bollywood Music Hits!</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>La Roka</title>
+ <serverURL>http://listen.radionomy.com/la-roka-estacion</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/La_Roka_radio.jpg" length="16154" type="image/jpeg" />
+ <musicgenre>Latin / Salsa / Tango</musicgenre>
+ <description>Salsa, Merengue &amp;amp; Latin pop, from Cali - Colombia.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Deep house lounge</title>
+ <serverURL>http://198.15.94.34:8006/stream</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/deephouselounge_radio.jpg" length="15555" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>Deep house lounge, is a deep house music radio station, with live streams and an interactive website.</description>
+ <category>Ultravox</category>
+</item>
+ <item> <title>FriskyRadio</title>
+ <serverURL>http://stream2.friskyradio.com/frisky_mp3_hi</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/friskyradio.jpg" length="18600" type="image/jpeg" />
+ <musicgenre>Techno / Trance</musicgenre>
+ <description>The largest collection of exclusive, human-curated electronic music DJ mixes, from the world&amp;rsquo;s top DJs. FRISKY connects you to the music and the DJs that you love.</description>
+ <category>Ultravox</category>
+</item>
+ <item> <title>Sweat Lodge</title>
+ <serverURL>http://78.47.60.141:8000/stream</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Sweat-Lodge-radio.jpg" length="15259" type="image/jpeg" />
+ <musicgenre>Electronica / Industrial</musicgenre>
+ <description>Electronic radio station broadcasting live from Berlin!</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Futuredrumz</title>
+ <serverURL>http://91.121.134.105:8466</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/futuredrumz-radio.jpg" length="18412" type="image/jpeg" />
+ <musicgenre>Breaks / DrumnBass</musicgenre>
+ <description>All styles of underground music: drum &amp;amp; bass, jungle, old skool.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Skglobe</title>
+ <serverURL>http://mixedemotions.skglobe.net:80</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/skglobe_radio.jpg" length="15200" type="image/jpeg" />
+ <musicgenre>Hits / Mainstream</musicgenre>
+ <description>Music selections that will bring to you a good feeling,&amp;nbsp; in the morning hours at home or at the office. Essential tracks to make you feel the vibe. Carefully selected dance music to keep on grooving for the rest of your night.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>WeFunk</title>
+ <serverURL>http://shoutcast.wefunk.cdn.digvm.com:81/wefunk64.mp3</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/wefunk_radio.jpg" length="42138" type="image/jpeg" />
+ <musicgenre>HipHop / RnB</musicgenre>
+ <description>Professor Groove and DJ Static team up and break it down to the deep funk, underground hip-hop, and rare grooves on the weekly show WEFUNK.</description>
+ <category>Ultravox</category>
+</item>
+ <item> <title>Partyvibe reggae</title>
+ <serverURL>http://www.partyvibe.com:8000</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/partyvibe_reggae_radio.jpg" length="35248" type="image/jpeg" />
+ <musicgenre>Reggae / Dub / Dancehall</musicgenre>
+ <description>The choice for reggae lovers, from contemporary to classic reggae, dancehall, mixes, dubplates, mixtapes and soundclash.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>DanceGroove</title>
+ <serverURL>http://server3.digital-webstream.de:12160</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/dancegroove.jpg" length="20540" type="image/jpeg" />
+ <musicgenre>Funk / Soul / Disco</musicgenre>
+ <description>Soul &amp;amp; funk from the 80&amp;#39;s.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Soma FM Groove Salad</title>
+ <serverURL>http://uwstream1.somafm.com:80</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/groovesalad_radio.jpg" length="19735" type="image/jpeg" />
+ <musicgenre>Lounge Grooves</musicgenre>
+ <description>A nicely chilled plate of ambient beats and grooves.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Schizoid</title>
+ <serverURL>http://88.198.48.36:8000/chill</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/schizoid_1.jpg" length="27493" type="image/jpeg" />
+ <musicgenre>Downtempo / Ambient</musicgenre>
+ <description>Schizoid radio: fly through the mystic soundscapes of nature in an altered state of reality.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Toast!Radio</title>
+ <serverURL>http://listen.radionomy.com/toastradio</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/toastradio.jpg" length="19894" type="image/jpeg" />
+ <musicgenre>Various / Independent</musicgenre>
+ <description>Toast!Radio: a digital melting pot of old and new talented musicians. They&amp;#39;ll confess to you the molecular secrets of their handmade sweet cream to put directly on your toasted headphones.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Underground 80s</title>
+ <serverURL>http://xstream1.somafm.com:8880</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Underground-80s.jpg" length="13508" type="image/jpeg" />
+ <musicgenre>60s / 70s / 80s / 90s</musicgenre>
+ <description>Early 80s UK synthpop and a bit of new wave. By SomaFM.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>The Morning Coffee Mix</title>
+ <serverURL>http://sc9.shoutcaststreaming.us:9520</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/themorningcoffeemix_logo.jpg" length="22765" type="image/jpeg" />
+ <musicgenre>Eclectic</musicgenre>
+ <description>Imagine hearing jazz favorites, from Louis Armstrong &amp;amp; Diana Krall, vocal legends like Frank Sinatra &amp;amp; Michael Buble, as well as Top 40 favorites like Katy Perry &amp;amp; Jason Mraz , &amp;amp; light rock hits from Chicago. &amp;nbsp;All in one place. ... That&amp;#39;s the best mix! The Morning Coffee Mix&amp;trade;.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Radio4</title>
+ <serverURL>http://icecast.omroep.nl:80/radio4-bb-mp3</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/avro.jpg" length="21727" type="image/jpeg" />
+ <musicgenre>Classical</musicgenre>
+ <description>Classical and baroque music radio from the Netherlands.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Radio Swiss Jazz</title>
+ <serverURL>http://streaming.swisstxt.ch/m/rsj/mp3_128</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radioswissjazz.jpg" length="25069" type="image/jpeg" />
+ <musicgenre>Jazz</musicgenre>
+ <description>Radio Swiss Jazz: is a premier radio station for Jazz, blues &amp;amp; soul music.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Radio Paradise</title>
+ <serverURL>http://stream-eu1.radioparadise.com:80/mp3-128</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radioparadise.jpg" length="5154" type="image/jpeg" />
+ <musicgenre>Rock / Metal</musicgenre>
+ <description>Radio Paradise is an old fashioned radio station, playing songs from the 21st century.&amp;nbsp;</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Mantra</title>
+ <serverURL>http://air.radiolla.com/mantra128k</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/mantra-radio.jpg" length="10785" type="image/jpeg" />
+ <musicgenre>International / Ethnic</musicgenre>
+ <description>An eclectic mix of beats, layers &amp;amp; chants with transcendental ethnic and spiritual sounds.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Corazon Latino</title>
+ <serverURL>http://listen1.myradio24.com:9000/8054</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/corazonlatinoradio.jpg" length="18943" type="image/jpeg" />
+ <musicgenre>Latin / Salsa / Tango</musicgenre>
+ <description>Radio station Corazon Latino - the first&amp;nbsp;radio station in Russia, playing an aether of the best Spanish-speaking music. Broadcasting, the most popular Spanish-speaking singers. Each song is a hit. Spanish-speaking music is presented by the best actors from Spain, Mexico, Venezuela, Miami and Argentina.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Deepershades</title>
+ <serverURL>http://178.18.26.132:8000/DeeperShadesRadioNetwork</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/deepershades-radio.png" length="4225" type="image/png" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>&amp;#39;Deeper Shades of House&amp;#39; radio show.</description>
+ <category>Ultravox</category>
+</item>
+ <item> <title>Schizoid progressive</title>
+ <serverURL>http://78.46.73.237:8000/prog</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/schizoid.jpg" length="49854" type="image/jpeg" />
+ <musicgenre>Techno / Trance</musicgenre>
+ <description>Schizoid radio offers you Groovy beats, pumping basslines &amp;amp; pure ecstasy from India.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>DI.fm Electronica</title>
+ <serverURL>http://pub3.di.fm:80/di_oldschoolelectronica</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/di.fm__1.jpg" length="18791" type="image/jpeg" />
+ <musicgenre>Electronica / Industrial</musicgenre>
+ <description>DI.fm Electronica: In this channel one can find the finest selection of oldschool electronica.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Dirtybass</title>
+ <serverURL>http://5.9.94.144:8000/dirtybass.mp3</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/dirtybassradio.jpg" length="28256" type="image/jpeg" />
+ <musicgenre>Breaks / DrumnBass</musicgenre>
+ <description>Dirtybass is mostly different flavours of drum and bass</description>
+ <category>Ultravox</category>
+</item>
+ <item> <title>PurelectroRadio</title>
+ <serverURL>http://str0.creacast.com:838</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/purelectroradio.jpg" length="14280" type="image/jpeg" />
+ <musicgenre>Hits / Mainstream</musicgenre>
+ <description>Purelectroradio: Radio Pure, the trendy radio station from Paris, offers its listeners 100% electro music.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Culture FM</title>
+ <serverURL>http://culturefm.dyndns.org:9020</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/culture-fm-radio.jpg" length="12286" type="image/jpeg" />
+ <musicgenre>HipHop / RnB</musicgenre>
+ <description>Underground, selected playlist from Germany.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>SKY.fm Roots</title>
+ <serverURL>http://pub10am.radiotunes.com:80/radiotunes_rootsreggae</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/sky.fm-roots-reggae.jpg" length="18576" type="image/jpeg" />
+ <musicgenre>Reggae / Dub / Dancehall</musicgenre>
+ <description>SKY.fm Roots Reggae, features the best of classic and modern roots reggaemusic. You can expect to hear nuff tunes from Culture, Bob Marley and the Wailers, Burning Spear, the Wailing Souls and &amp;quot;all of the standards&amp;quot; of the seventies and early eighties.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Soulconnexion</title>
+ <serverURL>http://199.180.72.2:9104</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/soulconnexion.jpg" length="24542" type="image/jpeg" />
+ <musicgenre>Funk / Soul / Disco</musicgenre>
+ <description>A cool selection of soul, funk raregroove &amp;amp; RnB choons.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Purasonica</title>
+ <serverURL>http://stream3.ibizasonica.com:8750</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/pura-sonica-radio.jpg" length="13181" type="image/jpeg" />
+ <musicgenre>Lounge Grooves</musicgenre>
+ <description>Downtempo beach sounds with roots in soul, funk and jazz, trip hop and cutting edge lounge. The very best of chillout tunes, from deep house to electronica.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Chromanova</title>
+ <serverURL>http://85.25.86.69:8100</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/chromanova.jpg" length="18995" type="image/jpeg" />
+ <musicgenre>Downtempo / Ambient</musicgenre>
+ <description>Chromanova&amp;#39;s ambient stream: chillout, ambient livesets and mixes made in Berlin.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Lanoche del hombrelobo</title>
+ <serverURL>http://lobocast.org.es:8000/stream</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/lanochedelhombrelobo_radio.jpg" length="15857" type="image/jpeg" />
+ <musicgenre>Various / Independent</musicgenre>
+ <description>La noche del hombre lobo is a non-profit radio dedicated to the dissemination of creative commons licensed music, jazz, chill, funk, dub and electronic music .. 24 hours a day continuously.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>M2 Analog channel</title>
+ <serverURL>http://antarctica.m2stream.fr:80/m280-128.mp3</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/m2-radio.jpg" length="18158" type="image/jpeg" />
+ <musicgenre>60s / 70s / 80s / 90s</musicgenre>
+ <description>M2 Analog: Hits only from the 80&amp;#39;s!</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Soma FM Boot Liquor</title>
+ <serverURL>http://xstream1.somafm.com:7000</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/BootLiquor.jpg" length="6662" type="image/jpeg" />
+ <musicgenre>Eclectic</musicgenre>
+ <description>Boot Liquor from soma fm radio Americana roots music for Cowhands, Cowpokes and Cowtippers.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Venice classic</title>
+ <serverURL>http://109.123.116.202:8020</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/veniceclassicradio.jpg" length="12147" type="image/jpeg" />
+ <musicgenre>Classical</musicgenre>
+ <description>The radio for the classical music lovers. Venice Classic Radio offers a daily repertoire of early, baroque, chamber, symphony and opera music.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>TSF 89.9</title>
+ <serverURL>http://tsfjazz.ice.infomaniak.ch:80/tsfjazz-high.mp3</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/tsfjazz.jpg" length="9869" type="image/jpeg" />
+ <musicgenre>Jazz</musicgenre>
+ <description>TSF: The best jazz radio station in Paris.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Morow</title>
+ <serverURL>http://stream.morow.com:8080/morow_med</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/morowradio.jpg" length="5809" type="image/jpeg" />
+ <musicgenre>Rock / Metal</musicgenre>
+ <description>Morow is a webradio based on Paris, France, dedicated to progressive rock. It&amp;#39;s progressive rock is streaming, 24/7 without any advertisement or commenting. Music, just pure music!</description>
+ <category>Ultravox</category>
+</item>
+ <item> <title>Byblos</title>
+ <serverURL>http://byblosnights.com:443</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/byblosradio.jpg" length="27948" type="image/jpeg" />
+ <musicgenre>International / Ethnic</musicgenre>
+ <description>Byblos radio plays Mediterranean music: Lebanese, Greek, Turkish, Armenian, Arabic, Hebrew and Persian.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>SKY.fm Guitar</title>
+ <serverURL>http://pub10am.radiotunes.com:80/radiotunes_guitar</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/sky.fm-flamenco.jpg" length="18888" type="image/jpeg" />
+ <musicgenre>Latin / Salsa / Tango</musicgenre>
+ <description>The Classical Guitar channel, brings to you quality tunes that are played by the traditional classical guitar. Also known as the spanish guitar, the classical guitar is usually played without amplifier.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>House-radio</title>
+ <serverURL>http://stream.house-radio.com:80</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/house-radio.jpg" length="12001" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>House-radio is a non-profit radio project, specialized in &amp;quot;underground&amp;quot; House-music from 1986, up to now. House-radio, serves a nonstop stream of music tracks, live shows and DJ-mixsets.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Partyvibe techno</title>
+ <serverURL>http://www.partyvibe.com:8004</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/partyvibe-main.jpg" length="40741" type="image/jpeg" />
+ <musicgenre>Techno / Trance</musicgenre>
+ <description>Partyvibe radio, focuses on electronic dance music, including Trance, Psytrance, Techno, Acid Techno, Drum and Bass and other electronic music genres.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Shouted fm Electro</title>
+ <serverURL>http://electro.mthn.net:8400</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/shoutedfm_0.jpg" length="12649" type="image/jpeg" />
+ <musicgenre>Electronica / Industrial</musicgenre>
+ <description>Shouted fm Electro, plays mostly drum &amp;#39;n&amp;#39; bass &amp;amp; chillout music.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Dubstep</title>
+ <serverURL>http://stream.dubstep.fm:8000</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/dubstep.jpg" length="14726" type="image/jpeg" />
+ <musicgenre>Breaks / DrumnBass</musicgenre>
+ <description>Mostly drum and bass &amp;amp; dubstep</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Frequence3</title>
+ <serverURL>http://ice.stream.frequence3.net/frequence3-128.mp3</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/frequence3.jpg" length="12651" type="image/jpeg" />
+ <musicgenre>Hits / Mainstream</musicgenre>
+ <description>Frequence3: The French Hit webradio from Paris!</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Radio 61</title>
+ <serverURL>http://92.50.161.146:80</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Radio61-radio.jpg" length="16664" type="image/jpeg" />
+ <musicgenre>HipHop / RnB</musicgenre>
+ <description>World hip-hop from Russia</description>
+ <category>Ultravox</category>
+</item>
+ <item> <title>Iway</title>
+ <serverURL>http://72.55.137.82:8000</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/iwayhigh.jpg" length="22963" type="image/jpeg" />
+ <musicgenre>Reggae / Dub / Dancehall</musicgenre>
+ <description>Iwayhigh:&amp;nbsp;high dub, electro chill sounds.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Funklopedick Radio</title>
+ <serverURL>http://listen.radionomy.com/bmc</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/Funklopedik-Radio.jpg" length="16730" type="image/jpeg" />
+ <musicgenre>Funk / Soul / Disco</musicgenre>
+ <description>Programme includes&amp;nbsp;afro-american music, rare funk gems, disco gems, smooth-jazzy tracks, and Washington D.C Go-Go releases.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>MotionFM Lounge</title>
+ <serverURL>http://ice.motionfm.com:80/motionthree_free</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/motionfm_0.jpg" length="21257" type="image/jpeg" />
+ <musicgenre>Lounge Grooves</musicgenre>
+ <description>Lounge Motion or Motion three is serving you a delicious cocktail of relaxed grooves, organic rhythms, laid back lounge and world jazz vibes.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Majorursa</title>
+ <serverURL>http://178.19.116.3:60037</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/majorursa_0.jpg" length="5163" type="image/jpeg" />
+ <musicgenre>Downtempo / Ambient</musicgenre>
+ <description>Majorursa radio: ambient music in a wider sense, varying from drone/space to ambientjazz.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>BigBeat</title>
+ <serverURL>http://87.117.228.94:8036</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/bigbeat.jpg" length="19239" type="image/jpeg" />
+ <musicgenre>Various / Independent</musicgenre>
+ <description>Bigbeat:&amp;nbsp;breakbeat, nu&amp;#39;skool, dub, electronic, trip-Hop from Switzerland.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>80s Forever</title>
+ <serverURL>http://192.240.97.67:8085</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/80sforeverradio350x196.jpg" length="27625" type="image/jpeg" />
+ <musicgenre>60s / 70s / 80s / 90s</musicgenre>
+ <description>From New Wave, SynthPop, Alternative, Indie, New Romantic, Manchester Rave and 80s College-Rock. You will also hear rare songs and long forgotten 12&amp;quot; or 7&amp;quot; single versions.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Med Web</title>
+ <serverURL>http://5.63.145.173:7050</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radiomedweb_logo.jpg" length="18313" type="image/jpeg" />
+ <musicgenre>Eclectic</musicgenre>
+ <description>radio medweb plays eclectic showcase music from Italy.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Streaming Soundtracks</title>
+ <serverURL>http://hi1.streamingsoundtracks.com:8000</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/streamingsoundtracks.jpg" length="18162" type="image/jpeg" />
+ <musicgenre>Classical</musicgenre>
+ <description>Broadcasts movie scores, TV themes, anime and game music.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Swissradio Jazz</title>
+ <serverURL>http://stream2138.init7.net</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/swissradio.jpg" length="16307" type="image/jpeg" />
+ <musicgenre>Jazz</musicgenre>
+ <description>Swissradio: Jazz &amp;amp; swing music, from Switzerland.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Krautrock-world</title>
+ <serverURL>http://94.249.254.14:7592</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/krautrock-world_0.jpg" length="6187" type="image/jpeg" />
+ <musicgenre>Rock / Metal</musicgenre>
+ <description>Psychedelic and Progressive rock music from Germany.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Psalmsradio</title>
+ <serverURL>http://viadj.viastreaming.net:7084</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/psalmsradio.jpg" length="24969" type="image/jpeg" />
+ <musicgenre>International / Ethnic</musicgenre>
+ <description>Psalmsradio: world No-1 Malayalam Christian Devotional e-radio Broadcasting 24/7. Amen.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Sky.fm Salsa</title>
+ <serverURL>http://pub10am.radiotunes.com:80/radiotunes_salsa</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/SKY.fm-salsa.jpg" length="16401" type="image/jpeg" />
+ <musicgenre>Latin / Salsa / Tango</musicgenre>
+ <description>In this radio channel you can listen to the Salsa sounds from its pioneering days, (Ismael Miranda, Cheo Feliciano, Pete &amp;quot;El Conde&amp;quot; Rodriguez) till the sizzlers of today. These Salsa tunes will blow you away!</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Chillkyway</title>
+ <serverURL>http://78.47.229.156:8000</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Chillkyway-radio.jpg" length="28817" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>The chilled side of electronic music, from downtempo and lounge, to deephouse and dubtechno.</description>
+ <category>Ultravox</category>
+</item>
+ <item> <title>Deepindub</title>
+ <serverURL>http://50.7.158.42:8199</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Deepindub-radio.jpg" length="12673" type="image/jpeg" />
+ <musicgenre>Techno / Trance</musicgenre>
+ <description>Main styles of this radio are deep house, dubtechno, ambient dub, tech house &amp;amp; deep techno.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>EMP</title>
+ <serverURL>http://emp.cx:8000</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/emp_radio_logo_0.jpg" length="16016" type="image/jpeg" />
+ <musicgenre>Electronica / Industrial</musicgenre>
+ <description>Originally started by a group of redditors,&amp;nbsp;emp.cx, features live DJs and recorded sets, spanning all genres of electronic music. This channel is consisted of people ranging from amateur DJ&amp;#39;s to professional ones, music producers and released artists.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Drumandbasslounge</title>
+ <serverURL>http://198.15.94.34:8012/stream</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/drumandbasslounge-radio.jpg" length="12967" type="image/jpeg" />
+ <musicgenre>Breaks / DrumnBass</musicgenre>
+ <description>Non stop drum and bass music.</description>
+ <category>Ultravox</category>
+</item>
+ <item> <title>EyeOnYou</title>
+ <serverURL>http://listen.radionomy.com/eyeonyou</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/EyeOnYou_radio.jpg" length="12340" type="image/jpeg" />
+ <musicgenre>Hits / Mainstream</musicgenre>
+ <description>Broadcasting from Athens-Greece, all the latest radio and dance hits.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Dirty South</title>
+ <serverURL>http://174.37.110.72:8010</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/dirtysouthradioonline.jpg" length="35047" type="image/jpeg" />
+ <musicgenre>HipHop / RnB</musicgenre>
+ <description>DirtySouthRadioOnline, is the crunkest online internet radio, playing the best in dirty south hits, complete with live shows.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Blast FM</title>
+ <serverURL>http://72.55.137.82:8002</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/blastfm.jpg" length="27192" type="image/jpeg" />
+ <musicgenre>Reggae / Dub / Dancehall</musicgenre>
+ <description>Enjoy a mix of dub, downtempo, funky breaks, cold sweated house and some minimal at night. They call it Honky Dub.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Soulandfunkmusic</title>
+ <serverURL>http://server3.digital-webstream.de:12160</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/soulandfunkmusic.jpg" length="21066" type="image/jpeg" />
+ <musicgenre>Funk / Soul / Disco</musicgenre>
+ <description>RnB, soul, boogie and funk music radio database.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Illinois street lounge</title>
+ <serverURL>http://xstream1.somafm.com:8500</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/illstreet.jpg" length="30273" type="image/jpeg" />
+ <musicgenre>Lounge Grooves</musicgenre>
+ <description>Classic bachelor pad, playful exotica and vintage music</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Ocean radio chilled</title>
+ <serverURL>http://174.142.192.209:9040</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Ocean-radio-chilled.jpg" length="22226" type="image/jpeg" />
+ <musicgenre>Downtempo / Ambient</musicgenre>
+ <description>Ultra downtempo, smooth, sultry, chillout music.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>New normal music</title>
+ <serverURL>http://music.newnormalmusic.com:80</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/newnormalmusic_logo.jpg" length="23657" type="image/jpeg" />
+ <musicgenre>Various / Independent</musicgenre>
+ <description>New normal music is an indie radio station from Los Angeles, California playing&amp;nbsp;today&amp;#39;s hottest indie tracks 24/7.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Gem Radio New Wave</title>
+ <serverURL>http://77.67.106.13:10407</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Gem-Radio-New-Wave.jpg" length="15418" type="image/jpeg" />
+ <musicgenre>60s / 70s / 80s / 90s</musicgenre>
+ <description>70s and 80s New Wave, Synthpop, Electric, and mainstream punk.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>SKY.fm New Age</title>
+ <serverURL>http://pub10am.radiotunes.com:80/radiotunes_newage</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/skyfmnewage.jpg" length="6386" type="image/jpeg" />
+ <musicgenre>Eclectic</musicgenre>
+ <description>New Age from Sky.fm: soothing sounds of new age music. This channel genre can definitely speak for itself. Perfect for relaxing, working, or meditating.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Chinese music world</title>
+ <serverURL>http://radio.chinesemusicworld.com:8202</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/chinesemusicworld.jpg" length="26413" type="image/jpeg" />
+ <musicgenre>Classical</musicgenre>
+ <description>Chinesemusicworld: classical, folk music from China.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Jazzradio</title>
+ <serverURL>http://broadcast.infomaniak.net:80/jazzradio-high.mp3</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/jazzradio.jpg" length="13126" type="image/jpeg" />
+ <musicgenre>Jazz</musicgenre>
+ <description>Jazzradio: jazz and soul music, from France.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Spoon</title>
+ <serverURL>http://spoonradio.ice.infomaniak.ch:80/spoonradio-hd</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/spoon-radio.jpg" length="41029" type="image/jpeg" />
+ <musicgenre>Rock / Metal</musicgenre>
+ <description>Spoon Radio plays all kinds of rock classic rock, 80s &amp;amp; 90s rock as well as today&amp;#39;s greatest rock bands.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Aewen</title>
+ <serverURL>http://37.72.100.39:8001/stream</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/aewen-radio.jpg" length="27629" type="image/jpeg" />
+ <musicgenre>International / Ethnic</musicgenre>
+ <description>K-pop (Korean Music) is available all day, every day. From pop to indie and underground, K-pop plays music from any notable Korean artists including covers and remixes, and songs by Korean artists outside of Korea.</description>
+ <category>Ultravox</category>
+</item>
+ <item> <title>Malpais</title>
+ <serverURL>http://5.39.82.140:8006</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radiomalpais.jpg" length="21282" type="image/jpeg" />
+ <musicgenre>Latin / Salsa / Tango</musicgenre>
+ <description>Traditional music from Costa Rica.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Ritmo</title>
+ <serverURL>http://82.145.43.92:8274/stream</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Ritmo-radio.jpg" length="41255" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>Soulful deep house music.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Sonic</title>
+ <serverURL>http://live.chicago.cdn.sonic.fm:8000/live128</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Sonic-radio.jpg" length="35168" type="image/jpeg" />
+ <musicgenre>Techno / Trance</musicgenre>
+ <description>All styles of electronic music: house, techno, progressive tuning from Argentina.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Nectarine</title>
+ <serverURL>http://scenemusic.unfy.org:80/necta</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/nectarine-radio.jpg" length="28355" type="image/jpeg" />
+ <musicgenre>Electronica / Industrial</musicgenre>
+ <description>A tribute to all the great computer &amp;amp; demoscene artists.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Partyvibe Old Skool</title>
+ <serverURL>http://www.partyvibe.com:8006</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/partyvibe.jpg" length="39781" type="image/jpeg" />
+ <musicgenre>Breaks / DrumnBass</musicgenre>
+ <description>Party Vibe Radio old skool stream.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Discofoxhimmel</title>
+ <serverURL>http://s14.derstream24.de:8000</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/filtermusic.jpg" length="48432" type="image/jpeg" />
+ <musicgenre>Hits / Mainstream</musicgenre>
+ <description>Discofoxhimmel: Discofox, Dance, Pop Schlager, 80&amp;#39;s &amp;amp; European Hits, from Germany.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Base FM</title>
+ <serverURL>http://130.216.72.72:8002</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/basefm.jpg" length="21936" type="image/jpeg" />
+ <musicgenre>HipHop / RnB</musicgenre>
+ <description>BASE FM is a collective of DJs, who began broadcasting in May 2004, straight outta Ponsonby / Grey Lynn, aiming to bring underground music to the community. No commercial bullshit hustle, no fake machismo muscle.The show schedule reads like a who&amp;#39;s who of Auckland&amp;#39;s hip hop, reggae, funk and soul scene, and the station&amp;#39;s run by a crew that cares.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>People Powered</title>
+ <serverURL>http://198.154.106.102:8423</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Jah-People-Powered-radio.jpg" length="26621" type="image/jpeg" />
+ <musicgenre>Reggae / Dub / Dancehall</musicgenre>
+ <description>People Powered Radio - 24/7 conscious dub, roots, reggae and FWD vibrations streaming to Jah Nation.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>4mysoul</title>
+ <serverURL>http://83.170.104.71:3377/Live</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/4mysoul-radio.jpg" length="31915" type="image/jpeg" />
+ <musicgenre>Funk / Soul / Disco</musicgenre>
+ <description>Soul, funk, acid jazz and soulful pop.</description>
+ <category>Ultravox</category>
+</item>
+ <item> <title>SomaFm Secret agent</title>
+ <serverURL>http://xstream1.somafm.com:8002</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/SecretAgentBox.jpg" length="26077" type="image/jpeg" />
+ <musicgenre>Lounge Grooves</musicgenre>
+ <description>The soundtrack for a stylish, mysterious, dangerous life.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Chill out zone</title>
+ <serverURL>http://eu1.fastcast4u.com:3078/320k</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/chilloutzone_350x196.jpg" length="112536" type="image/jpeg" />
+ <musicgenre>Downtempo / Ambient</musicgenre>
+ <description>Enjoy the silence!</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Flippinradio</title>
+ <serverURL>http://94.100.18.210:8022</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/flippinradio_logo.jpg" length="13212" type="image/jpeg" />
+ <musicgenre>Various / Independent</musicgenre>
+ <description>Flippinradio: is an indie webradio with the most up-to-date airplay on the net. Live broadcasts and guests dj sets. Indie,Dubstep,Electronica,Nudisco,Psy,Ambient,Idm etc.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>35x80</title>
+ <serverURL>http://listen.radionomy.com/35x80</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/35x80-radio.jpg" length="36106" type="image/jpeg" />
+ <musicgenre>60s / 70s / 80s / 90s</musicgenre>
+ <description>Streaming the greatest hits of the 80&amp;#39;s, as well as the one-hit wonders and some rare remixes and extended versions.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Time Capsule</title>
+ <serverURL>http://149.255.33.71:8060</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/timecapsuleaudionetwork_radio.jpg" length="69710" type="image/jpeg" />
+ <musicgenre>Eclectic</musicgenre>
+ <description>Celebrating the Sounds and Music of the 20th Century. 100 Years in a Week! The Time Capsule Audio Network spreads the music on the Century over 7 days. Monday-1900-1939, Tuesday 1940-49, Wednesday 1950-59, Thursday 1960-69, Friday 1970-79, Saturday 1980-89, Sunday 1990-99.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Sky.fm Classical</title>
+ <serverURL>http://pub10am.radiotunes.com:80/radiotunes_classical</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/sky.fm_classical.jpg" length="19733" type="image/jpeg" />
+ <musicgenre>Classical</musicgenre>
+ <description>The Mostly Classical channel is Sky.fm&amp;#39; main relaxation channel, also branded as MostlyClassical.com. The idea behind it is to be able to relax to the channel without too many moody interruptions. You&amp;#39;ll find an excellent compilation of classical composers, as well as various contemporary works. Typical composers for this channel include Bach, Mozart, Beethoven, Telemann, and Vivaldi. Sit back and enjoy the relaxing sounds of Mostly Classical at SKY.fm.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>The Source</title>
+ <serverURL>http://sc3.mystreamserver.com:8002</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/thesourcesmoothjazzandmoreradio.jpg" length="16837" type="image/jpeg" />
+ <musicgenre>Jazz</musicgenre>
+ <description>A wide variety of international Smooth Jazz, Contemporary, Easy Listening, Fusion, Instrumental and Vocal Jazz, featuring both major and independent label artists. Playing 24/7, &amp;quot;The Best Smooth Jazz on the Internet&amp;quot;</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Vinyle Collection</title>
+ <serverURL>http://listen.radionomy.com/vinyle-rock</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/vinylecollection_radio.jpg" length="22936" type="image/jpeg" />
+ <musicgenre>Rock / Metal</musicgenre>
+ <description>Relive the atmosphere with Vinyl Rock of the &amp;#39;60s with the &amp;#39;70s rock music, rock and roll, garage and psychedelic.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Indoradio</title>
+ <serverURL>http://server-06.stream-server.nl:8622</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Indoradio.jpg" length="25231" type="image/jpeg" />
+ <musicgenre>International / Ethnic</musicgenre>
+ <description>Keroncong, Maluku, Jazz, Funk, Soul, Easy Listening &amp;amp; Pop Indonesian music, from the Netherlands.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Dogglounge</title>
+ <serverURL>http://dogglounge.com:8000</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/dogglounge.jpg" length="30782" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>Welcome to the internationally renowned Dogglounge internet radio station. Listen to deep &amp;amp; soulful house music, from Minneapolis, USA.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Discoid</title>
+ <serverURL>http://discoid.fr:8080/radio.mp3</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/discoid.jpg" length="54001" type="image/jpeg" />
+ <musicgenre>Techno / Trance</musicgenre>
+ <description>Hardcore, makina, techno, trance and other styles from France</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Cue</title>
+ <serverURL>http://cue-radio.dyndns.org:8000</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/cue_radio.jpg" length="10264" type="image/jpeg" />
+ <musicgenre>Electronica / Industrial</musicgenre>
+ <description>Rare underground electronic non-stop music from France. Electro, synth-pop, minimal wave, post-punk, EBM, industrial, ambient, experimental, minimal techno. Special themed shows every night. No commercials. No dj commenting. Just music!</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Dnbheaven</title>
+ <serverURL>http://dnbheaven.com:8000</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/dnbheaven.jpg" length="26507" type="image/jpeg" />
+ <musicgenre>Breaks / DrumnBass</musicgenre>
+ <description>Jungle, drum &amp;amp; bass music for your mind, body and soul.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>TechnoFM Live</title>
+ <serverURL>http://stream.techno.fm/live.mp3</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/techno.fm_.jpg" length="19386" type="image/jpeg" />
+ <musicgenre>Hits / Mainstream</musicgenre>
+ <description>Offering more styles and live performances than any other station, this is where you&amp;#39;ll always hear the best featured live shows.Originally known as the Tunes Channel under Deric&amp;#39;s reign, it quickly earned its name of Live Channel in the Doc Funk era. The Live Channel has paved the way and set the standards for all the other channels on Techno.FM.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Mobb Report</title>
+ <serverURL>http://majestic.wavestreamer.com:7638/1</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Mobb-Report-radio.jpg" length="15517" type="image/jpeg" />
+ <musicgenre>HipHop / RnB</musicgenre>
+ <description>Bay Area rap music, turf tested &amp;amp; block approved. Everything from Mobb Music, Hyphy, Introspective and gangster rap music from Oakland, San Francisco, Richmond, Vallejo, Pittsburg etc.</description>
+ <category>Ultravox</category>
+</item>
+ <item> <title>Rastamusic</title>
+ <serverURL>http://ais.rastamusic.com:80/rastamusic.mp3</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/rastamusic.jpg" length="19237" type="image/jpeg" />
+ <musicgenre>Reggae / Dub / Dancehall</musicgenre>
+ <description>Rastamusic.com is a 24/7 reggae radio (roots and culture).</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Stomp</title>
+ <serverURL>http://38.96.148.253:7020</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/stomp-radio.jpg" length="48053" type="image/jpeg" />
+ <musicgenre>Funk / Soul / Disco</musicgenre>
+ <description>Playing quality Soul Funk &amp;amp; Jazz with a unique sound.</description>
+ <category>Ultravox</category>
+</item>
+ <item> <title>Boozik Lounge</title>
+ <serverURL>http://listen.radionomy.com/boozik-lounge</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Boozik-radios.jpg" length="13991" type="image/jpeg" />
+ <musicgenre>Lounge Grooves</musicgenre>
+ <description>Lounge beats with latin &amp;amp; french influences.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Chromaradio</title>
+ <serverURL>http://176.9.22.6:8006</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/Chromaradio.jpg" length="22152" type="image/jpeg" />
+ <musicgenre>Downtempo / Ambient</musicgenre>
+ <description>Chromaradio, is a New age stream, from Greece.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Intersonik</title>
+ <serverURL>http://208.94.241.26:8000/stream</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/intersonik_radio_logo.jpg" length="16715" type="image/jpeg" />
+ <musicgenre>Various / Independent</musicgenre>
+ <description>Intersonik.net radio is an independent radio active experiment&amp;nbsp;freestyle (jazz, funk, soul, disco, hip hop, afrobeat, reggae, house).&amp;nbsp;The Radio station broadcasts and promotes Independent Artists and labels.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Ramradio</title>
+ <serverURL>http://uk1-vn.mixstream.net:9866</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/ramradio.jpg" length="22650" type="image/jpeg" />
+ <musicgenre>60s / 70s / 80s / 90s</musicgenre>
+ <description>The 80&amp;#39;s back on your radio.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Beatles radio</title>
+ <serverURL>http://www.beatlesradio.com:9999</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/beatlesradio.jpg" length="2676" type="image/jpeg" />
+ <musicgenre>Eclectic</musicgenre>
+ <description>Beatles Radio.com, Solos, Covers, Fab Four, News &amp;amp; More.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Radioart</title>
+ <serverURL>http://live.radioart.biz/f16.mp3</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/radio_art.jpg" length="12974" type="image/jpeg" />
+ <musicgenre>Classical</musicgenre>
+ <description>The very best classical music with many picks from classical guitar, piano legends and contemporary masters in wonderful music combinations activating the body and mind.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Radioart</title>
+ <serverURL>http://live.radioart.biz/f10.mp3</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/radioart-logo.jpg" length="12974" type="image/jpeg" />
+ <musicgenre>Jazz</musicgenre>
+ <description>Offers the most sublime selection of smooth jazz, from classic to contemporary, improving the mood and leaves the listener revitalized.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>You FM Rock</title>
+ <serverURL>http://gffstream.ic.llnwd.net/stream/gffstream_mp3_w77a</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/youfm.jpg" length="4659" type="image/jpeg" />
+ <musicgenre>Rock / Metal</musicgenre>
+ <description>Rock channel from Germany.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Subarashii</title>
+ <serverURL>http://listen.radionomy.com/subarashii</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/subarashiiradio.jpg" length="18091" type="image/jpeg" />
+ <musicgenre>International / Ethnic</musicgenre>
+ <description>Radio dedicated to Japanese anime music (mangas and some video games).</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>DeepLink</title>
+ <serverURL>http://213.136.71.3:9990</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/deeplink_radio.jpg" length="11319" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>This underground radio channel, plays mostly new and old house music DJ mixes, with a soulful, deep, jazzy, funky, latin, afro, tech house flavor. (a few jingles included)</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>The trip</title>
+ <serverURL>http://xstream1.somafm.com:2504</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/thetrip-somafm.jpg" length="14019" type="image/jpeg" />
+ <musicgenre>Techno / Trance</musicgenre>
+ <description>Progressive house / trance. Tip top tunes, from SomaFM.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Nightline</title>
+ <serverURL>http://radio.nightline-radio.de:8000</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/nightline.jpg" length="14424" type="image/jpeg" />
+ <musicgenre>Electronica / Industrial</musicgenre>
+ <description>Nightline-radio:&amp;nbsp;drum&amp;#39;n&amp;#39;bass, house &amp;amp; ambient sounds from Germany.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Renegade</title>
+ <serverURL>http://198.154.106.102:8567/stream</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/renegaderadio.jpg" length="33453" type="image/jpeg" />
+ <musicgenre>Breaks / DrumnBass</musicgenre>
+ <description>Renegaderadio is an underground net station playing all genres from 1988 to present day, mostly oldskool and underground vibes.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Letsgozik</title>
+ <serverURL>http://stream.letsgozik.org:8000/letsgozik</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/Letsgozik_radio_logo_0.jpg" length="14612" type="image/jpeg" />
+ <musicgenre>Hits / Mainstream</musicgenre>
+ <description>Let&amp;#39;s Go Zik is an electronic music radio, where DJs have daily shows where they mix happy hardcore, trance, techno, hardcore, dance, club, hardstyle sounds.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>1.FM Jamz</title>
+ <serverURL>http://sc1b-sjc.1.fm:8052</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/1.FM-Jamz-radio.jpg" length="19675" type="image/jpeg" />
+ <musicgenre>HipHop / RnB</musicgenre>
+ <description>1.FM Jamz is urban radio&amp;rsquo;s most interactive and diverse network, blazing non-stop Hip-Hop and R&amp;amp;B.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Joint</title>
+ <serverURL>http://radio.jointil.net:9998</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/joint-radio.jpg" length="34821" type="image/jpeg" />
+ <musicgenre>Reggae / Dub / Dancehall</musicgenre>
+ <description>Playing mostly reggae and hiphop songs.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Classic Soul Network</title>
+ <serverURL>http://streaming.streamonomy.com/classicsoulnetwork</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/The-Classic-Soul-Network-radio.jpg" length="17447" type="image/jpeg" />
+ <musicgenre>Funk / Soul / Disco</musicgenre>
+ <description>A station dedicated to the roots of soul music. Playing classic soul from the 50&amp;#39;s, 60&amp;#39;s, 70&amp;#39;s and the 80&amp;#39;s.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Suburbs of Goa</title>
+ <serverURL>http://xstream1.somafm.com:8850</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/suburbsofgoa.jpg" length="45497" type="image/jpeg" />
+ <musicgenre>Lounge Grooves</musicgenre>
+ <description>Suburbs of Goa: desi-influenced Asian world beats, from SomaFM.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Zen for you</title>
+ <serverURL>http://listen.radionomy.com/zen-for-you</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Zen-for-you-radio.jpg" length="14013" type="image/jpeg" />
+ <musicgenre>Downtempo / Ambient</musicgenre>
+ <description>Ambient and lounge music. Just close your eyes and enjoy, then you reach the Zen state of mind.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Wave</title>
+ <serverURL>http://live.waveradio.gr:8000/listen</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/wave-radio.jpg" length="22708" type="image/jpeg" />
+ <musicgenre>Various / Independent</musicgenre>
+ <description>Indietronica, indie pop, italo disco, post-rock, nu electro etc</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Xwave </title>
+ <serverURL>http://xwave.sytes.net:8500</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/xwave-radio.jpg" length="23092" type="image/jpeg" />
+ <musicgenre>60s / 70s / 80s / 90s</musicgenre>
+ <description>Diverse 80&amp;#39;s and early 90&amp;#39;s hits plus all forgotten hits.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Ascolta</title>
+ <serverURL>http://87.117.228.94:8030</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Ascolta-radio.jpg" length="12119" type="image/jpeg" />
+ <musicgenre>Eclectic</musicgenre>
+ <description>Quality Italian songs from the 60&amp;#39;s &amp;amp; the 70&amp;#39;s: Bobby Solo, Rita Pavone, Gianni Morandi, Domenico Modugno, Mina, Adriano Celentano, Nicola Di Bari and many, many more ..</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Radio Classique</title>
+ <serverURL>http://str20.creacast.com:443</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radioclassique.jpg" length="28154" type="image/jpeg" />
+ <musicgenre>Classical</musicgenre>
+ <description>Radioclassique: classical music from France.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Smoothjazz</title>
+ <serverURL>http://sj128.hnux.com</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/smoothjazz.com_.jpg" length="33547" type="image/jpeg" />
+ <musicgenre>Jazz</musicgenre>
+ <description>Smooth Jazz broadcasts from the Monterey Peninsula in Northern California.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title> Shouted FM</title>
+ <serverURL>http://alternative.mthn.net:8700</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/ShoutedFM.jpg" length="5234" type="image/jpeg" />
+ <musicgenre>Rock / Metal</musicgenre>
+ <description>Alternative, rock, punk, metal &amp;amp; grunge music.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Audiogrooves Soul</title>
+ <serverURL>http://stream.audiogrooves.net:9004</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/audiogrooves.jpg" length="18893" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>Produced and mixed by eDeep, this radio channel brings up to you the best selection of deep house, always with a soulful feeling.</description>
+ <category>Ultravox</category>
+</item>
+ <item> <title>Afterhours fm</title>
+ <serverURL>http://fr4.ah.fm:443</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/afterhoursfm.jpg" length="19954" type="image/jpeg" />
+ <musicgenre>Techno / Trance</musicgenre>
+ <description>Afterhours fm Progressive house music, from Canada.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>SomaFM Doomed</title>
+ <serverURL>http://xstream1.somafm.com:8300</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/somafm-doomed.jpg" length="12010" type="image/jpeg" />
+ <musicgenre>Electronica / Industrial</musicgenre>
+ <description>Soma fm Doomed: dark industrial-inspired music for tortured souls</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Jungletrain</title>
+ <serverURL>http://stream5.jungletrain.net:8000</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/jungletrain.jpg" length="18625" type="image/jpeg" />
+ <musicgenre>Breaks / DrumnBass</musicgenre>
+ <description>24/7 jungle / drum &amp;amp; bass internet radio station in the Benelux with live djs from across Europe and America.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Cotentin</title>
+ <serverURL>http://listen.radionomy.com/cotentin-webradio</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/cotentin-radio.jpg" length="7116" type="image/jpeg" />
+ <musicgenre>Hits / Mainstream</musicgenre>
+ <description>The best electro, dance and club&amp;nbsp;music.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Radiolla</title>
+ <serverURL>http://air.radiolla.com/equalyza128k</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radiolla_radio_logo.jpg" length="15499" type="image/jpeg" />
+ <musicgenre>HipHop / RnB</musicgenre>
+ <description>Free international internet-radio from Ukraine, for those who prefer leftfield triphop &amp;amp; dubwise.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Burningrockers</title>
+ <serverURL>http://80.246.63.96:8010</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/burningrockers.jpg" length="31605" type="image/jpeg" />
+ <musicgenre>Reggae / Dub / Dancehall</musicgenre>
+ <description>Burningrockers: oldschool reggae and lovers rock, classic soul, smooth R&amp;#39;n&amp;#39;B and soca tunes.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Boogie Star</title>
+ <serverURL>http://voltagelegend.ice.infomaniak.ch/b-and-b-radio-boogie-star.mp3</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Boogie-Star-radio.jpg" length="30383" type="image/jpeg" />
+ <musicgenre>Funk / Soul / Disco</musicgenre>
+ <description>Exclusive funk and groove music from the 80&amp;#39;s.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>DI.fm Lounge</title>
+ <serverURL>http://pub7.di.fm:80/di_lounge</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/di_fm_logo.gif" length="25421" type="image/gif" />
+ <musicgenre>Lounge Grooves</musicgenre>
+ <description>Lounge music direct from New York city. Sit back and enjoy the lounge grooves!</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Horyzont</title>
+ <serverURL>http://radiohoryzont.net:9050</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Horyzont-radio.jpg" length="15236" type="image/jpeg" />
+ <musicgenre>Downtempo / Ambient</musicgenre>
+ <description>Smooth mix of chillout, ambient, downtempo, lounge,&amp;nbsp;nu jazz and trip-hop.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>radio.audiomastering.lt</title>
+ <serverURL>http://radio.audiomastering.lt:8000/live</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/audiomastering_0.jpg" length="5201" type="image/jpeg" />
+ <musicgenre>Various / Independent</musicgenre>
+ <description>Audiomastering: electronic music radio with live broadcasts from events from Lithuania.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Disconet</title>
+ <serverURL>http://174.36.1.92:8508/Live</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Radio-Disconet.jpg" length="10899" type="image/jpeg" />
+ <musicgenre>60s / 70s / 80s / 90s</musicgenre>
+ <description>70&amp;#39;s &amp;amp; 80&amp;#39;s disco, 90&amp;#39;s dance hits from the Billboard Dance Club Play charts, together with exclusive remixes.</description>
+ <category>Ultravox</category>
+</item>
+ <item> <title>Radio mi amigo</title>
+ <serverURL>http://server-07.stream-server.nl:8200</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radiomiamigo.jpg" length="7540" type="image/jpeg" />
+ <musicgenre>Eclectic</musicgenre>
+ <description>Radio mi amigo: oldies but goldies from the Netherlands.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Ancientfm</title>
+ <serverURL>http://5.152.208.98:8058</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/ancientfm.jpg" length="15591" type="image/jpeg" />
+ <musicgenre>Classical</musicgenre>
+ <description>Ancient fm plays early classical music; medieval and renaissance music. Ancient fm is a volunteer project funded by individual patrons.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>La Grosse Radio Rock</title>
+ <serverURL>http://hd1.lagrosseradio.info:8500</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/lagrosseradio.jpg" length="12290" type="image/jpeg" />
+ <musicgenre>Rock / Metal</musicgenre>
+ <description>La Grosse Radio Rock Alternative. Indie pop hit legends from Paris.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Wherestheculture</title>
+ <serverURL>http://s5.wherestheculture.fm:9006</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/wherestheculture.jpg" length="20059" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>This is a house music radio station, streaming 24/7 quality house music, with live djs from all around the world, playing deep, soulful, funky, disco, garage, vocal, club and uplifting beats.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Schizoid psytrance</title>
+ <serverURL>http://78.46.73.237:8000/schizoid</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/schizoid_0.jpg" length="49854" type="image/jpeg" />
+ <musicgenre>Techno / Trance</musicgenre>
+ <description>Escape reality, tune in, and take a surreal trip. Broadcasting from India.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Hazzard of Darkness</title>
+ <serverURL>http://188.138.74.113:7777</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Hazzard-of-Darkness.jpg" length="31501" type="image/jpeg" />
+ <musicgenre>Electronica / Industrial</musicgenre>
+ <description>Your favorite Gothic, Dark Wave, EBM, Electro, Industrial, Metal, Rock, German Rock, medieval, folk and punk music.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Dubsteplive</title>
+ <serverURL>http://radio.dnbtv.com:8004</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/dubsteplive_logo.jpg" length="15252" type="image/jpeg" />
+ <musicgenre>Breaks / DrumnBass</musicgenre>
+ <description>
+	Dubsteplive: dubstep and drum&amp;#39;n&amp;#39;bass music
+</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>XLtrax</title>
+ <serverURL>http://174.142.215.249:8840</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/xltrax_radio_logo.jpg" length="12135" type="image/jpeg" />
+ <musicgenre>Hits / Mainstream</musicgenre>
+ <description>Based in Canada, the XLTRAX main station, plays high energy club electro house music, streaming for free! Catch DJ mixes and shows all week long! Tune in to the hottest internet music.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Blackbeats</title>
+ <serverURL>http://stream2.blackbeats.fm:80</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/blackbeats.jpg" length="61122" type="image/jpeg" />
+ <musicgenre>HipHop / RnB</musicgenre>
+ <description>Fresh Hip Hop Radio: Black music party songs, Hip Hop Music and Partybreaks, Soul, RnB etc.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Jah Live Radio</title>
+ <serverURL>http://50.22.211.228:8008</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Jah-Live-Radio.jpg" length="14861" type="image/jpeg" />
+ <musicgenre>Reggae / Dub / Dancehall</musicgenre>
+ <description>Blazing the hottest &amp;amp; latest in dancehall, reggae &amp;amp; roots.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Soul Movement</title>
+ <serverURL>http://stream.soulmovement.nl:8001</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/soulmovement.jpg" length="33528" type="image/jpeg" />
+ <musicgenre>Funk / Soul / Disco</musicgenre>
+ <description>Soul and R&amp;#39;n&amp;#39;B music from the better part of the 90&amp;#39;s but also featuring artists from the 80&amp;#39;s.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>SomaFM Lush</title>
+ <serverURL>http://xstream1.somafm.com:8800</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/lush120_0.jpg" length="42683" type="image/jpeg" />
+ <musicgenre>Lounge Grooves</musicgenre>
+ <description>Lush: Sensuous and mellow vocals, mostly female, with an electronic influence.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>SomaFM Drone zone</title>
+ <serverURL>http://uwstream2.somafm.com:80</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/Drone-Zone.jpg" length="19558" type="image/jpeg" />
+ <musicgenre>Downtempo / Ambient</musicgenre>
+ <description>Served best chilled, safe with most medications. Atmospheric textures with minimal beats.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>DFM RTV INT</title>
+ <serverURL>http://stereo.dfm.nu</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/DFM-RTV-INT.jpg" length="20905" type="image/jpeg" />
+ <musicgenre>Various / Independent</musicgenre>
+ <description>DFM is an independent webradio multimedia station with international artists.&amp;nbsp;</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Vintage Legend</title>
+ <serverURL>http://voltagelegend.ice.infomaniak.ch/b-and-b-radio-vintage-legend.mp3</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/vintage-legend-350-193.jpg" length="31976" type="image/jpeg" />
+ <musicgenre>60s / 70s / 80s / 90s</musicgenre>
+ <description>Exclusive funk &amp;amp; dance music from the 80&amp;#39;s &amp;amp; the 90&amp;#39;s.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Pierrot FM</title>
+ <serverURL>http://68.168.103.13:8321</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Radyo-Sensation.jpg" length="11033" type="image/jpeg" />
+ <musicgenre>Eclectic</musicgenre>
+ <description>Pierrot FM is a contemporary christian radio station. Streaming the good words to the world, no embarrassing lyrics. Always the best christian hits.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Minnesota Public Radio</title>
+ <serverURL>http://classicalstream1.publicradio.org:80</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/minnesota.jpg" length="25266" type="image/jpeg" />
+ <musicgenre>Classical</musicgenre>
+ <description>Minnesota Public Radio: classical channel.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Depressive</title>
+ <serverURL>http://184.154.10.83:8390</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/Depressive_radio_logo.jpg" length="31784" type="image/jpeg" />
+ <musicgenre>Rock / Metal</musicgenre>
+ <description>Metal, no publicity and no long and tedious interruption by the DJ, only music.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Depth radio</title>
+ <serverURL>http://depth.sytes.net:8300</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/depth-radio.jpg" length="7464" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>The intersection of deep &amp;amp; tech house.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Seance</title>
+ <serverURL>http://stardust.wavestreamer.com:4930</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/seance-radio.jpg" length="11434" type="image/jpeg" />
+ <musicgenre>Techno / Trance</musicgenre>
+ <description>Streaming underground Techno music, featuring mixes from some the genres most respected names.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Electro Music</title>
+ <serverURL>http://srv3.electro-music.com:8050</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/electro-music_logo.jpg" length="15386" type="image/jpeg" />
+ <musicgenre>Electronica / Industrial</musicgenre>
+ <description>Artistic and spiritual music expression that crosses many genres. electro-music.com is a place where artists and musicians meet, collaborate, sell our wares, and nurture their audiences. There they create their own critical mass, so they can develop music on its own terms. electro-music is new music; still undefined; happening all around our planet.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>DI.fm Breaks</title>
+ <serverURL>http://pub3.di.fm:80/di_breaks</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/di-fm-breaks.jpg" length="18791" type="image/jpeg" />
+ <musicgenre>Breaks / DrumnBass</musicgenre>
+ <description>DI.fm Breaks:&amp;nbsp;a fine assortment of Trance and House breaks</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Raw FM</title>
+ <serverURL>http://stream.rawfm.com.au:8000</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/rawfm.jpg" length="14700" type="image/jpeg" />
+ <musicgenre>Hits / Mainstream</musicgenre>
+ <description>Their slogan &amp;lsquo;Dance Floor Radio&amp;rsquo; sums up what they do perfectly: if it&amp;rsquo;s on the dance floor, it&amp;rsquo;s on RAW. In fact, they &amp;rsquo;re pretty confident that Nobody Plays More New Dance Music, and they pride themselves on playing the most cutting edge selection of House, Indie Dance, Electro, Trance and Urban in Australia.What&amp;rsquo;s more, you&amp;rsquo;ll hardly hear any talk when you tune in!</description>
+ <category>Ultravox</category>
+</item>
+ <item> <title>VirtualDJ</title>
+ <serverURL>http://virtualdjradio.com:7000</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/VirtualDJ_radio.jpg" length="18439" type="image/jpeg" />
+ <musicgenre>HipHop / RnB</musicgenre>
+ <description>The Grind channel: Urban and street style hip-hop and R&amp;amp;B.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Reggae Trade</title>
+ <serverURL>http://sc-reggae-128kmp3.1.fm</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radioreggaetrade.jpg" length="27492" type="image/jpeg" />
+ <musicgenre>Reggae / Dub / Dancehall</musicgenre>
+ <description>Classic and contemporary reggae music.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Starpoint</title>
+ <serverURL>http://217.28.20.20:8084/stream.mp3</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/starpointradio.jpg" length="12152" type="image/jpeg" />
+ <musicgenre>Funk / Soul / Disco</musicgenre>
+ <description>Real alternative soul music from London, UK.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>ABC Lounge</title>
+ <serverURL>http://listen.radionomy.com/abc-lounge</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/abc-lounge.jpg" length="19975" type="image/jpeg" />
+ <musicgenre>Lounge Grooves</musicgenre>
+ <description>Laze in the sun of the French Riviera.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>DI.fm Ambient</title>
+ <serverURL>http://pub8.di.fm:80/di_ambient</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/di.fm__0.jpg" length="18791" type="image/jpeg" />
+ <musicgenre>Downtempo / Ambient</musicgenre>
+ <description>DI.fm Ambient: ambient, psy, chillout. Check out their trippy flavors!</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Plusfm</title>
+ <serverURL>http://37.59.122.23:80</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Plusfm-radio.jpg" length="15684" type="image/jpeg" />
+ <musicgenre>Various / Independent</musicgenre>
+ <description>If you are receptive with all forms of electronic sonorities, you will like the eclectic &amp;quot;mixture&amp;quot; of plusfm. Electro, deep-house, breakbeat, pop, funk, downtempo, lounge, trip-hop, acid-jazz tracks, familiar, a little less known or to discover...</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Stad den Haag</title>
+ <serverURL>http://94.228.133.3:80</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radiostaddenhaag.jpg" length="31061" type="image/jpeg" />
+ <musicgenre>60s / 70s / 80s / 90s</musicgenre>
+ <description>Radiostaddenhaag: Italo disco, hi-nrg and 80&amp;#39;s music from the Netherlands.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Xitradio</title>
+ <serverURL>http://listen.radionomy.com/xitradio</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/xitradio.jpg" length="19375" type="image/jpeg" />
+ <musicgenre>Eclectic</musicgenre>
+ <description>Xitradio: a radio broadcast which appeared from a private collection of the original vinyl years!</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Stephansdom</title>
+ <serverURL>http://81.223.232.160:8000/live128</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radiostephansdom.jpg" length="12291" type="image/jpeg" />
+ <musicgenre>Classical</musicgenre>
+ <description>Stephansdom: Vienna style classical music.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>3WK Underground</title>
+ <serverURL>http://sc2.3wk.com/3wk-u-mp3-hi</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/3wkundergroundradio.jpg" length="5806" type="image/jpeg" />
+ <musicgenre>Rock / Metal</musicgenre>
+ <description>3WK Undergroundradio, Indie rock and alternative channel from St. Louis, USA Listen for newly added tracks from: ANIMAL COLLECTIVE, ARCTIC MONKEYS, BASSNECTAR, BIRDS &amp;amp; BATTERIES, BLAKROC, BRAZOS, CHIEF, COLD CAVE, COMPUTER PERFECTION, CURTIS HARVEY, DEVENDRA BANHART, DODOS, DRINK UP BUTTERCUP etc.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Deep Mix Moscow</title>
+ <serverURL>http://109.201.135.64:8128</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/Deep-Mix-Moscow.jpg" length="21142" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>Russian style, deep house music.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>DI.fm Progressive</title>
+ <serverURL>http://pub7.di.fm:80/di_progressive</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/di_fm_logo.jpg" length="21533" type="image/jpeg" />
+ <musicgenre>Techno / Trance</musicgenre>
+ <description>Progressive - D I G I T A L L Y - I M P O R T E D - house, techno, and trance beats that will blow your mind!</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Youppala</title>
+ <serverURL>http://149.255.33.72:8012</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/youpala.jpg" length="19093" type="image/jpeg" />
+ <musicgenre>Electronica / Industrial</musicgenre>
+ <description>Minimal techno and chill electronica from France</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Drums</title>
+ <serverURL>http://radio.drums.ro:8000</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/drums_logo.jpg" length="17993" type="image/jpeg" />
+ <musicgenre>Breaks / DrumnBass</musicgenre>
+ <description>Drums.ro: fresh drumandbass, jungle, breakbeat, dubstep, grime music from Romania.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Fresh92.7</title>
+ <serverURL>http://livestream.freshfm.com.au:8004</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/fresh927.jpg" length="14353" type="image/jpeg" />
+ <musicgenre>Hits / Mainstream</musicgenre>
+ <description>Fresh. It&amp;rsquo;s the Rhythm of the Night. It&amp;rsquo;s 100% Pure Love. It&amp;rsquo;ll Rock Your Body and it&amp;rsquo;s sure to Boom-Boom Shake-Shake Your Room.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Hot 108 Jamz</title>
+ <serverURL>http://sc.hot108.com:4020</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/hot108-jamz.jpg" length="32773" type="image/jpeg" />
+ <musicgenre>HipHop / RnB</musicgenre>
+ <description>Hot 108 Jamz is a rap and hip hop radio.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>BigUp Radio</title>
+ <serverURL>http://radio.bigupradio.com:8000</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/bigupradio.jpg" length="18151" type="image/jpeg" />
+ <musicgenre>Reggae / Dub / Dancehall</musicgenre>
+ <description>Bigupradio: 24/7 dancehall, reggae music and culture.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Gong</title>
+ <serverURL>http://listen.radionomy.com/gong</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/gong_radio_0.jpg" length="28894" type="image/jpeg" />
+ <musicgenre>Funk / Soul / Disco</musicgenre>
+ <description>Gong! Echo groove. Simple, purified playlist, different and efficient&amp;hellip; Soul, groove, funk, nu jazz, ambient and electro.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Sochi Lounge</title>
+ <serverURL>http://s4.radioheart.ru:8022/sochilounge</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Sochi-Lounge.jpg" length="13824" type="image/jpeg" />
+ <musicgenre>Lounge Grooves</musicgenre>
+ <description>Unique interweaving vocals,&amp;nbsp; gentle lounge music &amp;amp; trip-hop. in this channel, you can hear the beautiful vocals from the legendary headliners Cafe del Mar, to the gentle fragile songs of&amp;nbsp; Russian artists, Mary Tchaikovsky &amp;amp; Non Cadenza.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Mind Potion</title>
+ <serverURL>http://173.236.41.21:8000</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Mind-Potion-radio.jpg" length="15866" type="image/jpeg" />
+ <musicgenre>Downtempo / Ambient</musicgenre>
+ <description>Ambient and soulful music: the perfect music for relaxation, meditation or just a soothing background of sound.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Pigradio</title>
+ <serverURL>http://s6.mediastreaming.it:8080</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/pigradio.jpg" length="7937" type="image/jpeg" />
+ <musicgenre>Various / Independent</musicgenre>
+ <description>Pig Radio, streaming the best electronic and indie pop rock music 24/7.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Atlantic Sound Factory</title>
+ <serverURL>http://208.85.240.83:80</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/asfradio.jpg" length="28725" type="image/jpeg" />
+ <musicgenre>60s / 70s / 80s / 90s</musicgenre>
+ <description>Atlantic Sound Factory radio:&amp;nbsp;It&amp;#39;s important to note that their playlist is carefully selected. The station can be heard in almost every room in your house so if they don&amp;#39;t enjoy listening to it, it doesn&amp;#39;t make it on the radio. It&amp;#39;s as simple as that.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Offshore music radio</title>
+ <serverURL>http://www.bitsmitter.com:8000</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/OffshoreMusicRadio.jpg" length="4774" type="image/jpeg" />
+ <musicgenre>Eclectic</musicgenre>
+ <description>Offshore Music Radio is playing, 50&amp;#39;s 60&amp;#39;s 70&amp;#39;s Radio Gold Music tunes, from the UK and the USA.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Accent 4</title>
+ <serverURL>http://str2.creacast.com/accent4</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/accent4.jpg" length="10647" type="image/jpeg" />
+ <musicgenre>Classical</musicgenre>
+ <description>Accent4: la musique classique from France.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Radiobilly</title>
+ <serverURL>http://184.154.202.243:8150</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Radiobilly.jpg" length="15345" type="image/jpeg" />
+ <musicgenre>Rock / Metal</musicgenre>
+ <description>50s 40s, Rockabilly, Western Swing, Country, Jive, Swing, RocknRoll, Rockin, Psychobilly.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Vanilla</title>
+ <serverURL>http://94.23.62.189:5476</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/vanilla-radio.jpg" length="36362" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>Refresh your music trends, with Vanilla radio channel, playing 24/7 nu disco, deep &amp;amp; soulful house.</description>
+ <category>Ultravox</category>
+</item>
+ <item> <title>Proton radio</title>
+ <serverURL>http://protonradio.com:8000</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/protonradio.jpg" length="8793" type="image/jpeg" />
+ <musicgenre>Techno / Trance</musicgenre>
+ <description>Proton Radio is internet broadcasting&amp;#39;s gold standard for underground dance music. With a steadfast dedication providing it&amp;#39;s listeners, with the absolute highest quality programming and an emphasis on introducing lesser-known talents, Proton has cultivated an audience of thousands of daily listeners from locations around the globe since 2001.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Boosh</title>
+ <serverURL>http://stream.boosh.fm:8000/booshfm_256.mp3</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Boosh-radio.jpg" length="10932" type="image/jpeg" />
+ <musicgenre>Electronica / Industrial</musicgenre>
+ <description>Drum n Bass, dubstep, house and electro.&amp;nbsp; Stay tuned and hear us play all sorts from hip hop to trance to anything our DJs feel like playing. Boosh.FM is an Auckland based LPFM station.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Destroyer</title>
+ <serverURL>http://www.destroyer.net:8800</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/destroyer.jpg" length="19516" type="image/jpeg" />
+ <musicgenre>Breaks / DrumnBass</musicgenre>
+ <description>Destroyer radio: break culture advanced, DnB, jungle, breaks &amp;amp; amp.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>futuradios</title>
+ <serverURL>http://futuradiosdance.ice.infomaniak.ch/futuradiosdance-128.mp3</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/futuradios.jpg" length="15789" type="image/jpeg" />
+ <musicgenre>Hits / Mainstream</musicgenre>
+ <description>Futuradios: Dance anthems from France</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>ShoutedFM Black</title>
+ <serverURL>http://black.mthn.net:8300</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/shouted-fm-radio.jpg" length="11328" type="image/jpeg" />
+ <musicgenre>HipHop / RnB</musicgenre>
+ <description>ShoutedFM Black channel: HipHop, RnB &amp;amp; Rap.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Diva</title>
+ <serverURL>http://195.154.116.117:8000</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/diva-radio.jpg" length="25516" type="image/jpeg" />
+ <musicgenre>Funk / Soul / Disco</musicgenre>
+ <description>Quality tunes from a golden ageDiva radio.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>The Lounge Channel</title>
+ <serverURL>http://listen.radionomy.com/the-lounge-channel</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/theloungechannel-radio.jpg" length="21340" type="image/jpeg" />
+ <musicgenre>Lounge Grooves</musicgenre>
+ <description>Monaco&amp;#39;s 24/7 premium Lounge music radio channel. Serving up an exclusive blend of the best Lounge, Nu Jazz, Downtempo, Smooth Jazz, Chill Out and Soul.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Neonlogic World</title>
+ <serverURL>http://174.36.60.195:3273</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Neonlogic-radio.jpg" length="37069" type="image/jpeg" />
+ <musicgenre>Downtempo / Ambient</musicgenre>
+ <description>Ambient and dub and deep techno selected and mixed by neonlogic and guests.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Pigpen</title>
+ <serverURL>http://uk4.internet-radio.com:30884</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/pigpensocial_radio.jpg" length="59827" type="image/jpeg" />
+ <musicgenre>Various / Independent</musicgenre>
+ <description>Showcasing the sound of Pigpen Social at The Farm Pub Bristol England. &amp;nbsp;Daytime funk hiphop reggae. Evening breakbeat nufunk bigbeat. Late jungle dubstep. Night downtempo, trip hop.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Glam fm</title>
+ <serverURL>http://cent6.directhostingcenter.com:8372</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/glamfm_0.jpg" length="39547" type="image/jpeg" />
+ <musicgenre>60s / 70s / 80s / 90s</musicgenre>
+ <description>All your favourite classic hits as well as all those lost oldies, the ones you&amp;#39;d forgotten that you have loved!</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Dream Machine</title>
+ <serverURL>http://85.17.122.138:80/4</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/intergalacticfm_1.jpg" length="31953" type="image/jpeg" />
+ <musicgenre>Eclectic</musicgenre>
+ <description>Intergalacticfm Dream machine: non stop soundtracks.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Klassik Radio</title>
+ <serverURL>http://edge.live.mp3.mdn.newmedia.nacamar.net/klassikradio128/livestream.mp3</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/klassikradio.jpg" length="12252" type="image/jpeg" />
+ <musicgenre>Classical</musicgenre>
+ <description>Klassik Radio: classical and lounge music, from Germany.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>RockRA</title>
+ <serverURL>http://listen.radionomy.com/rock-ra</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/rockraradio_argentina-logo.jpg" length="20451" type="image/jpeg" />
+ <musicgenre>Rock / Metal</musicgenre>
+ <description>Radio de rock Argentino las 24 horas.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Cool Music</title>
+ <serverURL>http://5.39.86.44:8000/stream</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/cool-music-radio.jpg" length="19809" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>Spanish radio channel, playing cool music, ranging from lounge to deep house.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Kosmik Station</title>
+ <serverURL>http://listen.radionomy.com/kosmik-station</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/kosmik-station.jpg" length="49627" type="image/jpeg" />
+ <musicgenre>Techno / Trance</musicgenre>
+ <description>Acid techno, acidcore, deep/dub techno &amp;amp; trance.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>FG Radio Underground</title>
+ <serverURL>http://radiofg.impek.com:80/ufg</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radiofg-underground.jpg" length="69449" type="image/jpeg" />
+ <musicgenre>Electronica / Industrial</musicgenre>
+ <description>FG radio underground: live techno &amp;amp; radical electro from Paris.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>SubFM</title>
+ <serverURL>http://radio.sub.fm:8529</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/sub.fm_.jpg" length="19020" type="image/jpeg" />
+ <musicgenre>Breaks / DrumnBass</musicgenre>
+ <description>
+	Online pirate soundz, playing: dubstep, grime, dub, breaks, garage and DnB
+</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Maxxima</title>
+ <serverURL>http://maxxima.mine.nu:8000</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/maxxima_0.jpg" length="16300" type="image/jpeg" />
+ <musicgenre>Hits / Mainstream</musicgenre>
+ <description>New electronic music radio from France</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Lightitupradio</title>
+ <serverURL>http://173.193.219.163:8583</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/Lightitupradio.jpg" length="25339" type="image/jpeg" />
+ <musicgenre>HipHop / RnB</musicgenre>
+ <description>Light It Up Radio - Edmonton&amp;#39;s official urban on-line radio station. Playing hip hop, R&amp;amp;B and reggae music 24/7.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Soulful Bits</title>
+ <serverURL>http://195.154.104.70:80</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/soulful_bits_radio.jpg" length="33062" type="image/jpeg" />
+ <musicgenre>Funk / Soul / Disco</musicgenre>
+ <description>Soul music and rare groove from the 60&amp;#39;s to present.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>The BocX</title>
+ <serverURL>http://listen.radionomy.com/thebocx</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/The-BocX-radio-logo.jpg" length="16542" type="image/jpeg" />
+ <musicgenre>Lounge Grooves</musicgenre>
+ <description>Danceable jazzy, funky, soulful electronic chill-out music.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Healing Music</title>
+ <serverURL>http://listen.radionomy.com/healing-music-radio</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/healing-music.jpg" length="20699" type="image/jpeg" />
+ <musicgenre>Downtempo / Ambient</musicgenre>
+ <description>This webstation, diffuse a program carried out according to the principles of the music therapy. The musical sequences are intended to calm, to relieve and finally to bring you back, to the ordinary but positive conscience state of mind.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Global Funk Radio</title>
+ <serverURL>http://nyc04.egihosting.com:9770</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/globalfunkradio.jpg" length="36005" type="image/jpeg" />
+ <musicgenre>Various / Independent</musicgenre>
+ <description>Global Funk Radio: Playing electro, jazz, funk, hiphop and breaks.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Super Throwback Party</title>
+ <serverURL>http://listen.radionomy.com/superthrowbackparty</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Super-Throwback-Party-radio.jpg" length="43222" type="image/jpeg" />
+ <musicgenre>60s / 70s / 80s / 90s</musicgenre>
+ <description>Old school R&amp;amp;B and hip hop from the 70&amp;#39;s, 80&amp;#39;s and 90&amp;#39;s&amp;nbsp; hosted by Houston&amp;#39;s hottest DJ Madd Hatta.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Twenterand</title>
+ <serverURL>http://radiotwenterand.nl:8500</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radiotwenterand.jpg" length="5603" type="image/jpeg" />
+ <musicgenre>Eclectic</musicgenre>
+ <description>Radio Twenterand Pirate music from the Netherlands (24 uur per dag de beste piraten- en Nederlandstalige muziek via gratis mp3-streams).</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Ottos Baroque</title>
+ <serverURL>http://205.164.62.21:8045</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/1fm.jpg" length="14262" type="image/jpeg" />
+ <musicgenre>Classical</musicgenre>
+ <description>Classical music.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Pop for you</title>
+ <serverURL>http://listen.radionomy.com/pop-for-you</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Pop-for-you-radio.jpg" length="15292" type="image/jpeg" />
+ <musicgenre>Rock / Metal</musicgenre>
+ <description>Pop rock hits, indie classic, rock Britpop from France.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Innervisions</title>
+ <serverURL>http://50.7.184.106:8137</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/Innervisions_radio.jpg" length="15627" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>Ran by local DJ&amp;#39;s and based in Derry/L&amp;#39;Derry Northern Ireland, Innervisions aims to bring to you, the very best in underground dance music, featuring the best DJ&amp;#39;s from all around the world, 7 nights a week, playing Progressive House, Deep House, Tech House and Techno music.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Free Underground Tekno</title>
+ <serverURL>http://radio.freeundergroundtekno.org:8018</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/freeundergroundtekno-radio.jpg" length="31479" type="image/jpeg" />
+ <musicgenre>Techno / Trance</musicgenre>
+ <description>Freetekno, tribe, hardtek, hardcore, acid techno webradio and live streaming, TAZ and rave culture.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Rinse</title>
+ <serverURL>http://podcast.dgen.net:8000/rinseradio</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/rinse_fm_logo.jpg" length="12113" type="image/jpeg" />
+ <musicgenre>Electronica / Industrial</musicgenre>
+ <description>Rinse FM is a London-based radio station which also broadcasts over the Internet. The station plays grime, dubstep, UK garage, funky, drum and bass and other electronic genres.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Nuskoolbreaks</title>
+ <serverURL>http://live.nsbradio.co.uk:8904</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/nuskoolbreaks.jpg" length="17989" type="image/jpeg" />
+ <musicgenre>Breaks / DrumnBass</musicgenre>
+ <description>NuSkoolBreaks.co.uk is the worlds biggest and award winning online breaks music community, with news, features, reviews, breakbeat radio and more.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Generation Zel</title>
+ <serverURL>http://eu1.reliastream.com:8035</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Generation-Zel.jpg" length="12830" type="image/jpeg" />
+ <musicgenre>Hits / Mainstream</musicgenre>
+ <description>Top 40, EDM, Dance, House and Trance. 24/7, Live DJs from around the world.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Basso Radio</title>
+ <serverURL>http://188.117.44.132:8000</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/basso.jpg" length="13766" type="image/jpeg" />
+ <musicgenre>HipHop / RnB</musicgenre>
+ <description>Basso radio streams mostly rap, hip-hop and electronic music from Finland.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Swisspop</title>
+ <serverURL>http://streaming.swisstxt.ch/m/rsp/mp3_128</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Swisspop-radio.jpg" length="19755" type="image/jpeg" />
+ <musicgenre>Lounge Grooves</musicgenre>
+ <description>An exceptionally broad repertoire of the best and most familiar pop songs from the last 30 years.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Echoes</title>
+ <serverURL>http://85.17.75.143:80</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/Echoes_logo.jpg" length="11858" type="image/jpeg" />
+ <musicgenre>Downtempo / Ambient</musicgenre>
+ <description>Echoes: downtempo music from worldwide chillout, lounge &amp;amp; the ambient music scene.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Radio OPIE</title>
+ <serverURL>http://198.105.220.12:4348/Live</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/radio_OPIE.jpg" length="17584" type="image/jpeg" />
+ <musicgenre>Various / Independent</musicgenre>
+ <description>Playing Detroit&amp;#39;s best local music</description>
+ <category>Ultravox</category>
+</item>
+ <item> <title>Golden</title>
+ <serverURL>http://146.185.18.251:8008</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/golden_radio_italy.jpg" length="13099" type="image/jpeg" />
+ <musicgenre>60s / 70s / 80s / 90s</musicgenre>
+ <description>80&amp;#39;s music from Vicenza, Italy.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Sky fm Country</title>
+ <serverURL>http://pub10am.radiotunes.com:80/radiotunes_country</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/somafmcountry.jpg" length="3780" type="image/jpeg" />
+ <musicgenre>Eclectic</musicgenre>
+ <description>Country SKY FM internet radio station today&amp;#39;s Hit Country with a mix of your favorites.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Classical Radio</title>
+ <serverURL>http://46.4.82.243:8080</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/classicalradio.jpg" length="10992" type="image/jpeg" />
+ <musicgenre>Classical</musicgenre>
+ <description>Smooth popular classical music... just that!</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Radio-im-internet</title>
+ <serverURL>http://83.169.61.65:8090</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio-im-internet.jpg" length="11208" type="image/jpeg" />
+ <musicgenre>Rock / Metal</musicgenre>
+ <description>Rock, indie &amp;amp; alternative from Frankfurt, Germany. Alternative, Rock, Indie &amp;amp; Eclectic songs.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Pressure</title>
+ <serverURL>http://ic2256.c786.fast-serv.com/live</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/pressureradio.jpg" length="23483" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>Pressure radio: deep, soulful house music online internet radio station, with live djs brodacasting.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Techno music </title>
+ <serverURL>http://128k.technomusic.com:8006</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/technomusic.jpg" length="20233" type="image/jpeg" />
+ <musicgenre>Techno / Trance</musicgenre>
+ <description>Listen to a selection of the best DJs podcasts, dedicated to electronic and techno music.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Murdercapital</title>
+ <serverURL>http://85.17.122.138:80/1</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/intergalacticfm.jpg" length="42513" type="image/jpeg" />
+ <musicgenre>Electronica / Industrial</musicgenre>
+ <description>Murdercapital is Intergalactic&amp;#39;s westcoast sound of Holland: electro, minimal wave &amp;amp; acid</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>DI.fm Drum n Bass</title>
+ <serverURL>http://pub6.di.fm:80/di_drumandbass</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/difm-drum-n-bass.jpg" length="21593" type="image/jpeg" />
+ <musicgenre>Breaks / DrumnBass</musicgenre>
+ <description>DI.fm&amp;#39;s channel of Drum &amp;#39;n&amp;#39; Bass straight from NYC</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Kiss FM</title>
+ <serverURL>http://cc.net2streams.com:8565/kissfm.mp3</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/kissfm_australia.jpg" length="33474" type="image/jpeg" />
+ <musicgenre>Hits / Mainstream</musicgenre>
+ <description>All genres of dance and electronica from funk to disco to house, techno, hip hop, drum&amp;amp;bass and more.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Truehiphop</title>
+ <serverURL>http://truehiphop.dyndns.org:9020</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/truehiphop.fm_.jpg" length="22731" type="image/jpeg" />
+ <musicgenre>HipHop / RnB</musicgenre>
+ <description>TrueHipHop.FM - Finest underground Hip-Hop radio from Germany.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Peripou</title>
+ <serverURL>http://listen.radionomy.com/peripou-web-radio</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Peripou-radio-greece.jpg" length="15873" type="image/jpeg" />
+ <musicgenre>Lounge Grooves</musicgenre>
+ <description>Easy listening, lounge, downtempo &amp;amp; future jazz sounds, Greece.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Psychedelik</title>
+ <serverURL>http://195.154.166.226:8002</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Psychedelik-radio.jpg" length="22000" type="image/jpeg" />
+ <musicgenre>Downtempo / Ambient</musicgenre>
+ <description>Ambient by Yuman: chillout, ambient, psy from Paris.</description>
+ <category>Ultravox</category>
+</item>
+ <item> <title>New Radio Belgrade</title>
+ <serverURL>http://gal.bitsyu.net:8002</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/nrbg.jpg" length="25343" type="image/jpeg" />
+ <musicgenre>Various / Independent</musicgenre>
+ <description>New Radio Belgrade: indie, freestyle songs, broadcasting from Serbia.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Oldies project</title>
+ <serverURL>http://178.19.127.144:80</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/oldiesproject.jpg" length="24344" type="image/jpeg" />
+ <musicgenre>60s / 70s / 80s / 90s</musicgenre>
+ <description>The OldiesProject stream plays 24/7 non stop classic songs from the sixties and seventies, most of which have been long forgotten or are simply ignored by radio stations and DJ&amp;rsquo;s worldwide. Looking beyond merely the American and European charts, OldiesProject also offers you original versions of famous songs, typical Radio London hits (see Feature) and Northern Soul classics. No fuzz or format and devoid of all pretence, just oldies&amp;hellip;&amp;hellip;&amp;hellip; enjoy!</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Coma</title>
+ <serverURL>http://s1.radioheart.ru:8044/live</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/coma-radio.jpg" length="10343" type="image/jpeg" />
+ <musicgenre>Rock / Metal</musicgenre>
+ <description>Rock, alternative radio from Ukraine.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Deepvibes</title>
+ <serverURL>http://174.37.117.139:8010</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/deepvibes.jpg" length="31255" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>Deepvibes Radio, brings to you a selection of live and pre-recorded mixes by DJs from all over the planet. These unique mix of Deep house music, sends you to a trip from todays music trends, to&amp;nbsp; all the way back to the 90&amp;#39;s, acid house generation.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Discover trance</title>
+ <serverURL>http://norway.discovertrance.com:8002</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/discovertrance.jpg" length="25733" type="image/jpeg" />
+ <musicgenre>Techno / Trance</musicgenre>
+ <description>Discover trance radio Liquid Fm Progressive electronic radio.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Rant</title>
+ <serverURL>http://broadcast.rantradio.com:8888</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/RantRadio.jpg" length="16391" type="image/jpeg" />
+ <musicgenre>Electronica / Industrial</musicgenre>
+ <description>Industrial electronica for your mind. Streaming the best Industrial, Synthpop &amp;amp; EBM since 1999.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Krisisdnb</title>
+ <serverURL>http://live.krisisdnb.com:9268</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/krisisdnb.jpg" length="19191" type="image/jpeg" />
+ <musicgenre>Breaks / DrumnBass</musicgenre>
+ <description>KRISISDnB is an online internet Drum and Bass Radio Station, MP3 and Vinyl Record label, Event Promoter, Online Ticket Sales, and Music Social Network, established in March 2007, bringing you the freshest new talent, as well as established artists from around the globe.Primarily playing Drum and Bass, but also Breaks, Bassline, Jungle, Old Skool, Urban and more on our 24/7 schedule means that in this channel, you will definitely find something that you like!</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>AntiFM radio</title>
+ <serverURL>http://s2.viastreaming.net:7950</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/antifmradio.jpg" length="23891" type="image/jpeg" />
+ <musicgenre>Hits / Mainstream</musicgenre>
+ <description>Antifmradio: Underground dance from NYC</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>b-gyrl</title>
+ <serverURL>http://204.45.126.170:8111</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/b-gyrl-radio_0.jpg" length="19051" type="image/jpeg" />
+ <musicgenre>HipHop / RnB</musicgenre>
+ <description>Hip-hop, soul and R&amp;amp;B by female voices only.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Janga</title>
+ <serverURL>http://listen.radionomy.com/jangaradio</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/janga_fregene_italy.jpg" length="28473" type="image/jpeg" />
+ <musicgenre>Lounge Grooves</musicgenre>
+ <description>Independent, internet webradio, with a sophisticated and relaxing sound, from lounge music to nu jazz, chill out, nu soul and house. Broadcasting from Fregene, Italy.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Buzzoutroom</title>
+ <serverURL>http://128k.buzzoutroom.com:8034</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/buzzoutroom_1.jpg" length="10440" type="image/jpeg" />
+ <musicgenre>Downtempo / Ambient</musicgenre>
+ <description>Chilledout ambient downbeats: anything that is slower and instrumental and on the chill side.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>WFMU</title>
+ <serverURL>http://stream0.wfmu.org/freeform-128k.mp3</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/wfmu.jpg" length="11640" type="image/jpeg" />
+ <musicgenre>Various / Independent</musicgenre>
+ <description>WFMU-FM is a listener-supported, non-commercial radio station broadcasting at 91.1 Mhz FM in Jersey City, NJ, right across the Hudson from lower Manhattan. It is currently the longest running freeform radio station in the United States.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Threetenradio</title>
+ <serverURL>http://93.104.210.97:8041</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/threetenradio.jpg" length="33521" type="image/jpeg" />
+ <musicgenre>60s / 70s / 80s / 90s</musicgenre>
+ <description>THREETEN RADIO is a fun, fast moving unique Internet Radio station, which is COMMERCIAL FREE. Therefore, no annoying ads.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Beyond beat generation</title>
+ <serverURL>http://82.148.208.55:8000</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/beyondthebeatgeneration.jpg" length="6758" type="image/jpeg" />
+ <musicgenre>Rock / Metal</musicgenre>
+ <description>Archiving and publishing the entire, long forgotten &amp;#39;wild&amp;#39; musical gems out of the great years of the sixties (1965-1969) to a bright audience.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Tenzi</title>
+ <serverURL>http://96.30.52.117:8080/stream</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/tenzi-radio.jpg" length="13133" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>Techno, house, deep and tech house, dubstep and drum &amp;amp; bass from an Indian radio station.</description>
+ <category>Ultravox</category>
+</item>
+ <item> <title>Full vibes</title>
+ <serverURL>http://radio.full-vibes.com:8023</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/fullvibes.jpg" length="26632" type="image/jpeg" />
+ <musicgenre>Techno / Trance</musicgenre>
+ <description>Full vibes Underground techno radio , tekno, hardtek, breakbeat and jungle music trends.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>EBM</title>
+ <serverURL>http://www.ebm-radio.org:7000</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/ebm-radio.jpg" length="23329" type="image/jpeg" />
+ <musicgenre>Electronica / Industrial</musicgenre>
+ <description>EBM radio: strange music for strange people.</description>
+ <category>Ultravox</category>
+</item>
+ <item> <title>Drum and bass worldwide</title>
+ <serverURL>http://78.129.228.187:8094</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/drumandbassworldwide.jpg" length="13706" type="image/jpeg" />
+ <musicgenre>Breaks / DrumnBass</musicgenre>
+ <description>Drumandbassworldwide caters for all the DNB heads, London, UK</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Sky.fm Top Hits</title>
+ <serverURL>http://pub10am.radiotunes.com:80/radiotunes_tophits</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/sky.fm-top-hits.jpg" length="18901" type="image/jpeg" />
+ <musicgenre>Hits / Mainstream</musicgenre>
+ <description>Welcome to Top Hits at SKY.fm where today&amp;#39;s chartbusters shine 24 hours a day.&amp;nbsp;</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Stlhiphop</title>
+ <serverURL>http://204.45.126.170:8147</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/Stlhiphop.jpg" length="9728" type="image/jpeg" />
+ <musicgenre>HipHop / RnB</musicgenre>
+ <description>Stlhiphop rap and hiphop: dj mixes, beats &amp;amp; freestyles.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Ibiza Sonica</title>
+ <serverURL>http://stream.wft.es:7005</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/IBIZA_SONICA_RADIO_logo.jpg" length="65149" type="image/jpeg" />
+ <musicgenre>Lounge Grooves</musicgenre>
+ <description>No speech, no cuts, no advertising. Sonica Day, is the music channel playing for you Down Tempo music selection, perfect for those times that you feel listening to tranquilla music.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Triplag Chillout</title>
+ <serverURL>http://198.154.106.102:8208</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/triplag_0.jpg" length="25457" type="image/jpeg" />
+ <musicgenre>Downtempo / Ambient</musicgenre>
+ <description>Triplag is a full power shamanic web radio and a chill out dub stream.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Beograund</title>
+ <serverURL>http://94.242.222.27:9000/stream/1</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Beograund-radio.jpg" length="15178" type="image/jpeg" />
+ <musicgenre>Various / Independent</musicgenre>
+ <description>Crossover, eclectic, inspired music: Funk, (nu) jazz, blues, swing, downbeat, reggae, trip hop, latin, afro, blues, hip hop, electro &amp;amp; rock music.</description>
+ <category>Ultravox</category>
+</item>
+ <item> <title>Intergalacticfm Classix</title>
+ <serverURL>http://85.17.122.138:80/2</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/intergalacticfm_0.jpg" length="39137" type="image/jpeg" />
+ <musicgenre>60s / 70s / 80s / 90s</musicgenre>
+ <description>Intergalacticfm Classix channel: Classic, Italo disco, funk &amp;amp; hip-hop electro.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Pure Rock</title>
+ <serverURL>http://purerockradio.servemp3.com:8016</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/pure-rock-radio.jpg" length="23685" type="image/jpeg" />
+ <musicgenre>Rock / Metal</musicgenre>
+ <description>Live Hard Rock and Heavy Metal mobile and internet radio since 2000. Automated requests, popular specialty and syndicated shows, over 50,000 songs in rotation!</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Uzic</title>
+ <serverURL>http://stream.uzic.ch:9010</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/uzic.jpg" length="21732" type="image/jpeg" />
+ <musicgenre>Techno / Trance</musicgenre>
+ <description>Uzic webradio electronic music, plays Minimal techno from Switzerland.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Digital gunfire</title>
+ <serverURL>http://194.71.109.51:8000</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/digitalgunfire.jpg" length="13452" type="image/jpeg" />
+ <musicgenre>Electronica / Industrial</musicgenre>
+ <description>Industrial, EBM, Futurepop Internet Radio</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>db9radio</title>
+ <serverURL>http://74.124.12.137:7537/stream</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/db9radio_logo.jpg" length="19483" type="image/jpeg" />
+ <musicgenre>Breaks / DrumnBass</musicgenre>
+ <description>db9radio is an internet underground radio from UK, playing dubstep, drum&amp;#39;n&amp;#39;bass, house &amp;amp; progressive sounds.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Nonstopplay</title>
+ <serverURL>http://stream.nonstopplay.co.uk/nsp-192k-mp3</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/nonstopplay_radio.jpg" length="48735" type="image/jpeg" />
+ <musicgenre>Hits / Mainstream</musicgenre>
+ <description>NonStopPlay.com is an online dance music radio station, broadcasting from the UK since 2003, playing the best in rhythm &amp;amp; dance music - The latest upfront, commercial &amp;amp; mainstream dance tracks alongside the finest RnB, Old Skool, House, Electro, Bassline, UK garage, Drum &amp;amp; Bass, Trance &amp;amp; Techno</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Swurvradio</title>
+ <serverURL>http://sr128.swurvradio.com:8080</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/swurvradio.jpg" length="27292" type="image/jpeg" />
+ <musicgenre>HipHop / RnB</musicgenre>
+ <description>SwurvRadio.com - Hip Hop, R&amp;amp;B &amp;amp; Independent Artist Free Internet Radio.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>iMusic</title>
+ <serverURL>http://imusic.am:8000/imusic_radio_192.mp3</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/imusic.jpg" length="15747" type="image/jpeg" />
+ <musicgenre>Lounge Grooves</musicgenre>
+ <description>imusic.am: several lounge tunes from Armenia.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>DI.fm Chill out</title>
+ <serverURL>http://pub6.di.fm:80/di_chillout</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/DI.fm_.jpg" length="18791" type="image/jpeg" />
+ <musicgenre>Downtempo / Ambient</musicgenre>
+ <description>DI.fm plays ambient psy chillout music. Enjoy their trippy flavors!</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Celestia</title>
+ <serverURL>http://audio.celestiaradio.com:8062/stream</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/celestia_radio.jpg" length="22060" type="image/jpeg" />
+ <musicgenre>Various / Independent</musicgenre>
+ <description>Non-profit project that plays music that is&amp;nbsp;licensed directly only by the artists.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Rock 103</title>
+ <serverURL>http://77.67.106.54:80</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Rock-103.jpg" length="20345" type="image/jpeg" />
+ <musicgenre>60s / 70s / 80s / 90s</musicgenre>
+ <description>The best of the 60&amp;#39;s, 70&amp;#39;s and the 80&amp;#39;s, with live shows, psychedelic 60&amp;#39;s &amp;amp; garage rock music.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Idobi Radio</title>
+ <serverURL>http://fitch.idobi.com:80</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/idobiradio.jpg" length="7017" type="image/jpeg" />
+ <musicgenre>Rock / Metal</musicgenre>
+ <description>Idobi Radio is an Internet radio station that broadcasts 24/7 alternative rock music, with a mainstream focus. Since 1999, we&amp;rsquo;ve brought you unfiltered interviews with your favorite artists as well as the latest music industry news. We are committed to bringing you the best of the known (and not-so-well-known) artists from around the world.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Cannibal</title>
+ <serverURL>http://208.43.121.133:8238</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/cannibal-radio.jpg" length="25344" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>Cannibal webradio&amp;#39;s main intention is to break the established&amp;nbsp; sponsored radio music routine. This purpose has been brought together, within 12 months, by 39 radio producers which are broadcasting 22 shows throughout the week. Music from House to Techno and from Dub to DnB.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Additan</title>
+ <serverURL>http://stream.laut.fm/additan</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/additan-radio.jpg" length="8792" type="image/jpeg" />
+ <musicgenre>Techno / Trance</musicgenre>
+ <description>Techno und house Musik, aus Deutschland.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>VKRS</title>
+ <serverURL>http://fire.wavestreamer.com:6924/stream/1</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/VKRS-logo.jpg" length="49465" type="image/jpeg" />
+ <musicgenre>Electronica / Industrial</musicgenre>
+ <description>Showcasing selected tracks from Netlabel, Creative Commons, Copyleft and Independent Electronic Artists.</description>
+ <category>Ultravox</category>
+</item>
+ <item> <title>Dnbradio.com</title>
+ <serverURL>http://dnbradio.kryptoanarki.st:8000</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/dnbradio.jpg" length="12376" type="image/jpeg" />
+ <musicgenre>Breaks / DrumnBass</musicgenre>
+ <description>DnbRadio - Serving heavy doses of pure dark basslines, hard step, liquid funk, and jungle music. Dedicated to spreading the one love, drum &amp;amp; bass, and jungle to the masses</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>PlasticAge</title>
+ <serverURL>http://sc3.mystreamserver.com:8084</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/plasticage.jpg" length="12069" type="image/jpeg" />
+ <musicgenre>Hits / Mainstream</musicgenre>
+ <description>With an enormous play list, spanning many genres you wont be disappointed in what they have to offer. With live DJ mixes preformed locally, overseas and in their studio&amp;#39;s in Europe and Australia, they are always bringing underground music to the surface.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Cerritos All Stars</title>
+ <serverURL>http://stream.cerritosallstars.com:80</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/cerritosallstars.jpg" length="16704" type="image/jpeg" />
+ <musicgenre>HipHop / RnB</musicgenre>
+ <description>Spreading peace, love and Hip Hop. Long live Cerritos. Long live the All Stars.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Rise FM</title>
+ <serverURL>http://listen.radionomy.com/risefm_de</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/rise_fm_radio_logo.jpg" length="14107" type="image/jpeg" />
+ <musicgenre>Lounge Grooves</musicgenre>
+ <description>Chill out, relax, let your soul, you call it what you want. Everyone needs a little rest.&amp;nbsp; RiseFM is your relaxed, chillout radio station on the Internet, 24 hours a day all week, ready to capture your dangling soul.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Verdure</title>
+ <serverURL>http://95.211.217.163:8881</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/verdure.jpg" length="35901" type="image/jpeg" />
+ <musicgenre>Downtempo / Ambient</musicgenre>
+ <description>Minimal stream from Russia.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Freshradio</title>
+ <serverURL>http://176.31.113.37:8080</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/freshradio-logo.jpg" length="11937" type="image/jpeg" />
+ <musicgenre>Various / Independent</musicgenre>
+ <description>Best alternative radio: pop, rock electronic music, from France.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Affinity</title>
+ <serverURL>http://198.105.220.12:6849/Live</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/affinityradio_logo.jpg" length="62564" type="image/jpeg" />
+ <musicgenre>60s / 70s / 80s / 90s</musicgenre>
+ <description>Affinity Radio is playing the music from the 60&amp;#39;s, 70&amp;#39;s and the 80&amp;#39;s.</description>
+ <category>Ultravox</category>
+</item>
+ <item> <title>Delicious Agony</title>
+ <serverURL>http://74.124.12.138</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/deliciousagony.jpg" length="6844" type="image/jpeg" />
+ <musicgenre>Rock / Metal</musicgenre>
+ <description>Delicious Agony Progressive Rock Radio is run by a small but dedicated staff of volunteers who have only one thing in common: a desire to play and promote progressive rock music of all kinds.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Beradio</title>
+ <serverURL>http://87.117.193.10:21020/stream</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/beradio.jpg" length="23290" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>Deep House to Deep tech and Tech House, and from Minimal to Deep Techno and Funky Techno grooves. Smooth lounge and ambient sounds for the late night listeners.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>TrancePulse</title>
+ <serverURL>http://streaming.radionomy.com/TrancePulseFMDublin</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/TrancePulse-radio.jpg" length="11991" type="image/jpeg" />
+ <musicgenre>Techno / Trance</musicgenre>
+ <description>Dublin based radio playing nothing else but old &amp;amp; new Trance music.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>AmpedOut</title>
+ <serverURL>http://67.212.179.132:80</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/ampedout.jpg" length="25498" type="image/jpeg" />
+ <musicgenre>Electronica / Industrial</musicgenre>
+ <description>Streaming Industrial, EBM, IDM, Noise, and other crunchy sounds.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Dirt Lab Audio</title>
+ <serverURL>http://50.7.70.66:8693/stream</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/dirtlabaudio.jpg" length="23737" type="image/jpeg" />
+ <musicgenre>Breaks / DrumnBass</musicgenre>
+ <description>Dirt Lab Audio is the only internet station in the world dedicated to promoting dark Drum &amp;amp; Bass. Working with unsigned artists &amp;amp; new labels, they offer to it&amp;#39;s listeners , the freshest talent that the dark DnB scene has to offer.&amp;nbsp;Lock on to the stream any time of the day, to hear everything from tear-out filth to moody minimal.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Costa Del Mar</title>
+ <serverURL>http://sc-costadelmar.1.fm:10156</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Costa-Del-Mar-radio.jpg" length="38176" type="image/jpeg" />
+ <musicgenre>Lounge Grooves</musicgenre>
+ <description>100% chillout from Ibiza: chillout, ambient, lounge, easy listening.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Arctic Dub records</title>
+ <serverURL>http://67.212.165.106:8144</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/arctic-dub-radio.jpg" length="28445" type="image/jpeg" />
+ <musicgenre>Downtempo / Ambient</musicgenre>
+ <description>Chill dub techno and deep music. Deep arctic dub music from the push - dave wesley and casey borchert.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>UCLA</title>
+ <serverURL>http://stream.uclaradio.com:8000/listen</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/uclaradio.jpg" length="37262" type="image/jpeg" />
+ <musicgenre>Various / Independent</musicgenre>
+ <description>Official student-run radio station at UCLA.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>TopSide radio</title>
+ <serverURL>http://radiotopside.ice.infomaniak.ch/radiotopside-128.mp3</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radiotopside.jpg" length="18497" type="image/jpeg" />
+ <musicgenre>60s / 70s / 80s / 90s</musicgenre>
+ <description>TopSide radio: Generation vynil, from 1970, to present time, tuning from France.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Radio Caroline</title>
+ <serverURL>http://sc6.radiocaroline.net:8040</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radiocaroline.jpg" length="6160" type="image/jpeg" />
+ <musicgenre>Rock / Metal</musicgenre>
+ <description>Radio Caroline, rocking around the world.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Electrosound</title>
+ <serverURL>http://144.76.8.42:8000/stream/3</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Electrosound-radio.jpg" length="12088" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>Electronic music radio channel, from Germany.</description>
+ <category>Ultravox</category>
+</item>
+ <item> <title>Psyradio Techno</title>
+ <serverURL>http://komplex2.psyradio.org:8040</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/psyradio-techno.jpg" length="23597" type="image/jpeg" />
+ <musicgenre>Techno / Trance</musicgenre>
+ <description>Psyradio is a radio channel, with High evaluated, innovative &amp;amp; progressive musical arts.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Break Pirates</title>
+ <serverURL>http://bpstream.hostco.de:3000</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/breakpirates.jpg" length="14868" type="image/jpeg" />
+ <musicgenre>Breaks / DrumnBass</musicgenre>
+ <description>Break Pirates broadcasts live every day of the week via Internet, the very best in breakbeat oriented music.&amp;nbsp; From the latest Hardcore, Drum &amp;amp; Bass and Dubstep tunes to the Old Skool classics, you&amp;#39;ll find them all here. The station unites international DJs worldwide, giving a wider view of the music scene.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>SwissGroove</title>
+ <serverURL>http://swissgroove.ice.infomaniak.ch:80/swissgroove-128</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/swissgroove.jpg" length="32246" type="image/jpeg" />
+ <musicgenre>Lounge Grooves</musicgenre>
+ <description>Groovy tracks of funk, jazz, soul, latin, world, lounge and house</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>StillStream</title>
+ <serverURL>http://srv3.electro-music.com:8500</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/stillstream.jpg" length="8472" type="image/jpeg" />
+ <musicgenre>Downtempo / Ambient</musicgenre>
+ <description>Stillstream plays all sorts of ambient music, such as: soothing light, impenetrable dark ambient, Berlin-school electronic ambient &amp;amp; expansive space music.&amp;nbsp;</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>1190 Radio</title>
+ <serverURL>http://radio1190.colorado.edu:8000/high.mp3</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio1190.jpg" length="23195" type="image/jpeg" />
+ <musicgenre>Various / Independent</musicgenre>
+ <description>Radio 1190&amp;#39;s music philosophy is simple: they play great music that doesn&amp;#39;t get heard on the vapidly safe FM giants. Their dedicated music staff searches out the best bands you probably haven&amp;#39;t heard yet. Any genre is possible and our low-key, honest DJs mix many different styles together. From the electronic sounds of Boards of Canada, the quirky pop of Destroyer, the electro-punk sounds of Melt Banana, and the softer sounds of Low, Radio 1190 plays it all.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Sky.fm 70s hits</title>
+ <serverURL>http://pub10am.radiotunes.com:80/radiotunes_hit70s</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/sky.fm-All-Hits-70s.jpg" length="16977" type="image/jpeg" />
+ <musicgenre>60s / 70s / 80s / 90s</musicgenre>
+ <description>Hit 70&amp;#39;s represents the decade that made disco famous.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Deepinradio</title>
+ <serverURL>http://s3.viastreaming.net:8525</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/deepinradio.jpg" length="55065" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>Deepinradio, reflects the spirit of the underground generation, throughout the evolution of electronic music. Deepinradio broadcasts&amp;nbsp; upfront music from artists and djs who love to stay ahead of their time but keep it deep all the way. Deepinradio, streams real time on a 24/7 basis feed.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>ETN.fm Progressive </title>
+ <serverURL>http://24.249.116.122:8110</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/etn.jpg" length="12630" type="image/jpeg" />
+ <musicgenre>Techno / Trance</musicgenre>
+ <description>ETN.fm 2 Progressive Channel</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>UKBassRadio</title>
+ <serverURL>http://uk2-pn.mixstream.net:8740</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/ukbassradio.jpg" length="14586" type="image/jpeg" />
+ <musicgenre>Breaks / DrumnBass</musicgenre>
+ <description>Drum and Bass, Jungle, Old skool</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Smoothlounge</title>
+ <serverURL>http://sl128.hnux.com</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/smoothlounge_0.jpg" length="65138" type="image/jpeg" />
+ <musicgenre>Lounge Grooves</musicgenre>
+ <description>For the chill of it: music to move you</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Mixing of particulate solids</title>
+ <serverURL>http://147.175.61.55:8000</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/Mixing-of-particulate-solids.jpg" length="46319" type="image/jpeg" />
+ <musicgenre>Downtempo / Ambient</musicgenre>
+ <description>Mixing of particulate solids Radio 3: experimental &amp;amp; ambient music, from Bratislava, Slovakia.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Paranoise</title>
+ <serverURL>http://eco.caststream.net:8012</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/paranoise_radio.jpg" length="19780" type="image/jpeg" />
+ <musicgenre>Various / Independent</musicgenre>
+ <description>Independent, alternative radio playing contemporary urban music.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Rush</title>
+ <serverURL>http://85.17.122.32:8120/stream</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/rushradio.jpg" length="4649" type="image/jpeg" />
+ <musicgenre>Rock / Metal</musicgenre>
+ <description>Rush Radio streaming the music of Rush 24/7.</description>
+ <category>Ultravox</category>
+</item>
+ <item> <title>Traffic</title>
+ <serverURL>http://networx.trafficradio.org:8002</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Traffic-radio-bulgaria.jpg" length="22878" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>Club house &amp;amp; funky electro from Bulgaria.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Bassjunkees</title>
+ <serverURL>http://space.ducks.invasion.started.at.bassjunkees.com:8442</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/bassjunkees.jpg" length="13204" type="image/jpeg" />
+ <musicgenre>Breaks / DrumnBass</musicgenre>
+ <description>Bassjunkees:&amp;nbsp;Drum&amp;#39;n&amp;#39;bass, jungle, oldskool, dubstep. Music for the masses; once logged in, addicted for life.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Crooze.FM</title>
+ <serverURL>http://77.92.64.44:8045/stream</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/CROOZE-radio.jpg" length="22277" type="image/jpeg" />
+ <musicgenre>Lounge Grooves</musicgenre>
+ <description>A mix of soul, RnB, nu-soul, bossa, smooth jazz, nu-jazz, acid jazz, latin, Chill, Lounge, Deep House, Ambient, Lo-Fi, Funk and everything in between and around it.&amp;nbsp;</description>
+ <category>Ultravox</category>
+</item>
+ <item> <title>Eilo Chill</title>
+ <serverURL>http://stream.eilo.org:8000/ambient</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/eilo_org_progressive.jpg" length="49420" type="image/jpeg" />
+ <musicgenre>Downtempo / Ambient</musicgenre>
+ <description>EILO.org, is a multichannel internet radio, specialized in broadcasting electronic music of all styles.&amp;nbsp;The entire content is under a Creative Commons license, which makes EILO.org one of a few free online radios in the world.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Bear Radio network</title>
+ <serverURL>http://107.181.227.250:8044</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/bearradio.jpg" length="15564" type="image/jpeg" />
+ <musicgenre>Various / Independent</musicgenre>
+ <description>Bearradio is an eclectic Gay Radio, 24/7 digital webcast featuring some of the best independent music on the net from Gay, Lesbian and Gay-friendly Artists.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Metal Head Radio</title>
+ <serverURL>http://208.53.138.151:8032</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/metalheadradio.jpg" length="7710" type="image/jpeg" />
+ <musicgenre>Rock / Metal</musicgenre>
+ <description>Hard Rock, metal, progressive.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Ayeko</title>
+ <serverURL>http://ns364977.ovh.net:8000/ayeko.mp3</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Ayeko-radio.jpg" length="12380" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>Ayeko is a Swiss web radio station &amp;amp; netlabel, broadcasting and promoting music and news from the electronic music netlabel&amp;#39;s scene. Minimal, techno, house and experimental sounds that will keep you updated, in what&amp;#39;s cool, in the electronic music scene.</description>
+ <category>Ultravox</category>
+</item>
+ <item> <title>Eilo Dubstep</title>
+ <serverURL>http://stream.eilo.org:8000/dubstep</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/eilo_org_logo.jpg" length="49420" type="image/jpeg" />
+ <musicgenre>Breaks / DrumnBass</musicgenre>
+ <description>EILO.org is a multichannel internet radio, specialized in broadcasting electronic music of all styles. The entire content, is under a Creative Commons license, which makes EILO.org one of a few free online radios in the world.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Lounge Radio</title>
+ <serverURL>http://de1.streamhosting.ch:8050</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/lounge-radio_0.jpg" length="17142" type="image/jpeg" />
+ <musicgenre>Lounge Grooves</musicgenre>
+ <description>Enjoy this light summer-plate consisting of downtempo and fresh beats of nujazz - dipped into the warmth of brazil electro and finely served with a breath of ambient.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Sleepbot environmental</title>
+ <serverURL>http://sc13.shoutcaststreaming.us:8194</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/sleepbot.jpg" length="42874" type="image/jpeg" />
+ <musicgenre>Downtempo / Ambient</musicgenre>
+ <description>The official radio service of Ambience for the Masses. Peaceful streaming audio featuring a random cycling of some of the most sleep-worthy tracks ever created. Live on-line sedation is available 24/7/365 and all that without a doctor&amp;#39;s prescription.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Anonymous</title>
+ <serverURL>http://anon.fm:8000/radio</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/anonymous-radio.jpg" length="19861" type="image/jpeg" />
+ <musicgenre>Various / Independent</musicgenre>
+ <description>Popular community-driven radio from Russia.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Heavy metal attack</title>
+ <serverURL>http://s5.radiohost.pl:7052</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/heavymetalattack.jpg" length="5785" type="image/jpeg" />
+ <musicgenre>Rock / Metal</musicgenre>
+ <description>Heavy metal attack radio station. Hard rock &amp;amp; heavy metal from Poland.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Handzonradio</title>
+ <serverURL>http://173.192.207.51:8056</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/handzonradio.jpg" length="56438" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>Handz On Radio - broadcasts deep, soulful &amp;amp; underground house music 24/7.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Global DnB</title>
+ <serverURL>http://50.22.223.16:9554</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/globaldnb.jpg" length="41093" type="image/jpeg" />
+ <musicgenre>Breaks / DrumnBass</musicgenre>
+ <description>DnBmidlands.com plays all aspects of Drum and Bass, including Jump up, Techstep, Liquid Funk and Old Skool Jungle Techno.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Soundstorm</title>
+ <serverURL>http://5.2.65.200:8000</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/soundstorm-radio.jpg" length="19860" type="image/jpeg" />
+ <musicgenre>Lounge Grooves</musicgenre>
+ <description>Easy listening music: chill, ambient, indie pop, world house music.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Chiplduk</title>
+ <serverURL>http://radio.4duk.ru/4duk64.mp3</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/Chiplduk.jpg" length="6134" type="image/jpeg" />
+ <musicgenre>Various / Independent</musicgenre>
+ <description>Radio Unlimited,plays covers, easy listening music, from Russia with love!</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Free Phoenix</title>
+ <serverURL>http://68.178.199.78:8000</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/RadioFreePhoenix.jpg" length="8307" type="image/jpeg" />
+ <musicgenre>Rock / Metal</musicgenre>
+ <description>Radio Free Phoenix was created to provide the Phoenix area and the world with legitimate Free-Form Radio. Long lost to the FM Airwaves, this mix of music is alive and vibrant and on RadioFreePhoenix.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Autobahn</title>
+ <serverURL>http://listen.radionomy.com/autobahn-radio</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/Autobahn_radio.jpg" length="17102" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>Tune in Autobahn radio, and listen to the best electronic music tunes, made in Germany.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Ombilikal</title>
+ <serverURL>http://ombilikal.net:8004</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/ombilikal.jpg" length="12975" type="image/jpeg" />
+ <musicgenre>Breaks / DrumnBass</musicgenre>
+ <description>Promoting the Jungle Movement / Drum&amp;#39;n&amp;#39;Bass,&amp;nbsp;Dubstep, grime, broken beat, etc.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Luxuriamusic</title>
+ <serverURL>http://64.62.252.134:3142</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/luxuriamusic_logo.jpg" length="30419" type="image/jpeg" />
+ <musicgenre>Lounge Grooves</musicgenre>
+ <description>Surf Music, Bossa Nova, Exotica, Space-Age Bachelor Pad, Jazz, Soft-Psych, Sunshine Pop, Wall of Sound, Latin, Go-Go, and Film &amp;amp; TV music of the past 50 years are expertly distilled and blended in order to concoct the &amp;quot;highly intoxicating and sometimes hallucinatory&amp;quot; LuxuriaMusic Sound.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Poplie</title>
+ <serverURL>http://159.253.149.12:9060</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/poplie-radio.jpg" length="30019" type="image/jpeg" />
+ <musicgenre>Various / Independent</musicgenre>
+ <description>Poplie: urban humming stereo from Greece.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Cavo Paradiso</title>
+ <serverURL>http://s5.onweb.gr:8488</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/cavoparadisoradio.jpg" length="15198" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>Cavoparadisoradio: listen to soundz of the famous club in Mykonos island.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Addict</title>
+ <serverURL>http://stream1.addictradio.net:80/addictlounge.mp3</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/addictradio_logo.jpg" length="14947" type="image/jpeg" />
+ <musicgenre>Lounge Grooves</musicgenre>
+ <description>Addict Radio Lounge. The best of easy listening tunes.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Dublab</title>
+ <serverURL>http://dublab.streamguys.com/high.mp3</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/dublab.jpg" length="22967" type="image/jpeg" />
+ <musicgenre>Various / Independent</musicgenre>
+ <description>Dublab is a non-profit web radio collective, devoted to the growth of positive music, arts and culture.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Brap.fm</title>
+ <serverURL>http://delicious.wavestreamer.com:4626/1</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/brapfm_logo.jpg" length="12805" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>A four times Breakspoll nominated Internet Radio Station. We&amp;rsquo;re a community of DJs, producers, promoters and music lovers who have all come together in one place with one mission: to bring good music to anyone who wants to listen. We have live shows from 6PM to 12AM, 7 days a week, playing everything from Techno to DNB, Dubstep to House.</description>
+ <category>Ultravox</category>
+</item>
+ <item> <title>Lounge 96</title>
+ <serverURL>http://37.1.144.106:9003</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/lounge96.jpg" length="12694" type="image/jpeg" />
+ <musicgenre>Lounge Grooves</musicgenre>
+ <description>Turkey&amp;#39;s first and only downtempo radio station, Lounge 96, has the ability to breathe with it&amp;#39;s listeners and accompany their daily lives, in every hour of the day. Since there is no spoken show on the radio schedule, listeners have the chance to fully concentrate on the music itself.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>dRadio</title>
+ <serverURL>http://s10.myradiostream.com:11198</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/dradio_larissa_greece_0.jpg" length="36335" type="image/jpeg" />
+ <musicgenre>Various / Independent</musicgenre>
+ <description>After several years behind the decks and radio stations microphones, we put together all of our beloved voices and music, being ready for the coolest journey, that of music.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>MotionFM House</title>
+ <serverURL>http://ice.motionfm.com:80/motionone_free</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/MotionFM.jpg" length="15901" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>Motionfm: deep soulful house music radio channel.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Travel trends</title>
+ <serverURL>http://stream.laut.fm:80/travel-trends</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/travel-trends.jpg" length="41055" type="image/jpeg" />
+ <musicgenre>Lounge Grooves</musicgenre>
+ <description>Timeless relaxing music, relaxing, stimulating, thoughtful, joyful and meditative. This is Travel-trends.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>DinamoFM</title>
+ <serverURL>http://mp3.dinamo.fm:80</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/dinamofm.jpg" length="12880" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>DinamoFM: Handpicked music. Here at dinamo.fm humans pick the music. Not robots. If you&amp;#39;re into electronic (techno, deep house &amp;amp; minimal), dance, urban, music you&amp;#39;re at the right place.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Qmusica</title>
+ <serverURL>http://s1.viastreaming.net:7420</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/qmusica.jpg" length="22810" type="image/jpeg" />
+ <musicgenre>Lounge Grooves</musicgenre>
+ <description>Jazz, soul, blues, funk and cool ethnic grooves from over 100 countries make up the musical output of this ground breaking station, catering for the discerning cosmopolitan population throughout Tenerife &amp;amp; it&amp;acute;s surrounding Islands. So much more than just smooth jazz.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Smoothtraxx</title>
+ <serverURL>http://188.226.173.27:8000/ds128</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/smoothtraxx_radio_logo.jpg" length="12481" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>Charts and mixes from the best DJs around the globe and the latest house events. Deep, soulful and lounge.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Venus Radio</title>
+ <serverURL>http://s7.onweb.gr:8410</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/venus-radio.jpg" length="23034" type="image/jpeg" />
+ <musicgenre>Lounge Grooves</musicgenre>
+ <description>Selected international music: adding its own touch to your summer holiday, Myconos Greece.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Paris-one</title>
+ <serverURL>http://listen.radionomy.com/parisonedeeper</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/paris-one.jpg" length="15772" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>Uplifting Deep-house, garage &amp;amp; soulful music.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>DFR</title>
+ <serverURL>http://sc.dfr.fm:8004</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/dfr.jpg" length="8452" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>DFR is Internet radio specializing in house music. In the beginning of 2003, a few music enthusiasts started the station with primarily 70&amp;#39;s disco and funk music programming. Although they focus on today&amp;#39;s newest house music, they remain very strong with funk overtones.</description>
+ <category>Ultravox</category>
+</item>
+ <item> <title>Ibiza global radio</title>
+ <serverURL>http://ibgr.001.oye.fm:8024</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/ibizaglobalradio.jpg" length="21383" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>Ibiza Global Radio, was established in August 2004, as a response to the concerns of an increasingly demand from people which were more musically cultured and passionate about what has been generally referred as &amp;quot;electronic music&amp;quot;. Ibiza Global Radio, is a radio that broadcasts 24 hours a day from Ibiza, and it&amp;#39;s aim, is to bring to the entire world,&amp;nbsp; the spirit of the island as both consolidated ibiza global radio in the FM Pitiusa (Islands), as well as in the network.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>My house-your house</title>
+ <serverURL>http://50.7.98.106:8830/stream</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/myhouse-yourhouse.jpg" length="30360" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>This is the home of the underground house and eclectic broadcasting by DJs from around the globe. With excellent daily shows featuring house music in addition to it&amp;#39;s regular eclectic shows. This channel guarantees that there&amp;#39;s a show that&amp;#39;ll suit your taste.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Ernest</title>
+ <serverURL>http://79.143.189.68:13262</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Ernest-radio.jpg" length="17228" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>House, deep house, tech house, electronic and other dance music genres from Greece.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Housefm</title>
+ <serverURL>http://78.129.228.187:8008</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/housefm.jpg" length="12396" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>Pure house music.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Energy House Club</title>
+ <serverURL>http://listen.radionomy.com/energy-house-club</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/Energy-House-Club-radio.jpg" length="21554" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>100% pure house music, Deep House, Tech House, Electro, Progressive, Soulful House and more. Live from Malaga, Spain, Costa Del Sol.</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>AltroVerso</title>
+ <serverURL>http://37.59.32.115:2026/;stream.mp3</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/altroverso_logo.jpg" length="17265" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>Since 1998, AltroVerso Web-Radio is Rome&amp;#39;s best undergound electronic radio-show.&amp;nbsp; From House to Techno, crossing minimal, deep and ambient. They play the newest tracks, promos, in most cases next to be released.</description>
+ <category>Ultravox</category>
+</item>
+ <item> <title>Soundz</title>
+ <serverURL>http://50.7.70.66:8671</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/radio_logo_original/soundzradiouk.jpg" length="30804" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>From earlier UK Garage and Drum&amp;amp;Bass sounds, to the latest trends of UK dance music.</description>
+ <category>Shoutcast MPEG</category>
+</item>
+ <item> <title>Audioasyl</title>
+ <serverURL>http://stream.audioasyl.net/audioasyl</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/audioasyl.jpg" length="12936" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>Audioasyl is an independent music hub based in ZÃ¼rich, Switzerland. Broadcasting daily live shows on the web, audioasyl.net,&amp;nbsp; serves as a showcase for the Swiss scene. In addition, audioasyl aims to establish international ties in the world of electronic music.&amp;nbsp;</description>
+ <category>Icecast</category>
+</item>
+ <item> <title>Soulive</title>
+ <serverURL>http://radio.soullive.ru:8000/soul128</serverURL>
+ <enclosure url="http://filtermusic.net/sites/default/files/Soulive_radio.jpg" length="20398" type="image/jpeg" />
+ <musicgenre>House / Dance</musicgenre>
+ <description>For lovers of qualitative electronic music.</description>
+ <category>Icecast</category>
+</item>
+</channel>
+</rss>
+
+<!-- Page cached by Boost @ 2014-10-16 21:51:43, expires @ 2014-10-17 21:51:43, lifetime 1 day -->

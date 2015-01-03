@@ -1,0 +1,47 @@
+#
+# generated on 2014/12/15 11:50:42
+#
+# --table-start--
+dataClass=filtermusic.net.common.database.DbRadio
+tableName=radios
+# --table-fields-start--
+# --field-start--
+fieldName=id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=mTitle
+columnName=title
+# --field-end--
+# --field-start--
+fieldName=mURL
+columnName=url
+# --field-end--
+# --field-start--
+fieldName=mGenre
+columnName=genre
+# --field-end--
+# --field-start--
+fieldName=mDescription
+columnName=description
+# --field-end--
+# --field-start--
+fieldName=mCategory
+columnName=category
+# --field-end--
+# --field-start--
+fieldName=mImageUrl
+columnName=image_url
+# --field-end--
+# --field-start--
+fieldName=mIsFavorite
+columnName=is_favorite
+indexName=radios_is_favorite_idx
+# --field-end--
+# --field-start--
+fieldName=mPlayedDate
+columnName=played_date
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################

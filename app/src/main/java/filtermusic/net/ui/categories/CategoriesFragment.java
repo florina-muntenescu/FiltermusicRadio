@@ -1,4 +1,4 @@
-package filtermusic.net.categories;
+package filtermusic.net.ui.categories;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -16,6 +16,8 @@ import java.util.List;
 import filtermusic.net.R;
 import filtermusic.net.common.model.Category;
 import filtermusic.net.common.model.Radio;
+import filtermusic.net.ui.RadioDetailView;
+import filtermusic.net.ui.RadiosAdapter;
 
 /**
  * Holds a view flipper where the user can browse between categories and radios corresponding to

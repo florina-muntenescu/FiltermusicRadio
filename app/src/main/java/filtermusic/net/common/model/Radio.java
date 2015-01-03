@@ -7,7 +7,8 @@ import java.util.Date;
  * <p/>
  * <item> <title>Insomnia fm</title>
  * <serverURL>http://208.43.9.96:8092</serverURL>
- * <enclosure url="http://filtermusic.net/sites/default/files/insomniafm_0.jpg" length="36246" type="image/jpeg" />
+ * <enclosure url="http://filtermusic.net/sites/default/files/insomniafm_0.jpg" length="36246"
+ * type="image/jpeg" />
  * <musicgenre>Techno / Trance</musicgenre>
  * <description>All sorts of electronic music as well as laid back tunes.&amp;nbsp;</description>
  * <category>Shoutcast MPEG</category>
@@ -40,7 +41,7 @@ public class Radio {
     }
 
     public Radio(String title, String URL, String genre, String description, String category,
-                 String imageUrl, boolean isFavorite, Date playedDate) {
+            String imageUrl, boolean isFavorite, Date playedDate) {
         mTitle = title;
         mURL = URL;
         mGenre = genre;
@@ -93,12 +94,11 @@ public class Radio {
 
     @Override
     public boolean equals(Object o) {
-        Radio radio = (Radio)o;
-        if(this.getTitle().equals(radio.getTitle())
-                && this.getDescription().equals(radio.getDescription())
-                && this.getCategory().equals(radio.getCategory())
-                && this.getGenre().equals(radio.getGenre())
-                && this.getImageUrl().equals(radio.getImageUrl())){
+        Radio radio = (Radio) o;
+        if (this.getTitle().equals(radio.getTitle()) && this.getDescription().equals(
+                radio.getDescription()) && this.getCategory().equals(radio.getCategory()) &&
+                this.getGenre().equals(radio.getGenre()) && this.getImageUrl().equals(
+                radio.getImageUrl())) {
             return true;
         }
         return false;
@@ -106,6 +106,14 @@ public class Radio {
 
     @Override
     public int hashCode() {
-        return super.hashCode();
+        int hashCode = 1;
+        hashCode += 15 + mTitle.hashCode();
+        hashCode += 17 + mDescription.hashCode();
+        hashCode += mURL.hashCode();
+        hashCode += mCategory.hashCode();
+        hashCode += mIsFavorite ? 21 : 1;
+        hashCode += mGenre.hashCode();
+        hashCode += mPlayedDate.getTime();
+        return hashCode;
     }
 }

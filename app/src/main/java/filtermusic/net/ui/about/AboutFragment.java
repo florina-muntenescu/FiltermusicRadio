@@ -1,4 +1,4 @@
-package filtermusic.net.about;
+package filtermusic.net.ui.about;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

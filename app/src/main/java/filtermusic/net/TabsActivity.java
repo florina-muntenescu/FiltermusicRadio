@@ -1,7 +1,6 @@
 package filtermusic.net;
 
 import android.content.Context;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -14,10 +13,10 @@ import android.support.v7.app.ActionBarActivity;
 import java.util.ArrayList;
 import java.util.List;
 
-import filtermusic.net.about.AboutFragment;
-import filtermusic.net.categories.CategoriesFragment;
-import filtermusic.net.favorites.FavoritesFragment;
-import filtermusic.net.recents.RecentsFragment;
+import filtermusic.net.ui.about.AboutFragment;
+import filtermusic.net.ui.categories.CategoriesFragment;
+import filtermusic.net.ui.favorites.FavoritesFragment;
+import filtermusic.net.ui.recents.RecentsFragment;
 
 /**
  * Main activity of this app.
@@ -120,6 +119,10 @@ public class TabsActivity extends ActionBarActivity implements ActionBar.TabList
             // if we're in the categories fragment let it control the back
             CategoriesFragment categoriesFragment = (CategoriesFragment) findFragmentByPosition(0);
             categoriesFragment.onBackPressed();
+        } else if(1 == mViewPager.getCurrentItem()){
+            // if we're in the favorites fragment, let it control the back
+            FavoritesFragment favoritesFragment = (FavoritesFragment) findFragmentByPosition(1);
+            favoritesFragment.onBackPressed();
         } else {
             super.onBackPressed();
         }

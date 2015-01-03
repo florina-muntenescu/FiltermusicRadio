@@ -1,4 +1,4 @@
-package filtermusic.net.categories;
+package filtermusic.net.ui.categories;
 
 import android.content.Context;
 import android.view.LayoutInflater;

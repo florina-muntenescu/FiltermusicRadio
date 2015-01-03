@@ -3,8 +3,7 @@
     android:id="@+id/view_flipper"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#77445533">
+    android:layout_height="match_parent">
 
     <ProgressBar
         android:id="@+id/progress"
@@ -12,9 +11,18 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"/>
 
-    <ListView
-        android:id="@+id/favorites"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent">
 
+        <ListView
+            android:id="@+id/favorites"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@android:id/empty"
+            style="@style/content_text"
+            android:text="@string/favorites_suggestion"/>
+    </RelativeLayout>
 </ViewFlipper>

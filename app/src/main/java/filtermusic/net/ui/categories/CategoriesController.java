@@ -1,4 +1,4 @@
-package filtermusic.net.categories;
+package filtermusic.net.ui.categories;
 
 import android.content.Context;
 
@@ -19,7 +19,7 @@ import filtermusic.net.common.model.Radio;
  * Retrieves data from the server or DB when needed and notifies the
  * data listeners when data is updated.
  */
-public class CategoriesController implements DataProvider.DataUpdatedListener {
+/*default*/ class CategoriesController implements DataProvider.RadioListRetrievedListener {
 
     public interface DataListener {
         void onCategoriesUpdated(List<Category> categories);
@@ -96,7 +96,9 @@ public class CategoriesController implements DataProvider.DataUpdatedListener {
     }
 
     private void syncRadios() {
-        mDataProvider.getDataFromServer(this);
+        //        ImmutableList<Radio> radios = ImmutableList.copyOf(mDataProvider.provide(this));
+        //        updateCategories(radios);
+        mDataProvider.provide(this);
     }
 
     public List<Category> getCategories() {
@@ -108,17 +110,8 @@ public class CategoriesController implements DataProvider.DataUpdatedListener {
     }
 
     @Override
-    public void onRadioListUpdated(List<Radio> radios) {
+    public void onRadioListRetrieved(List<Radio> radios) {
         updateCategories(ImmutableList.copyOf(radios));
     }
 
-    @Override
-    public void onFavoritesUpdated(List<Radio> radios) {
-
-    }
-
-    @Override
-    public void onLastPlayedUpdated(List<Radio> radios) {
-
-    }
 }

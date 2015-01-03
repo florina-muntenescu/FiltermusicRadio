@@ -1,4 +1,4 @@
-package filtermusic.net.recents;
+package filtermusic.net.ui.recents;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
