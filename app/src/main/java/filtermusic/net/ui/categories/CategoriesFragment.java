@@ -125,7 +125,9 @@ public class CategoriesFragment extends Fragment implements CategoriesController
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putInt(LAST_OPENED_VIEW, mViewFlipper.getDisplayedChild());
+        if(mViewFlipper != null) {
+            outState.putInt(LAST_OPENED_VIEW, mViewFlipper.getDisplayedChild());
+        }
     }
 
     private void flipToPage(int pageIndex) {

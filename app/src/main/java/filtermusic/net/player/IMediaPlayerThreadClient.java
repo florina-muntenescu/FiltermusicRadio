@@ -3,7 +3,7 @@ package filtermusic.net.player;
 /**
  * Created by android on 11/10/14.
  */
-public interface IMediaPlayerThreadClient
+/*default*/ interface IMediaPlayerThreadClient
 {
 
     /**

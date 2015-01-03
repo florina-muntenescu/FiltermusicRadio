@@ -3,7 +3,7 @@ package filtermusic.net.common.communication;
 import java.util.List;
 
 import filtermusic.net.common.model.Radio;
-import retrofit.http.*;
+import retrofit.http.GET;
 import rx.Observable;
 
 public interface FiltermusicService {

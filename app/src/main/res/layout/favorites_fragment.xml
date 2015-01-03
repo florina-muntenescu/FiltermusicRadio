@@ -22,7 +22,10 @@
 
         <TextView
             android:id="@android:id/empty"
-            style="@style/content_text"
-            android:text="@string/favorites_suggestion"/>
+            style="@style/title_text"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/favorites_suggestion"
+            android:textAlignment="center"/>
     </RelativeLayout>
 </ViewFlipper>

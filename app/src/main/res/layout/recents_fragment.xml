@@ -12,9 +12,21 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"/>
 
-    <ListView
-        android:id="@+id/recents"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent">
 
+        <ListView
+            android:id="@+id/recents"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@android:id/empty"
+            style="@style/title_text"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/favorites_suggestion"
+            android:textAlignment="center"/>
+    </RelativeLayout>
 </ViewFlipper>

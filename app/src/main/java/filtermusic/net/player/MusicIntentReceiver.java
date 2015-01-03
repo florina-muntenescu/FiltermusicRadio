@@ -5,7 +5,7 @@ import android.content.Intent;
 
 /**
  * Many well-written applications that play audio automatically stop playback when an event occurs
- * that causes the audio to become noisy (ouput through external speakers). For instance,
+ * that causes the audio to become noisy (output through external speakers). For instance,
  * this might happen when a user is listening to music through headphones and accidentally
  * disconnects the headphones from the device. However, this behavior does not happen automatically.
  * If you don't implement this feature, audio plays out of the device's external speakers,

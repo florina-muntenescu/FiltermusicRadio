@@ -10,7 +10,7 @@ import filtermusic.net.common.model.Radio;
 /**
  * Controls the list of favorites
  */
-public class FavoritesController implements DataProvider.FavoritesRetrievedListener{
+/*default*/ class FavoritesController implements DataProvider.FavoritesRetrievedListener{
 
     public interface DataRetrievedListener {
         void onDataRetrieved(List<Radio> radios);

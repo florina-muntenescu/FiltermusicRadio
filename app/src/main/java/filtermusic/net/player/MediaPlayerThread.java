@@ -15,8 +15,9 @@ import filtermusic.net.common.model.Radio;
 
 
 /**
+ *  Player thread
  */
-public class MediaPlayerThread
+/*default*/ class MediaPlayerThread
         extends Thread
         implements
         OnBufferingUpdateListener,

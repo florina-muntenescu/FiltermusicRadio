@@ -1,9 +1,5 @@
 package filtermusic.net.player;
 
-/**
- * Created by android on 11/10/14.
- */
-
 import android.media.AudioManager;
 import android.util.Log;
 
@@ -15,7 +11,7 @@ import filtermusic.net.common.model.Radio;
  * A subclass of android.media.MediaPlayer which provides methods for
  * state-management, data-source management, etc.
  */
-public class StatefulMediaPlayer extends android.media.MediaPlayer {
+/*default*/ class StatefulMediaPlayer extends android.media.MediaPlayer {
     /**
      * Set of states for StatefulMediaPlayer:<br>
      * EMPTY, CREATED, PREPARED, STARTED, PAUSED, STOPPED, ERROR
