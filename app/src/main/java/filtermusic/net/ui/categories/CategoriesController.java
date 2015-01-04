@@ -9,6 +9,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.inject.Inject;
+
 import filtermusic.net.FiltermusicApplication;
 import filtermusic.net.common.data.DataProvider;
 import filtermusic.net.common.model.Category;
@@ -19,7 +21,10 @@ import filtermusic.net.common.model.Radio;
  * Retrieves data from the server or DB when needed and notifies the
  * data listeners when data is updated.
  */
-/*default*/ class CategoriesController implements DataProvider.RadioListRetrievedListener {
+public class CategoriesController implements DataProvider.RadioListRetrievedListener {
+
+    @Inject
+    DataProvider mDataProvider;
 
     public interface DataListener {
         void onCategoriesUpdated(List<Category> categories);
@@ -31,7 +36,6 @@ import filtermusic.net.common.model.Radio;
 
     private Context mContext;
 
-    private DataProvider mDataProvider;
     private List<Category> mCategories = new ArrayList<Category>();
 
     private DataListener mDataListener;
@@ -49,7 +53,8 @@ import filtermusic.net.common.model.Radio;
 
     private CategoriesController() {
         mContext = FiltermusicApplication.getInstance().getApplicationContext();
-        mDataProvider = new DataProvider(mContext);
+
+        FiltermusicApplication.getInstance().inject(this);
         syncRadios();
     }
 

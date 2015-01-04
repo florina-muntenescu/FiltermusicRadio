@@ -43,7 +43,7 @@ public class FavoritesFragment extends Fragment implements FavoritesController
             @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.favorites_fragment, container, false);
 
-        mController = new FavoritesController(getActivity());
+        mController = new FavoritesController();
 
         mViewFlipper = (ViewFlipper) rootView.findViewById(R.id.view_flipper);
         mRadiosList = (ListView) rootView.findViewById(R.id.favorites);
@@ -57,6 +57,9 @@ public class FavoritesFragment extends Fragment implements FavoritesController
                         flipToPage(RADIO_DETAIL_VIEW_INDEX);
                     }
                 });
+
+        mRadiosList.setEmptyView(rootView.findViewById(android.R.id.empty));
+        mRadioDetailView = (RadioDetailView) rootView.findViewById(R.id.radio_detail_view);
 
         mController.retrieveFavorites(this);
 

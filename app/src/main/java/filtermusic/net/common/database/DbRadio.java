@@ -48,6 +48,7 @@ public class DbRadio {
     }
 
     public DbRadio(Radio radio) {
+        id = radio.getId();
         mTitle = radio.getTitle();
         mURL = radio.getURL();
         mGenre = radio.getGenre();

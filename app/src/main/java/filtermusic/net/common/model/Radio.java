@@ -26,6 +26,7 @@ public class Radio {
     public static final String TAG_CATEGORY = "category";
 
 
+    private int mId;
     private String mTitle;
     private String mURL;
     private String mGenre;
@@ -40,8 +41,9 @@ public class Radio {
         // all persisted classes must define a no-arg constructor with at least package visibility
     }
 
-    public Radio(String title, String URL, String genre, String description, String category,
-            String imageUrl, boolean isFavorite, Date playedDate) {
+    public Radio(int id, String title, String URL, String genre, String description,
+            String category, String imageUrl, boolean isFavorite, Date playedDate) {
+        mId = id;
         mTitle = title;
         mURL = URL;
         mGenre = genre;
@@ -92,6 +94,10 @@ public class Radio {
         mPlayedDate = playedDate;
     }
 
+    public void setId(int id) {
+        mId = id;
+    }
+
     @Override
     public boolean equals(Object o) {
         Radio radio = (Radio) o;
@@ -104,9 +110,14 @@ public class Radio {
         return false;
     }
 
+    public int getId() {
+        return mId;
+    }
+
     @Override
     public int hashCode() {
         int hashCode = 1;
+
         hashCode += 15 + mTitle.hashCode();
         hashCode += 17 + mDescription.hashCode();
         hashCode += mURL.hashCode();

@@ -1,6 +1,4 @@
-package filtermusic.net.ui.favorites;
-
-import android.content.Context;
+package filtermusic.net.ui.recents;
 
 import java.util.List;
 
@@ -11,9 +9,9 @@ import filtermusic.net.common.data.DataProvider;
 import filtermusic.net.common.model.Radio;
 
 /**
- * Controls the list of favorites
+ * Controls the list of recently played radios
  */
-public class FavoritesController implements DataProvider.FavoritesRetrievedListener, DataProvider.DataUpdatedListener {
+public class RecentsController implements DataProvider.LastPlayedRetrievedListener, DataProvider.DataUpdatedListener {
 
     public interface DataRetrievedListener {
         void onDataRetrieved(List<Radio> radios);
@@ -25,27 +23,27 @@ public class FavoritesController implements DataProvider.FavoritesRetrievedListe
     DataProvider mDataProvider;
 
     private Radio mLastSelectedRadio;
-    private List<Radio> mFavorites;
+    private List<Radio> mLastPlayed;
 
-    public FavoritesController() {
+    public RecentsController() {
         FiltermusicApplication.getInstance().inject(this);
         mDataProvider.registerDataListener(this);
     }
 
-    public void retrieveFavorites(DataRetrievedListener listener) {
+    public void retrieveRecents(DataRetrievedListener listener) {
         mListener = listener;
-        mDataProvider.retrieveFavorites(this);
+        mDataProvider.retrieveLastPlayed(this);
     }
 
     @Override
-    public void onFavoritesRetrieved(List<Radio> radios) {
-        mFavorites = radios;
+    public void onLastPlayedRetrieved(List<Radio> radios) {
+        mLastPlayed = radios;
         mListener.onDataRetrieved(radios);
     }
 
     @Override
     public void onDataChanged() {
-        mDataProvider.retrieveFavorites(this);
+        mDataProvider.retrieveLastPlayed(this);
     }
 
     public Radio getLastSelectedRadio() {
@@ -53,7 +51,7 @@ public class FavoritesController implements DataProvider.FavoritesRetrievedListe
     }
 
     public Radio selectRadio(int radioIndex) {
-        mLastSelectedRadio = mFavorites.get(radioIndex);
+        mLastSelectedRadio = mLastPlayed.get(radioIndex);
         return mLastSelectedRadio;
     }
 }

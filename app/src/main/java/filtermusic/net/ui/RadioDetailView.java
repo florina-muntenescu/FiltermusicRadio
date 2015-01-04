@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.text.Html;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -12,13 +13,18 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+import javax.inject.Inject;
+
+import filtermusic.net.FiltermusicApplication;
 import filtermusic.net.R;
+import filtermusic.net.common.data.DataProvider;
 import filtermusic.net.common.model.Radio;
 import filtermusic.net.player.IMediaPlayerServiceListener;
 import filtermusic.net.player.PlayerController;
 
 /**
- * View holding the details for a radio and that gives the user the possibility of playing that radio
+ * View holding the details for a radio and that gives the user the possibility of playing that
+ * radio
  * and saving the radio as favorite
  */
 public class RadioDetailView extends LinearLayout implements IMediaPlayerServiceListener {
@@ -35,6 +41,9 @@ public class RadioDetailView extends LinearLayout implements IMediaPlayerService
     private Context mContext;
 
     private PlayerController mPlayerController;
+
+    @Inject
+    DataProvider mDataProvider;
 
     public RadioDetailView(Context context) {
         super(context);
@@ -56,6 +65,9 @@ public class RadioDetailView extends LinearLayout implements IMediaPlayerService
     }
 
     private void initUI(final Context context) {
+
+        FiltermusicApplication.getInstance().inject(this);
+
         setOrientation(VERTICAL);
 
         mContext = context;
@@ -63,8 +75,8 @@ public class RadioDetailView extends LinearLayout implements IMediaPlayerService
         mPlayerController = PlayerController.getInstance();
         mPlayerController.addListener(this);
 
-        LayoutInflater inflater = (LayoutInflater) context
-                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context
+                        .LAYOUT_INFLATER_SERVICE);
         View rootView = inflater.inflate(R.layout.radio_detail_view, this, true);
 
         mRadioImage = (ImageView) rootView.findViewById(R.id.radio_image);
@@ -72,31 +84,33 @@ public class RadioDetailView extends LinearLayout implements IMediaPlayerService
         mRadioDescription = (TextView) rootView.findViewById(R.id.radio_description);
 
         mPlayButton = (ImageView) rootView.findViewById(R.id.play_button);
-        mPlayButton.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                boolean isPlaying = mPlayerController.isRadioPlaying(mRadio);
-                if (!isPlaying) {
-                    mPlayerController.play(mRadio);
-                } else {
-                    mPlayerController.pause();
-                }
-            }
-        });
+        mPlayButton.setOnClickListener(
+                new OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        boolean isPlaying = mPlayerController.isRadioPlaying(mRadio);
+                        if (!isPlaying) {
+                            mPlayerController.play(mRadio);
+                        } else {
+                            mPlayerController.pause();
+                        }
+                    }
+                });
 
 
         mStarButton = (ImageView) rootView.findViewById(R.id.star_button);
-        mStarButton.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        mStarButton.setOnClickListener(
+                new OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        mRadio.setFavorite(!mRadio.isFavorite());
 
-                mRadio.setFavorite(!mRadio.isFavorite());
+                        int star = mRadio.isFavorite() ? R.drawable.star : R.drawable.star_outline;
+                        mStarButton.setImageResource(star);
+                        mDataProvider.updateFavorite(mRadio);
 
-                int star = mRadio.isFavorite() ? R.drawable.star : R.drawable.star_outline;
-                mStarButton.setImageResource(star);
-
-            }
-        });
+                    }
+                });
     }
 
     public void setRadio(@NonNull Radio radio) {
@@ -106,9 +120,7 @@ public class RadioDetailView extends LinearLayout implements IMediaPlayerService
 
     private void updateUI() {
 
-        Picasso.with(mContext)
-                .load(mRadio.getImageUrl())
-                .placeholder(R.drawable.station_image)
+        Picasso.with(mContext).load(mRadio.getImageUrl()).placeholder(R.drawable.station_image)
                 .into(mRadioImage);
 
         mRadioTitle.setText(mRadio.getTitle());

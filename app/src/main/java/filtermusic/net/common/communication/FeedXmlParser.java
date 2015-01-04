@@ -40,8 +40,8 @@ import retrofit.mime.TypedOutput;
         }
     }
 
-    private List<Radio> readFeed(final @NonNull XmlPullParser parser)
-            throws XmlPullParserException, IOException {
+    private List<Radio> readFeed(final @NonNull XmlPullParser parser) throws
+            XmlPullParserException, IOException {
         List<Radio> entries = new ArrayList<Radio>();
 
         parser.require(XmlPullParser.START_TAG, ns, "rss");
@@ -60,8 +60,8 @@ import retrofit.mime.TypedOutput;
         return entries;
     }
 
-    private List<Radio> readChannel(final @NonNull XmlPullParser parser)
-            throws XmlPullParserException, IOException {
+    private List<Radio> readChannel(final @NonNull XmlPullParser parser) throws
+            XmlPullParserException, IOException {
         List<Radio> entries = new ArrayList<Radio>();
 
         parser.require(XmlPullParser.START_TAG, ns, "channel");
@@ -84,8 +84,8 @@ import retrofit.mime.TypedOutput;
      * Parses the contents of an item. If it encounters a title, summary, or link tag, hands them
      * off to their respective read methods for processing. Otherwise, skips the tag.
      */
-    private Radio readRadio(final @NonNull XmlPullParser parser)
-            throws XmlPullParserException, IOException {
+    private Radio readRadio(final @NonNull XmlPullParser parser) throws XmlPullParserException,
+            IOException {
         parser.require(XmlPullParser.START_TAG, ns, "item");
 
         String title = null;
@@ -117,12 +117,12 @@ import retrofit.mime.TypedOutput;
             }
         }
 
-        return new Radio(title, url, genre, description, category, imageUrl, false, null);
+        return new Radio(-1, title, url, genre, description, category, imageUrl, false, null);
     }
 
     // Processes tags in the feed.
-    private String readTag(final @NonNull XmlPullParser parser, final @NonNull String tag)
-            throws IOException, XmlPullParserException {
+    private String readTag(final @NonNull XmlPullParser parser, final @NonNull String tag) throws
+            IOException, XmlPullParserException {
         parser.require(XmlPullParser.START_TAG, ns, tag);
         String title = readText(parser);
         parser.require(XmlPullParser.END_TAG, ns, tag);
@@ -130,8 +130,8 @@ import retrofit.mime.TypedOutput;
     }
 
     // Processes image url tags in the feed.
-    private String readImageUrl(final @NonNull XmlPullParser parser)
-            throws IOException, XmlPullParserException {
+    private String readImageUrl(final @NonNull XmlPullParser parser) throws IOException,
+            XmlPullParserException {
         String link = "";
         parser.require(XmlPullParser.START_TAG, ns, Radio.TAG_IMAGEURL);
         String tag = parser.getName();
@@ -144,8 +144,8 @@ import retrofit.mime.TypedOutput;
     }
 
 
-    private String readText(final @NonNull XmlPullParser parser)
-            throws IOException, XmlPullParserException {
+    private String readText(final @NonNull XmlPullParser parser) throws IOException,
+            XmlPullParserException {
         String result = "";
         if (parser.next() == XmlPullParser.TEXT) {
             result = parser.getText();
@@ -157,8 +157,8 @@ import retrofit.mime.TypedOutput;
     // Skips tags the parser isn't interested in. Uses depth to handle nested tags. i.e.,
     // if the next tag after a START_TAG isn't a matching END_TAG, it keeps going until it
     // finds the matching END_TAG (as indicated by the value of "depth" being 0).
-    private void skip(final @NonNull XmlPullParser parser)
-            throws XmlPullParserException, IOException {
+    private void skip(final @NonNull XmlPullParser parser) throws XmlPullParserException,
+            IOException {
         if (parser.getEventType() != XmlPullParser.START_TAG) {
             throw new IllegalStateException();
         }

@@ -28,4 +28,10 @@
             android:text="@string/favorites_suggestion"
             android:textAlignment="center"/>
     </RelativeLayout>
+
+    <filtermusic.net.ui.RadioDetailView
+        android:id="@+id/radio_detail_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
 </ViewFlipper>
