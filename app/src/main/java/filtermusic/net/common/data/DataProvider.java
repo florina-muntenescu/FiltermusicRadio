@@ -114,17 +114,7 @@ public class DataProvider {
         dataProvider.provideLastPlayedList(listener);
     }
 
-    public void updateFavorite(Radio radio) {
-        updateRadio(radio);
-    }
-
-    public void updatePlayDate(Radio radio) {
-        Date date = new Date(System.currentTimeMillis());
-        radio.setPlayedDate(date);
-        updateRadio(radio);
-    }
-
-    private void updateRadio(Radio radio) {
+    public void updateRadio(Radio radio) {
         DatabaseDataProvider dataProvider = new DatabaseDataProvider(mContext);
         dataProvider.updateRadio(
                 radio, new DataUpdatedListener() {

@@ -121,7 +121,7 @@ import rx.schedulers.Schedulers;
         }catch (SQLException exception){
             exception.printStackTrace();
         }
-        
+
         List<DbRadio> dbRadios = null;
         try {
             dbRadios = dao.query(queryBuilder.prepare());

@@ -11,9 +11,13 @@ import android.support.annotation.NonNull;
 import android.util.Log;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
+import javax.inject.Inject;
+
 import filtermusic.net.FiltermusicApplication;
+import filtermusic.net.common.data.DataProvider;
 import filtermusic.net.common.model.Radio;
 
 /**
@@ -25,6 +29,9 @@ public class PlayerController {
         void onPlay(Radio radio);
         void onStop();
     }
+
+    @Inject
+    DataProvider mDataProvider;
 
     private Radio mSelectedRadio;
     private MediaPlayerService mService;
@@ -44,6 +51,8 @@ public class PlayerController {
     }
 
     private PlayerController() {
+        FiltermusicApplication.getInstance().inject(this);
+
         mContext = FiltermusicApplication.getInstance().getApplicationContext();
         mServiceListeners = new ArrayList<IMediaPlayerServiceListener>();
         bindToService();
@@ -87,6 +96,9 @@ public class PlayerController {
         }else{
             newRadioSelected(radio);
         }
+        final Date now = new Date(System.currentTimeMillis());
+        radio.setPlayedDate(now);
+        mDataProvider.updateRadio(radio);
     }
 
     private void newRadioSelected(Radio radio) {

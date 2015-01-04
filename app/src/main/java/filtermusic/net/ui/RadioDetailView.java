@@ -107,7 +107,7 @@ public class RadioDetailView extends LinearLayout implements IMediaPlayerService
 
                         int star = mRadio.isFavorite() ? R.drawable.star : R.drawable.star_outline;
                         mStarButton.setImageResource(star);
-                        mDataProvider.updateFavorite(mRadio);
+                        mDataProvider.updateRadio(mRadio);
 
                     }
                 });

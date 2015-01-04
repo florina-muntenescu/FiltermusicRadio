@@ -16,6 +16,7 @@
     <!--recently played tab-->
     <string name="recent_tab">Played</string>
     <string name="recent_radios">Your recently played radios will be visible here</string>
+    <string name="last_played">Last played %s</string>
 
     <!--about tab-->
     <string name="about_tab">About</string>
