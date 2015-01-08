@@ -124,7 +124,6 @@ public class Radio {
         hashCode += mCategory.hashCode();
         hashCode += mIsFavorite ? 21 : 1;
         hashCode += mGenre.hashCode();
-        hashCode += mPlayedDate.getTime();
         return hashCode;
     }
 }

@@ -21,7 +21,7 @@ public class DatabaseHelperTest extends AndroidTestCase {
         RuntimeExceptionDao<DbRadio, Integer> dao = databaseHelper.getDbRadioDao();
 
         Radio radio = new Radio(
-                "title", "url", "genre", "description", "category", null, false, null);
+                -1, "title", "url", "genre", "description", "category", null, false, null);
         DbRadio dbRadio = new DbRadio(radio);
         int insertedRows = dao.create(dbRadio);
 
@@ -40,12 +40,12 @@ public class DatabaseHelperTest extends AndroidTestCase {
     }
 
 
-    public void testStar() throws Exception{
+    public void testStar() throws Exception {
         DatabaseHelper databaseHelper = new DatabaseHelper(getContext());
         RuntimeExceptionDao<DbRadio, Integer> dao = databaseHelper.getDbRadioDao();
 
         Radio radio = new Radio(
-                "title", "url", "genre", "description", "category", null, false, null);
+                -1, "title", "url", "genre", "description", "category", null, false, null);
         DbRadio dbRadio = new DbRadio(radio);
         int insertedRows = dao.create(dbRadio);
 
@@ -60,12 +60,12 @@ public class DatabaseHelperTest extends AndroidTestCase {
         assertEquals(radios.get(0).isFavorite(), true);
     }
 
-    public void testLastPlayed() throws Exception{
+    public void testLastPlayed() throws Exception {
         DatabaseHelper databaseHelper = new DatabaseHelper(getContext());
         RuntimeExceptionDao<DbRadio, Integer> dao = databaseHelper.getDbRadioDao();
 
         Radio radio = new Radio(
-                "title", "url", "genre", "description", "category", null, false, null);
+                -1, "title", "url", "genre", "description", "category", null, false, null);
         DbRadio dbRadio = new DbRadio(radio);
         int insertedRows = dao.create(dbRadio);
 

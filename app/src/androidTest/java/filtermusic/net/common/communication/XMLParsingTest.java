@@ -1,4 +1,4 @@
-package filtermusic.net;
+package filtermusic.net.common.communication;
 
 import android.test.InstrumentationTestCase;
 
@@ -7,7 +7,6 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 
-import filtermusic.net.common.communication.FeedXmlParser;
 import filtermusic.net.common.model.Radio;
 
 /**

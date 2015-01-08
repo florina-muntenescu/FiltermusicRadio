@@ -56,7 +56,19 @@ public class PlayerView extends LinearLayout implements IMediaPlayerServiceListe
         mRadioTitle = ButterKnife.findById(rootView, R.id.radio_title);
         mPlayPauseButton = ButterKnife.findById(rootView, R.id.play_pause_button);
 
-        if(mPlayerController.getSelectedRadio() != null){
+        mPlayPauseButton.setOnClickListener(
+                new OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                       if(mPlayerController.isRadioPlaying(mRadio)){
+                           mPlayerController.pause();
+                       }else{
+                           mPlayerController.play(mRadio);
+                       }
+                    }
+                });
+
+        if (mPlayerController.getSelectedRadio() != null) {
             setRadio(mPlayerController.getSelectedRadio());
         }
     }
@@ -64,9 +76,7 @@ public class PlayerView extends LinearLayout implements IMediaPlayerServiceListe
     public void setRadio(Radio radio) {
         mRadio = radio;
         mRadioTitle.setText(mRadio.getTitle());
-        Picasso.with(mContext)
-                .load(mRadio.getImageUrl())
-                .placeholder(R.drawable.station_image)
+        Picasso.with(mContext).load(mRadio.getImageUrl()).placeholder(R.drawable.station_image)
                 .into(mRadioImage);
     }
 

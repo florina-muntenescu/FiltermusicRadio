@@ -4,10 +4,14 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 import filtermusic.net.common.model.Radio;
+import rx.Observable;
+import rx.Subscriber;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
 
 /**
  * Provides the data either from the server or from database
@@ -68,32 +72,120 @@ public class DataProvider {
                 new RadioListRetrievedListener() {
                     @Override
                     public void onRadioListRetrieved(List<Radio> radios) {
-                        updateWithDatabase(radios, listener);
+                        Observable<List<Radio>> radiosObservable = requestFromServerAndSync(radios);
+                        radiosObservable.subscribeOn(Schedulers.newThread()).observeOn(
+                                AndroidSchedulers.mainThread()).subscribe(
+                                new Subscriber<List<Radio>>() {
+                                    @Override
+                                    public void onCompleted() {
+                                        // nothing
+                                    }
+
+                                    @Override
+                                    public void onError(Throwable e) {
+                                    }
+
+                                    @Override
+                                    public void onNext(List<Radio> radios) {
+                                        listener.onRadioListRetrieved(radios);
+                                    }
+                                });
+
+                    }
+                });
+
+    }
+
+    private Observable<List<Radio>> requestFromServerAndSync(final List<Radio> radios) {
+        return Observable.create(
+                new Observable.OnSubscribe<List<Radio>>() {
+                    @Override
+                    public void call(final Subscriber<? super List<Radio>> observer) {
+                        List<Radio> radioList = syncDatabaseAndServerData(radios);
+                        observer.onNext(radioList);
+                        observer.onCompleted();
                     }
                 });
     }
 
-    /**
-     * Update the list of radios with the radios from the database
-     *
-     * @param radios   list of radios
-     * @param listener notifies when the data has been updated
-     */
-    public void updateWithDatabase(List<Radio> radios, @NonNull final RadioListRetrievedListener
-            listener) {
-        // merge the list of radios with the one from the db
+    private List<Radio> syncDatabaseAndServerData(@NonNull final List<Radio> serverRadios) {
         DatabaseDataProvider dbProvider = new DatabaseDataProvider(mContext);
-        List<Radio> dbRadios = dbProvider.provideRadioList();
+        final List<Radio> dbRadios = dbProvider.provideRadioList();
+
+        final List<Radio> dbRadiosRemoved = getRemovedRadios(serverRadios, dbRadios);
+        final List<Radio> newOrUpdatedRadios = getNewUpdatedRadios(
+                serverRadios, dbRadios);
+        dbProvider.createOrUpdateCollection(newOrUpdatedRadios);
+        dbProvider.deleteCollection(dbRadiosRemoved);
+
+        return dbProvider.provideRadioList();
+    }
+
+    protected List<Radio> getRemovedRadios(@NonNull final List<Radio> radios,
+            @NonNull final List<Radio> dbRadios) {
+        List<Radio> dbRadiosRemoved = new ArrayList<Radio>();
         for (Radio dbRadio : dbRadios) {
+            Radio existingRadio = null;
             for (Radio radio : radios) {
-                if (dbRadio.equals(radio)) {
-                    radio.setId(dbRadio.getId());
-                    radio.setFavorite(dbRadio.isFavorite());
-                    radio.setPlayedDate(dbRadio.getPlayedDate());
+                // if title and category are equal, we consider the radios equal
+                if (radio.getTitle().equals(dbRadio.getTitle()) && radio.getCategory().equals
+                        (dbRadio.getCategory())) {
+                    existingRadio = radio;
+                    break;
                 }
             }
+            if (existingRadio == null) {
+                // the radio has been removed
+                dbRadiosRemoved.add(dbRadio);
+            }
         }
-        listener.onRadioListRetrieved(radios);
+
+        return dbRadiosRemoved;
+    }
+
+    /**
+     * Returns the list of radios that are not in the database or that have been updated
+     * Making the method protected to test it
+     */
+    protected List<Radio> getNewUpdatedRadios(@NonNull final List<Radio> radios,
+            @NonNull final List<Radio> dbRadios) {
+        List<Radio> newOrUpdatedRadios = new ArrayList<Radio>(radios);
+
+        // radios that have been retrieved from the BE, exist in the database but we don't know
+        // their ID and the radio from the database
+        HashMap<Radio, Radio> existingRadiosMap = new HashMap<Radio, Radio>();
+        for (Radio dbRadio : dbRadios) {
+            Radio existingRadio = null;
+            for (Radio radio : radios) {
+                // if title and category are equal, we consider the radios equal
+                if (radio.getTitle().equals(dbRadio.getTitle()) && radio.getCategory().equals
+                        (dbRadio.getCategory())) {
+                    existingRadio = radio;
+                    break;
+                }
+            }
+            if (existingRadio != null) {
+                existingRadiosMap.put(existingRadio, dbRadio);
+            }
+        }
+
+        // if from the list of radios we remove all the radios that exist already
+        // we get the list of new radios
+        newOrUpdatedRadios.removeAll(existingRadiosMap.keySet());
+
+        //for every updated radio, update the id, is favorite and last play date
+        // according to the value from the database
+        // like this we don't loose the info that we saved in the DB
+        // add the key set of the existing map to the list of new radios.
+        for (Radio radio : existingRadiosMap.keySet()) {
+            Radio dbRadio = existingRadiosMap.get(radio);
+            radio.setId(dbRadio.getId());
+            radio.setFavorite(dbRadio.isFavorite());
+            radio.setPlayedDate(dbRadio.getPlayedDate());
+            newOrUpdatedRadios.add(radio);
+        }
+
+        return newOrUpdatedRadios;
     }
 
     public void registerDataListener(@NonNull final DataUpdatedListener listener) {

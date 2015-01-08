@@ -103,6 +103,34 @@ import rx.schedulers.Schedulers;
                 });
     }
 
+
+    /**
+     * Creates or updates a collection of radios syncronous
+     * @param radios the radios that are updated or created in the database
+     */
+    public void createOrUpdateCollection(@NonNull final List<Radio> radios){
+        DatabaseHelper databaseHelper = new DatabaseHelper(mContext);
+        RuntimeExceptionDao<DbRadio, Integer> dao = databaseHelper.getDbRadioDao();
+        for(Radio radio : radios){
+            dao.createOrUpdate(new DbRadio(radio));
+        }
+    }
+
+    /**
+     * Deletes from the database all the elements of the collection
+     * @param radios the collection that is removed
+     */
+    public void deleteCollection(@NonNull final List<Radio> radios){
+        DatabaseHelper databaseHelper = new DatabaseHelper(mContext);
+        RuntimeExceptionDao<DbRadio, Integer> dao = databaseHelper.getDbRadioDao();
+
+        List<DbRadio> dbRadios = new ArrayList<DbRadio>();
+        for(Radio radio : radios){
+            dbRadios.add(new DbRadio(radio));
+        }
+        dao.delete(dbRadios);
+    }
+
     /**
      * Retrieve from the database all the fields ordered by their play date
      *
