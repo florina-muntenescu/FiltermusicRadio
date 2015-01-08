@@ -126,4 +126,10 @@ public class Radio {
         hashCode += mGenre.hashCode();
         return hashCode;
     }
+
+    @Override
+    public String toString() {
+        return mId + " " + mTitle + " " + mCategory + " " + mGenre + " " + mDescription + " "
+                + mImageUrl + " " + mURL + " " + mIsFavorite + " " + mPlayedDate;
+    }
 }

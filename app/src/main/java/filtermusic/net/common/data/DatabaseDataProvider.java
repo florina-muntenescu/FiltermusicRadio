@@ -105,27 +105,59 @@ import rx.schedulers.Schedulers;
 
 
     /**
-     * Creates or updates a collection of radios syncronous
-     * @param radios the radios that are updated or created in the database
+     * Synchronizes the database by creating or updating a list of radios and deleting another list
+     * or radios
+     *
+     * @param radiosToCreateOrUpdate radios that are created or updated in case they are already in
+     *                               the database
+     * @param radiosToDelete         radios that are removed from the database
+     * @return the entire list of radios from the database
      */
-    public void createOrUpdateCollection(@NonNull final List<Radio> radios){
+    public List<Radio> syncDatabase(@NonNull final List<Radio> radiosToCreateOrUpdate,
+            @NonNull final List<Radio> radiosToDelete) {
+        Log.d(LOG_TAG, "to create/update " + radiosToCreateOrUpdate.size()
+                        + " to delete " + radiosToDelete.size());
         DatabaseHelper databaseHelper = new DatabaseHelper(mContext);
         RuntimeExceptionDao<DbRadio, Integer> dao = databaseHelper.getDbRadioDao();
-        for(Radio radio : radios){
+        // create or update radios
+        for (Radio radio : radiosToCreateOrUpdate) {
+            dao.createOrUpdate(new DbRadio(radio));
+        }
+        // delete radios
+        List<DbRadio> dbRadios = new ArrayList<DbRadio>();
+        for (Radio radio : radiosToDelete) {
+            dbRadios.add(new DbRadio(radio));
+        }
+        dao.delete(dbRadios);
+
+        final List<DbRadio> allDBRadios = dao.queryForAll();
+        return convert(allDBRadios);
+    }
+
+    /**
+     * Creates or updates a collection of radios syncronous
+     *
+     * @param radios the radios that are updated or created in the database
+     */
+    public void createOrUpdateCollection(@NonNull final List<Radio> radios) {
+        DatabaseHelper databaseHelper = new DatabaseHelper(mContext);
+        RuntimeExceptionDao<DbRadio, Integer> dao = databaseHelper.getDbRadioDao();
+        for (Radio radio : radios) {
             dao.createOrUpdate(new DbRadio(radio));
         }
     }
 
     /**
      * Deletes from the database all the elements of the collection
+     *
      * @param radios the collection that is removed
      */
-    public void deleteCollection(@NonNull final List<Radio> radios){
+    public void deleteCollection(@NonNull final List<Radio> radios) {
         DatabaseHelper databaseHelper = new DatabaseHelper(mContext);
         RuntimeExceptionDao<DbRadio, Integer> dao = databaseHelper.getDbRadioDao();
 
         List<DbRadio> dbRadios = new ArrayList<DbRadio>();
-        for(Radio radio : radios){
+        for (Radio radio : radios) {
             dbRadios.add(new DbRadio(radio));
         }
         dao.delete(dbRadios);
@@ -146,7 +178,7 @@ import rx.schedulers.Schedulers;
         try {
             Where<DbRadio, Integer> where = queryBuilder.where();
             where.isNotNull(DbRadio.PLAYED_DATE_FILED_NAME);
-        }catch (SQLException exception){
+        } catch (SQLException exception) {
             exception.printStackTrace();
         }
 

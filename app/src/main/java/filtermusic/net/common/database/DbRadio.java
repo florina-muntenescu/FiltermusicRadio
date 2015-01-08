@@ -102,4 +102,10 @@ public class DbRadio {
     public int getId() {
         return id;
     }
+
+    @Override
+    public String toString() {
+        return id + " " + mTitle + " " + mCategory + " " + mGenre + " " + mDescription + " "
+                + mImageUrl + " " + mURL + " " + mIsFavorite + " " + mPlayedDate;
+    }
 }

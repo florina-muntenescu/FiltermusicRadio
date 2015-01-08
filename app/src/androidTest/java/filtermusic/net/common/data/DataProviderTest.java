@@ -57,7 +57,7 @@ public class DataProviderTest extends AndroidTestCase {
 
         assertNotNull(newAndUpdatedRadios);
 
-        assertEquals(newAndUpdatedRadios.size(), 5);
+        assertEquals(newAndUpdatedRadios.size(), 3);
     }
 
     public void testRemovedRadios() {
