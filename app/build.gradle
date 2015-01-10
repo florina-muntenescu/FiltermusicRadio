@@ -1,17 +1,28 @@
 apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
 apply plugin: 'android-apt'
 
 buildscript {
     repositories {
         mavenCentral()
         jcenter()
+        maven { url 'https://maven.fabric.io/public' }
     }
     dependencies {
         classpath 'com.neenbedankt.gradle.plugins:android-apt:+'
         classpath 'com.github.ben-manes:gradle-versions-plugin:0.5-beta-6'
         classpath 'org.codehaus.groovy:groovy-backports-compat23:2.3.5'
+        classpath 'io.fabric.tools:gradle:1.+'
     }
 }
+
+def hockeyAppToken = project.hasProperty("hockeyApp.token") ? project.property("hockeyApp.token") : "unspecified";
+
 
 android {
     compileSdkVersion 21
@@ -22,20 +33,30 @@ android {
         minSdkVersion 11
         targetSdkVersion 20
         versionCode 1
-        versionName "1.0"
+        versionName "0.7"
 
-        renderscriptTargetApi 19
-        renderscriptSupportMode true
+        buildConfigField "boolean", "HOCKEY_APP_ENABLED", "false"
+        buildConfigField "String", "HOCKEY_APP_TOKEN", "\"9918ddd2acc2f957011f077d15ca2ad2\""
     }
     buildTypes {
-        debug {
-            runProguard false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
 
         release {
+            buildConfigField "boolean", "HOCKEY_APP_ENABLED", "true"
+            buildConfigField "String", "HOCKEY_APP_TOKEN", "null"
+
             runProguard true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+        }
+    }
+
+    sourceSets {
+        main.java.srcDirs = ['src/hockeyapp/source', 'src/main/java']
+    }
+    productFlavors{
+        hockeyapp{
+            packageName 'filtermusic.test'
+            buildConfigField "boolean", "HOCKEY_APP_ENABLED", "true"
         }
     }
 
@@ -50,6 +71,8 @@ dependencies {
     compile 'com.android.support:appcompat-v7:21.0.2'
     compile 'com.google.guava:guava:18.0'
 
+    compile 'net.hockeyapp.android:HockeySDK:3.0.2@jar'
+
     compile 'com.squareup.dagger:dagger:1.2.2'
     compile 'com.squareup.dagger:dagger-compiler:1.2.2'
 
@@ -62,6 +85,8 @@ dependencies {
     compile 'com.j256.ormlite:ormlite-core:4.48'
     compile 'com.j256.ormlite:ormlite-android:4.48'
     compile 'com.squareup.picasso:picasso:2.3.2'
-
+    compile('com.crashlytics.sdk.android:crashlytics:2.2.0@aar') {
+        transitive = true;
+    }
 
 }

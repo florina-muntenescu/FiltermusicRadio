@@ -39,10 +39,14 @@ public class TabsActivity extends ActionBarActivity implements ActionBar.TabList
      */
     private ViewPager mViewPager;
 
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        initUI();
+    }
+
+    private void initUI() {
         List<Tab> tabs = new ArrayList<Tab>();
         tabs.add(new Tab(CategoriesFragment.class.getName(), getString(R.string.categories_tab)));
         tabs.add(new Tab(FavoritesFragment.class.getName(), getString(R.string.favorites_tab)));
@@ -51,8 +55,8 @@ public class TabsActivity extends ActionBarActivity implements ActionBar.TabList
 
         // Create the adapter that will return a fragment for each of the three primary sections
         // of the app.
-        mAppSectionsPagerAdapter = new AppSectionsPagerAdapter(getSupportFragmentManager(), tabs,
-                this);
+        mAppSectionsPagerAdapter = new AppSectionsPagerAdapter(
+                getSupportFragmentManager(), tabs, this);
 
         // Set up the action bar.
         final ActionBar actionBar = getSupportActionBar();
@@ -74,15 +78,18 @@ public class TabsActivity extends ActionBarActivity implements ActionBar.TabList
         // user swipes between sections.
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mAppSectionsPagerAdapter);
-        mViewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
-            @Override
-            public void onPageSelected(int position) {
-                // When swiping between different app sections, select the corresponding tab.
-                // We can also use ActionBar.Tab#select() to do this if we have a reference to the
-                // Tab.
-                actionBar.setSelectedNavigationItem(position);
-            }
-        });
+        mViewPager.setOnPageChangeListener(
+                new ViewPager.SimpleOnPageChangeListener() {
+                    @Override
+                    public void onPageSelected(int position) {
+                        // When swiping between different app sections,
+                        // select the corresponding tab.
+                        // We can also use ActionBar.Tab#select() to do this if we have a
+                        // reference to the
+                        // Tab.
+                        actionBar.setSelectedNavigationItem(position);
+                    }
+                });
 
         // For each of the sections in the app, add a tab to the action bar.
         for (int i = 0; i < mAppSectionsPagerAdapter.getCount(); i++) {
@@ -90,13 +97,11 @@ public class TabsActivity extends ActionBarActivity implements ActionBar.TabList
             // Also specify this Activity object, which implements the TabListener interface, as the
             // listener for when this tab is selected.
             actionBar.addTab(
-                    actionBar.newTab()
-                            .setText(mAppSectionsPagerAdapter.getPageTitle(i))
+                    actionBar.newTab().setText(mAppSectionsPagerAdapter.getPageTitle(i))
                             .setTabListener(this));
         }
 
     }
-
 
     @Override
     public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
@@ -119,11 +124,11 @@ public class TabsActivity extends ActionBarActivity implements ActionBar.TabList
             // if we're in the categories fragment let it control the back
             CategoriesFragment categoriesFragment = (CategoriesFragment) findFragmentByPosition(0);
             categoriesFragment.onBackPressed();
-        } else if(1 == mViewPager.getCurrentItem()){
+        } else if (1 == mViewPager.getCurrentItem()) {
             // if we're in the favorites fragment, let it control the back
             FavoritesFragment favoritesFragment = (FavoritesFragment) findFragmentByPosition(1);
             favoritesFragment.onBackPressed();
-        } else if(2 == mViewPager.getCurrentItem()){
+        } else if (2 == mViewPager.getCurrentItem()) {
             // if we're in the favorites fragment, let it control the back
             RecentsFragment recentsFragment = (RecentsFragment) findFragmentByPosition(2);
             recentsFragment.onBackPressed();
@@ -134,8 +139,8 @@ public class TabsActivity extends ActionBarActivity implements ActionBar.TabList
 
     public Fragment findFragmentByPosition(int position) {
         return getSupportFragmentManager().findFragmentByTag(
-                "android:switcher:" + mViewPager.getId() + ":"
-                        + mAppSectionsPagerAdapter.getItemId(position));
+                "android:switcher:" + mViewPager.getId() + ":" + mAppSectionsPagerAdapter
+                        .getItemId(position));
     }
 
 
@@ -148,7 +153,8 @@ public class TabsActivity extends ActionBarActivity implements ActionBar.TabList
         private final List<Tab> mTabs;
         private final Context mContext;
 
-        public AppSectionsPagerAdapter(FragmentManager fm, final List<Tab> tabs, final Context context) {
+        public AppSectionsPagerAdapter(FragmentManager fm, final List<Tab> tabs,
+                final Context context) {
             super(fm);
             mTabs = tabs;
             mContext = context;

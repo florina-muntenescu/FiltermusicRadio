@@ -32,4 +32,14 @@
 
     <!--player view-->
     <string name="no_radio_selected">Choose a radio station</string>
+
+    <!--hockey-->
+    <!--crash reporting-->
+    <string name="crashreporter_crashes_found_alertview_message">Please write a short description of the error and your contact details and we will fix it as soon as possible.</string>
+    <string name="crashreporter_crashes_found_alertview_button_dont_send">Don´t send report</string>
+    <string name="crashreporter_crashes_found_alertview_button_send">OK</string>
+    <string name="crashreporter_crashes_found_alert_input_default_text">Contact:\
+    What happended?\</string>
+    <string name="crashreporter_crashes_found_alertview_title">A crash occured</string>
+
 </resources>
