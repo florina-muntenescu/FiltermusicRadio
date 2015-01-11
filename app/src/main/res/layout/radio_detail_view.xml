@@ -19,13 +19,23 @@
             android:layout_gravity="center"
             android:src="@drawable/station_image"/>
 
+        <FrameLayout
+            android:layout_width="@dimen/play_button_size"
+            android:layout_height="@dimen/play_button_size"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="@dimen/item_margin">
         <ImageView
             android:id="@+id/play_button"
             android:layout_width="@dimen/play_button_size"
             android:layout_height="@dimen/play_button_size"
-            android:layout_gravity="bottom|right"
-            android:layout_margin="@dimen/item_margin"
             android:src="@drawable/play_circle"/>
+         <ProgressBar
+             android:id="@+id/loading_progress"
+             android:layout_width="@dimen/loading_progress_size"
+             android:layout_height="@dimen/loading_progress_size"
+             android:layout_gravity="center"
+             android:visibility="gone"/>
+        </FrameLayout>
     </FrameLayout>
 
     <LinearLayout
@@ -40,7 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="test"/>
+            android:text="Radio Paradise"/>
 
 
         <ImageView

@@ -25,6 +25,8 @@ import filtermusic.net.common.model.Radio;
  */
 public class PlayerController {
 
+    private static final String LOG_TAG = PlayerController.class.getSimpleName();
+
     public interface PlayerListener{
         void onPlay(Radio radio);
         void onStop();
@@ -77,11 +79,13 @@ public class PlayerController {
         Intent intent = new Intent(mContext, MediaPlayerService.class);
 
         if (mediaPlayerServiceRunning()) {
+            Log.d(LOG_TAG, "player running" );
             // Bind to Service
             mContext.bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
         }
         //no instance of service
         else {
+            Log.d(LOG_TAG, "new instance of service");
             //start service and bind to it
             mContext.startService(intent);
             mContext.bindService(intent, mConnection, Context.BIND_AUTO_CREATE);

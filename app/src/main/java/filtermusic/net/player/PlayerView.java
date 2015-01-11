@@ -27,7 +27,6 @@ public class PlayerView extends LinearLayout implements IMediaPlayerServiceListe
     private TextView mRadioTitle;
     private ImageView mPlayPauseButton;
 
-
     public PlayerView(Context context) {
         super(context);
         init(context);
@@ -60,16 +59,18 @@ public class PlayerView extends LinearLayout implements IMediaPlayerServiceListe
                 new OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                       if(mPlayerController.isRadioPlaying(mRadio)){
-                           mPlayerController.pause();
-                       }else{
-                           mPlayerController.play(mRadio);
-                       }
+                        if (mPlayerController.isRadioPlaying(mRadio)) {
+                            mPlayerController.pause();
+                        } else {
+                            mPlayerController.play(mRadio);
+                        }
                     }
                 });
 
         if (mPlayerController.getSelectedRadio() != null) {
             setRadio(mPlayerController.getSelectedRadio());
+        } else {
+            mPlayPauseButton.setVisibility(View.GONE);
         }
     }
 
@@ -78,6 +79,10 @@ public class PlayerView extends LinearLayout implements IMediaPlayerServiceListe
         mRadioTitle.setText(mRadio.getTitle());
         Picasso.with(mContext).load(mRadio.getImageUrl()).placeholder(R.drawable.station_image)
                 .into(mRadioImage);
+        if (mPlayerController.isRadioPlaying(mRadio)) {
+            mPlayPauseButton.setVisibility(View.VISIBLE);
+            mPlayPauseButton.setImageResource(R.drawable.pause);
+        }
     }
 
     @Override
@@ -95,7 +100,6 @@ public class PlayerView extends LinearLayout implements IMediaPlayerServiceListe
     @Override
     public void onPlaying(Radio radio) {
         setRadio(radio);
-        mPlayPauseButton.setImageResource(R.drawable.pause);
     }
 
     @Override

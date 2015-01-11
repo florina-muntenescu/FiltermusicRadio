@@ -32,7 +32,7 @@ android {
         applicationId "filtermusic.net"
         minSdkVersion 11
         targetSdkVersion 20
-        versionCode 1
+        versionCode 3
         versionName "0.7"
 
         buildConfigField "boolean", "HOCKEY_APP_ENABLED", "false"
@@ -40,9 +40,13 @@ android {
     }
     buildTypes {
 
-        release {
+        debug{
             buildConfigField "boolean", "HOCKEY_APP_ENABLED", "true"
             buildConfigField "String", "HOCKEY_APP_TOKEN", "null"
+
+        }
+        release {
+            buildConfigField "boolean", "HOCKEY_APP_ENABLED", "true"
 
             runProguard true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -53,6 +57,7 @@ android {
     sourceSets {
         main.java.srcDirs = ['src/hockeyapp/source', 'src/main/java']
     }
+
     productFlavors{
         hockeyapp{
             packageName 'filtermusic.test'

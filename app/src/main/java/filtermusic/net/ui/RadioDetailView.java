@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
@@ -29,12 +30,14 @@ import filtermusic.net.player.PlayerController;
  */
 public class RadioDetailView extends LinearLayout implements IMediaPlayerServiceListener {
 
+    private static final String LOG_TAG = RadioDetailView.class.getSimpleName();
     private ImageView mRadioImage;
     private TextView mRadioTitle;
     private TextView mRadioDescription;
 
     private ImageView mPlayButton;
     private ImageView mStarButton;
+    private ProgressBar mLoadingProgress;
 
     private Radio mRadio;
 
@@ -75,13 +78,15 @@ public class RadioDetailView extends LinearLayout implements IMediaPlayerService
         mPlayerController = PlayerController.getInstance();
         mPlayerController.addListener(this);
 
-        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context
-                        .LAYOUT_INFLATER_SERVICE);
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(
+                Context.LAYOUT_INFLATER_SERVICE);
         View rootView = inflater.inflate(R.layout.radio_detail_view, this, true);
 
         mRadioImage = (ImageView) rootView.findViewById(R.id.radio_image);
         mRadioTitle = (TextView) rootView.findViewById(R.id.radio_title);
         mRadioDescription = (TextView) rootView.findViewById(R.id.radio_description);
+
+        mLoadingProgress = (ProgressBar) rootView.findViewById(R.id.loading_progress);
 
         mPlayButton = (ImageView) rootView.findViewById(R.id.play_button);
         mPlayButton.setOnClickListener(
@@ -90,6 +95,8 @@ public class RadioDetailView extends LinearLayout implements IMediaPlayerService
                     public void onClick(View v) {
                         boolean isPlaying = mPlayerController.isRadioPlaying(mRadio);
                         if (!isPlaying) {
+                            mPlayButton.setVisibility(View.GONE);
+                            mLoadingProgress.setVisibility(View.VISIBLE);
                             mPlayerController.play(mRadio);
                         } else {
                             mPlayerController.pause();
@@ -129,6 +136,8 @@ public class RadioDetailView extends LinearLayout implements IMediaPlayerService
         int star = mRadio.isFavorite() ? R.drawable.star : R.drawable.star_outline;
         mStarButton.setImageResource(star);
 
+        mPlayButton.setVisibility(VISIBLE);
+        mLoadingProgress.setVisibility(GONE);
         if (mPlayerController.isRadioPlaying(mRadio)) {
             mPlayButton.setImageResource(R.drawable.pause_circle_fill);
         } else {
@@ -145,12 +154,17 @@ public class RadioDetailView extends LinearLayout implements IMediaPlayerService
 
     @Override
     public void onInitializePlayerStart(Radio radio) {
-
+        Log.d(LOG_TAG, "onInitializePlayerStart");
     }
 
     @Override
     public void onPlaying(Radio radio) {
-        mPlayButton.setImageResource(R.drawable.pause_circle_fill);
+        if(mRadio != null && mRadio.equals(radio)) {
+            Log.d(LOG_TAG, "onPlaying " + radio.getTitle());
+            mLoadingProgress.setVisibility(View.GONE);
+            mPlayButton.setVisibility(VISIBLE);
+            mPlayButton.setImageResource(R.drawable.pause_circle_fill);
+        }
     }
 
     @Override
