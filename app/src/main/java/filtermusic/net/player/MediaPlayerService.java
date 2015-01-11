@@ -2,6 +2,7 @@ package filtermusic.net.player;
 
 import android.app.Service;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.media.MediaPlayer;
 import android.os.Binder;
 import android.os.IBinder;
@@ -28,9 +29,14 @@ public class MediaPlayerService
 
     private List<IMediaPlayerServiceListener> mListeners = new ArrayList<IMediaPlayerServiceListener>();
 
+    private MusicIntentReceiver mReceiver = new MusicIntentReceiver();
+
     @Override
     public void onCreate() {
         mMediaPlayerThread.start();
+
+        IntentFilter intentFilter = new IntentFilter();
+        registerReceiver(mReceiver, intentFilter);
     }
 
     /**
@@ -170,5 +176,11 @@ public class MediaPlayerService
         Log.d(MediaPlayerService.class.getSimpleName(), "on task removed");
         stopMediaPlayer();
         this.unRegister();
+    }
+
+    @Override
+    public void onDestroy() {
+        Log.d(MediaPlayerService.class.getSimpleName(), "ondestroy");
+        super.onDestroy();
     }
 }

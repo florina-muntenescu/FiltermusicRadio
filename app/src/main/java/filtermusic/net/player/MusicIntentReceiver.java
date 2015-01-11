@@ -16,10 +16,7 @@ public class MusicIntentReceiver extends android.content.BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         if (intent.getAction().equals(
                 android.media.AudioManager.ACTION_AUDIO_BECOMING_NOISY)) {
-            // signal your service to stop playback
-            // (via an Intent, for instance)
-            Intent intentStopService = new Intent(context, MediaPlayerService.class);
-            context.stopService(intentStopService);
+            PlayerController.getInstance().shutDown();
         }
     }
 }
