@@ -1,6 +1,7 @@
 package filtermusic.net.ui.details;
 
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.text.Html;
 import android.util.Log;
@@ -68,6 +69,14 @@ public class RadioDetailActivity extends ActionBarActivity implements IMediaPlay
      * Initializes the views and sets up the click listeners
      */
     private void initUI() {
+
+        // Set up the action bar.
+        final ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayShowTitleEnabled(false);
+        actionBar.setDisplayHomeAsUpEnabled(false);
+        actionBar.setDisplayShowHomeEnabled(false);
+
+        actionBar.setBackgroundDrawable(null);
 
         mRadioImage = (ImageView) findViewById(R.id.radio_image);
         mRadioTitle = (TextView) findViewById(R.id.radio_title);

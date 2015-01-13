@@ -2,6 +2,7 @@ package filtermusic.net.ui.details;
 
 import javax.inject.Inject;
 
+import filtermusic.net.FiltermusicApplication;
 import filtermusic.net.common.data.DataProvider;
 import filtermusic.net.common.model.Radio;
 
@@ -16,6 +17,9 @@ public class RadioDetailController {
     DataProvider mDataProvider;
 
     public RadioDetailController(Radio radio) {
+
+        FiltermusicApplication.getInstance().inject(this);
+
         mRadio = radio;
     }
 

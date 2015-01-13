@@ -1,5 +1,6 @@
 package filtermusic.net.ui.categories;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -10,14 +11,18 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ViewFlipper;
 
+import com.google.gson.Gson;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import filtermusic.net.R;
 import filtermusic.net.common.model.Category;
 import filtermusic.net.common.model.Radio;
+import filtermusic.net.player.PlayerController;
 import filtermusic.net.ui.RadioDetailView;
 import filtermusic.net.ui.RadiosAdapter;
+import filtermusic.net.ui.details.RadioDetailActivity;
 
 /**
  * Holds a view flipper where the user can browse between categories and radios corresponding to
@@ -32,11 +37,9 @@ public class CategoriesFragment extends Fragment implements CategoriesController
     private static final int PROGRESS_VIEW_INDEX = 0;
     private static final int CATEGORIES_VIEW_INDEX = 1;
     private static final int RADIOS_VIEW_INDEX = 2;
-    private static final int RADIO_DETAIL_VIEW_INDEX = 3;
 
     private ListView mCategoriesList;
     private ListView mRadiosList;
-    private RadioDetailView mRadioDetailView;
 
     private ViewFlipper mViewFlipper;
 
@@ -72,7 +75,6 @@ public class CategoriesFragment extends Fragment implements CategoriesController
         mViewFlipper = (ViewFlipper) rootView.findViewById(R.id.view_flipper);
         mCategoriesList = (ListView) rootView.findViewById(R.id.categories_list);
         mRadiosList = (ListView) rootView.findViewById(R.id.radios_list);
-        mRadioDetailView = (RadioDetailView) rootView.findViewById(R.id.radio_detail_view);
 
         mCategoriesList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -88,10 +90,16 @@ public class CategoriesFragment extends Fragment implements CategoriesController
         mRadiosList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // open the radio details
-                Radio radio = mCategoriesController.selectRadio(position);
-                updateRadio(radio);
-                flipToPage(RADIO_DETAIL_VIEW_INDEX);
+                final Radio selectedRadio = mCategoriesController.selectRadio(position);
+                if(!PlayerController.getInstance().radioWasPlayedInThisSession()){
+                    final String selectedRadioGson = new Gson().toJson(selectedRadio);
+                    Intent radioDetailIntent = new Intent(
+                            getActivity(), RadioDetailActivity.class);
+                    radioDetailIntent.putExtra(
+                            RadioDetailActivity.INTENT_RADIO_PLAYING, selectedRadioGson);
+                    startActivity(radioDetailIntent);
+                }
+                PlayerController.getInstance().play(selectedRadio);
             }
         });
     }
@@ -101,10 +109,6 @@ public class CategoriesFragment extends Fragment implements CategoriesController
                 R.layout.radio_list_item, radios);
 
         mRadiosList.setAdapter(radiosAdapter);
-    }
-
-    private void updateRadio(Radio radio) {
-        mRadioDetailView.setRadio(radio);
     }
 
     @Override
@@ -141,9 +145,6 @@ public class CategoriesFragment extends Fragment implements CategoriesController
             case RADIOS_VIEW_INDEX:
                 newPage = CATEGORIES_VIEW_INDEX;
                 break;
-            case RADIO_DETAIL_VIEW_INDEX:
-                newPage = RADIOS_VIEW_INDEX;
-                break;
             case PROGRESS_VIEW_INDEX:
             case CATEGORIES_VIEW_INDEX:
                 getActivity().finish();
@@ -163,9 +164,6 @@ public class CategoriesFragment extends Fragment implements CategoriesController
         switch (pageIndex) {
             case RADIOS_VIEW_INDEX:
                 updateRadioList(mCategoriesController.getLastSelectedCategory().getRadioList());
-                break;
-            case RADIO_DETAIL_VIEW_INDEX:
-                updateRadio(mCategoriesController.getLastSelectedRadio());
                 break;
             default:
                 updateCategories(mCategoriesController.getCategories());

@@ -45,11 +45,11 @@ public class RadiosAdapter extends ArrayAdapter<Radio> {
             view.setTag(holder);
         }
 
-        Radio radio = getItem(position);
+        final Radio radio = getItem(position);
         holder.title.setText(radio.getTitle());
 
         if(radio.getPlayedDate() != null) {
-            SimpleDateFormat formatter = new SimpleDateFormat("HH:mm:ss dd/MM/yyyy");
+            final SimpleDateFormat formatter = new SimpleDateFormat("EEE, dd MMM yyyy, HH:mm");
             final String dateString = formatter.format(radio.getPlayedDate());
             holder.lastPlayed.setText(mContext.getString(R.string.last_played, dateString));
             holder.lastPlayed.setVisibility(View.VISIBLE);
