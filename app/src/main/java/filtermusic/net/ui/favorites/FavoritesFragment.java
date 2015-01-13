@@ -37,8 +37,6 @@ public class FavoritesFragment extends Fragment implements FavoritesController
     private ViewFlipper mViewFlipper;
     private ListView mRadiosList;
 
-    private RadioDetailView mRadioDetailView;
-
     private FavoritesController mController;
 
     @Override
@@ -70,7 +68,6 @@ public class FavoritesFragment extends Fragment implements FavoritesController
                 });
 
         mRadiosList.setEmptyView(rootView.findViewById(android.R.id.empty));
-        mRadioDetailView = (RadioDetailView) rootView.findViewById(R.id.radio_detail_view);
 
         mController.retrieveFavorites(this);
 

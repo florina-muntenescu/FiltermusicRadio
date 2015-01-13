@@ -126,10 +126,6 @@ public class TabsActivity extends ActionBarActivity implements ActionBar.TabList
             // if we're in the categories fragment let it control the back
             CategoriesFragment categoriesFragment = (CategoriesFragment) findFragmentByPosition(0);
             categoriesFragment.onBackPressed();
-        } else if (2 == mViewPager.getCurrentItem()) {
-            // if we're in the favorites fragment, let it control the back
-            RecentsFragment recentsFragment = (RecentsFragment) findFragmentByPosition(2);
-            recentsFragment.onBackPressed();
         } else {
             super.onBackPressed();
         }
