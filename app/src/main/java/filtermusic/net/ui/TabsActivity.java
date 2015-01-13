@@ -1,4 +1,4 @@
-package filtermusic.net;
+package filtermusic.net.ui;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -13,6 +13,8 @@ import android.support.v7.app.ActionBarActivity;
 import java.util.ArrayList;
 import java.util.List;
 
+import filtermusic.net.R;
+import filtermusic.net.ui.Tab;
 import filtermusic.net.ui.about.AboutFragment;
 import filtermusic.net.ui.categories.CategoriesFragment;
 import filtermusic.net.ui.favorites.FavoritesFragment;
@@ -124,10 +126,6 @@ public class TabsActivity extends ActionBarActivity implements ActionBar.TabList
             // if we're in the categories fragment let it control the back
             CategoriesFragment categoriesFragment = (CategoriesFragment) findFragmentByPosition(0);
             categoriesFragment.onBackPressed();
-        } else if (1 == mViewPager.getCurrentItem()) {
-            // if we're in the favorites fragment, let it control the back
-            FavoritesFragment favoritesFragment = (FavoritesFragment) findFragmentByPosition(1);
-            favoritesFragment.onBackPressed();
         } else if (2 == mViewPager.getCurrentItem()) {
             // if we're in the favorites fragment, let it control the back
             RecentsFragment recentsFragment = (RecentsFragment) findFragmentByPosition(2);

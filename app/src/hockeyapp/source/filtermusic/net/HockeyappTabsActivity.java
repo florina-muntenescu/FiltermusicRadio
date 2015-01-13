@@ -6,6 +6,8 @@ import android.util.Log;
 import net.hockeyapp.android.Tracking;
 import net.hockeyapp.android.UpdateManager;
 
+import filtermusic.net.ui.TabsActivity;
+
 public class HockeyappTabsActivity extends TabsActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {

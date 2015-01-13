@@ -174,7 +174,12 @@ public class RadioDetailView extends LinearLayout implements IMediaPlayerService
     }
 
     @Override
-    public void onStop() {
+    public void onPlayerStop() {
         mPlayButton.setImageResource(R.drawable.play_circle);
+    }
+
+    @Override
+    public void onTrackChanged(String track) {
+
     }
 }

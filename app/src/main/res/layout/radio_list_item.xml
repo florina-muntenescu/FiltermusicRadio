@@ -9,7 +9,7 @@
         android:id="@+id/radio_title"
         style="@style/title_text"/>
     <TextView
-        android:id="@+id/last_played"
+        android:id="@+id/radio_info"
         style="@style/content_text"/>
 
 </LinearLayout>

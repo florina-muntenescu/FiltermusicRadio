@@ -27,8 +27,9 @@ public class PlayerController {
 
     private static final String LOG_TAG = PlayerController.class.getSimpleName();
 
-    public interface PlayerListener{
+    public interface PlayerListener {
         void onPlay(Radio radio);
+
         void onStop();
     }
 
@@ -60,26 +61,35 @@ public class PlayerController {
         bindToService();
     }
 
-    public boolean isRadioPlaying(@NonNull final Radio radio){
-        if(mSelectedRadio != null && mSelectedRadio.equals(radio)
-                && mService.isPlaying()){
+    /**
+     * Check if a radio was played in this session of the app
+     * @return true if a radio was selected
+     */
+    public boolean radioWasPlayedInThisSession(){
+        return mSelectedRadio != null;
+    }
+
+    public boolean isRadioPlaying(@NonNull final Radio radio) {
+        if (mSelectedRadio != null && mSelectedRadio.equals(radio) && mService.isPlaying()) {
             return true;
         }
         return false;
     }
+
     public Radio getSelectedRadio() {
         return mSelectedRadio;
     }
 
     /**
-     * Binds to the instance of MediaPlayerService. If no instance of MediaPlayerService exists, it first starts
+     * Binds to the instance of MediaPlayerService. If no instance of MediaPlayerService exists,
+     * it first starts
      * a new instance of the service.
      */
     private void bindToService() {
         Intent intent = new Intent(mContext, MediaPlayerService.class);
 
         if (mediaPlayerServiceRunning()) {
-            Log.d(LOG_TAG, "player running" );
+            Log.d(LOG_TAG, "player running");
             // Bind to Service
             mContext.bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
         }
@@ -94,10 +104,10 @@ public class PlayerController {
 
     }
 
-    public void play(Radio radio){
-        if(mSelectedRadio != null && radio.equals(mSelectedRadio) && !mService.isPlaying()){
+    public void play(Radio radio) {
+        if (mSelectedRadio != null && radio.equals(mSelectedRadio) && !mService.isPlaying()) {
             mService.startMediaPlayer();
-        }else{
+        } else {
             newRadioSelected(radio);
         }
         final Date now = new Date(System.currentTimeMillis());
@@ -125,12 +135,14 @@ public class PlayerController {
             Log.d("MainActivity", "service connected");
 
             //bound with Service. get Service instance
-            MediaPlayerService.MediaPlayerBinder binder = (MediaPlayerService.MediaPlayerBinder) serviceBinder;
+            MediaPlayerService.MediaPlayerBinder binder = (MediaPlayerService.MediaPlayerBinder)
+                    serviceBinder;
             mService = binder.getService();
 
-            //send this instance to the service, so it can make callbacks on this instance as a client
+            //send this instance to the service, so it can make callbacks on this instance as a
+            // client
             mBound = true;
-            for(IMediaPlayerServiceListener listener : mServiceListeners){
+            for (IMediaPlayerServiceListener listener : mServiceListeners) {
                 mService.addListener(listener);
             }
         }
@@ -148,7 +160,8 @@ public class PlayerController {
      * @return true if the service is running, false otherwise.
      */
     private boolean mediaPlayerServiceRunning() {
-        ActivityManager manager = (ActivityManager) mContext.getSystemService(mContext.ACTIVITY_SERVICE);
+        ActivityManager manager = (ActivityManager) mContext.getSystemService(mContext
+                        .ACTIVITY_SERVICE);
 
         for (RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)) {
             if (MediaPlayerService.MEDIA_PLAYER_SERVICE.equals(service.service.getClassName())) {
@@ -162,12 +175,13 @@ public class PlayerController {
     /**
      * Add a listener of this service.
      *
-     * @param listener The listener of this service, which implements the  {@link IMediaPlayerServiceListener}  interface
+     * @param listener The listener of this service, which implements the  {@link
+     * IMediaPlayerServiceListener}  interface
      */
     public void addListener(IMediaPlayerServiceListener listener) {
-        if(mService != null) {
+        if (mService != null) {
             mService.addListener(listener);
-        }else{
+        } else {
             mServiceListeners.add(listener);
         }
 
@@ -176,12 +190,13 @@ public class PlayerController {
     /**
      * Removes a listener of this service
      *
-     * @param listener - The listener of this service, which implements the {@link IMediaPlayerServiceListener} interface
+     * @param listener - The listener of this service, which implements the {@link
+     * IMediaPlayerServiceListener} interface
      */
     public void removeListener(IMediaPlayerServiceListener listener) {
-        if(mService != null) {
+        if (mService != null) {
             mService.removeListener(listener);
-        }else{
+        } else {
             mServiceListeners.add(listener);
         }
     }

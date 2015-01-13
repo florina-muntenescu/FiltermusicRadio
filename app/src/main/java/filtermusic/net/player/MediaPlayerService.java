@@ -3,31 +3,40 @@ package filtermusic.net.player;
 import android.app.Service;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.media.MediaPlayer;
 import android.os.Binder;
 import android.os.IBinder;
 import android.util.Log;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
 import filtermusic.net.common.model.Radio;
+import rx.Observable;
+import rx.Subscriber;
+import rx.Subscription;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
 
 
 /**
  * An extension of android.app.Service class which provides management to a MediaPlayerThread.<br>
  */
-public class MediaPlayerService
-        extends Service
-        implements IMediaPlayerThreadClient {
+public class MediaPlayerService extends Service implements IMediaPlayerThreadClient {
+
+    private static final String LOG_TAG = MediaPlayerService.class.getSimpleName();
 
     public static final String MEDIA_PLAYER_SERVICE = "filtermusic.net.player.MediaPlayerService";
 
     private MediaPlayerThread mMediaPlayerThread = new MediaPlayerThread(this);
     private final Binder mBinder = new MediaPlayerBinder();
     private Radio mRadio;
+    private String mCurrentTrack;
+    private Subscription mTrackMetadataSubscription;
 
-    private List<IMediaPlayerServiceListener> mListeners = new ArrayList<IMediaPlayerServiceListener>();
+    private List<IMediaPlayerServiceListener> mListeners = new
+            ArrayList<IMediaPlayerServiceListener>();
 
     private MusicIntentReceiver mReceiver = new MusicIntentReceiver();
 
@@ -40,7 +49,8 @@ public class MediaPlayerService
     }
 
     /**
-     * A class for clients binding to this service. The client will be passed an object of this class
+     * A class for clients binding to this service. The client will be passed an object of this
+     * class
      * via its onServiceConnected(ComponentName, IBinder) callback.
      */
     public class MediaPlayerBinder extends Binder {
@@ -80,7 +90,8 @@ public class MediaPlayerService
     /**
      * Add a listener of this service.
      *
-     * @param listener The listener of this service, which implements the  {@link IMediaPlayerServiceListener}  interface
+     * @param listener The listener of this service, which implements the  {@link
+     * IMediaPlayerServiceListener}  interface
      */
     public void addListener(IMediaPlayerServiceListener listener) {
         mListeners.add(listener);
@@ -89,7 +100,8 @@ public class MediaPlayerService
     /**
      * Removes a listener of this service
      *
-     * @param listener - The listener of this service, which implements the {@link IMediaPlayerServiceListener} interface
+     * @param listener - The listener of this service, which implements the {@link
+     * IMediaPlayerServiceListener} interface
      */
     public void removeListener(IMediaPlayerServiceListener listener) {
         mListeners.remove(listener);
@@ -105,9 +117,9 @@ public class MediaPlayerService
         mMediaPlayerThread.startMediaPlayer();
     }
 
-    public boolean isPlaying(){
+    public boolean isPlaying() {
         StatefulMediaPlayer player = mMediaPlayerThread.getMediaPlayer();
-        return player!= null && player.isStarted();
+        return player != null && player.isStarted();
     }
 
     /**
@@ -117,7 +129,10 @@ public class MediaPlayerService
         Log.d("MediaPlayerService", "pauseMediaPlayer() called");
         mMediaPlayerThread.pauseMediaPlayer();
         stopForeground(true);
-
+        if (mTrackMetadataSubscription != null) {
+            mTrackMetadataSubscription.unsubscribe();
+        }
+        mCurrentTrack = null;
     }
 
     /**
@@ -126,6 +141,10 @@ public class MediaPlayerService
     public void stopMediaPlayer() {
         stopForeground(true);
         mMediaPlayerThread.stopMediaPlayer();
+        if (mTrackMetadataSubscription != null) {
+            mTrackMetadataSubscription.unsubscribe();
+        }
+        mCurrentTrack = null;
     }
 
     public void resetMediaPlayer() {
@@ -151,13 +170,18 @@ public class MediaPlayerService
         for (IMediaPlayerServiceListener client : mListeners) {
             client.onPlaying(mRadio);
         }
+        getMetaData();
     }
 
     @Override
     public void onStop() {
         for (IMediaPlayerServiceListener client : mListeners) {
-            client.onStop();
+            client.onPlayerStop();
         }
+        if (mTrackMetadataSubscription != null) {
+            mTrackMetadataSubscription.unsubscribe();
+        }
+        mCurrentTrack = null;
     }
 
     public void unRegister() {
@@ -180,7 +204,51 @@ public class MediaPlayerService
 
     @Override
     public void onDestroy() {
-        Log.d(MediaPlayerService.class.getSimpleName(), "ondestroy");
         super.onDestroy();
+    }
+
+    private void getMetaData() {
+        final Long timeBefore = System.currentTimeMillis();
+        URL url = null;
+        try {
+            url = new URL(mRadio.getURL());
+        } catch (MalformedURLException e) {
+
+        }
+        MetaDataRetriever retriever = new MetaDataRetriever(url);
+        Observable<String> metadataObservable = retriever.getMetadataAsync();
+        mTrackMetadataSubscription = metadataObservable
+                .repeat()
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread()).subscribe(
+                new Subscriber<String>() {
+                    @Override
+                    public void onCompleted() {
+                        // nothing
+                        Log.d(LOG_TAG, "track metadata completed");
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                    }
+
+                    @Override
+                    public void onNext(String metadata) {
+
+                        final Long timeElapsed = System.currentTimeMillis() -
+                                timeBefore;
+                        final String timeGetMetadata = String.format("%1$,.5f",
+                                (double) timeElapsed / 1000);
+                        Log.d(LOG_TAG, "time metadata " + timeGetMetadata + " " + metadata);
+                        Log.d(LOG_TAG, metadata);
+
+                        if (isPlaying() && !metadata.equals(mCurrentTrack)) {
+                            mCurrentTrack = metadata;
+                            for (IMediaPlayerServiceListener client : mListeners) {
+                                client.onTrackChanged(mCurrentTrack);
+                            }
+                        }
+                    }
+                });
     }
 }

@@ -11,14 +11,14 @@ import filtermusic.net.common.data.DataProvider;
 import filtermusic.net.player.PlayerController;
 import filtermusic.net.ui.RadioDetailView;
 import filtermusic.net.ui.categories.CategoriesController;
+import filtermusic.net.ui.details.RadioDetailController;
 import filtermusic.net.ui.favorites.FavoritesController;
 import filtermusic.net.ui.recents.RecentsController;
 
 
 @Module(
         injects = {CategoriesController.class, FavoritesController.class, RadioDetailView.class,
-                RecentsController.class,
-                PlayerController.class})
+                RecentsController.class, PlayerController.class, RadioDetailController.class})
 public class FiltermusicModule {
 
     @Provides

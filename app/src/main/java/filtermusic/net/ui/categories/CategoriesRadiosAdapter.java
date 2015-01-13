@@ -1,13 +1,13 @@
-package filtermusic.net.ui;
+package filtermusic.net.ui.categories;
 
 import android.content.Context;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.List;
 
@@ -17,14 +17,14 @@ import filtermusic.net.R;
 import filtermusic.net.common.model.Radio;
 
 /**
- * Adapter for the list of radios
+ * Adapter for the list of radios displayed in the categories view
  */
-public class RadiosAdapter extends ArrayAdapter<Radio> {
+/*package*/ class CategoriesRadiosAdapter extends ArrayAdapter<Radio> {
 
     private LayoutInflater mLayoutInflater;
     private Context mContext;
 
-    public RadiosAdapter(Context context, int resource, List<Radio> objects) {
+    public CategoriesRadiosAdapter(Context context, int resource, List<Radio> objects) {
         super(context, resource, objects);
         init(context);
     }
@@ -47,15 +47,8 @@ public class RadiosAdapter extends ArrayAdapter<Radio> {
 
         Radio radio = getItem(position);
         holder.title.setText(radio.getTitle());
+        holder.radioInfo.setText(Html.fromHtml(radio.getDescription()));
 
-        if(radio.getPlayedDate() != null) {
-            SimpleDateFormat formatter = new SimpleDateFormat("HH:mm:ss dd/MM/yyyy");
-            final String dateString = formatter.format(radio.getPlayedDate());
-            holder.lastPlayed.setText(mContext.getString(R.string.last_played, dateString));
-            holder.lastPlayed.setVisibility(View.VISIBLE);
-        }else{
-            holder.lastPlayed.setVisibility(View.INVISIBLE);
-        }
         return view;
     }
 
@@ -63,7 +56,7 @@ public class RadiosAdapter extends ArrayAdapter<Radio> {
         @InjectView(R.id.radio_title)
         TextView title;
         @InjectView(R.id.radio_info)
-        TextView lastPlayed;
+        TextView radioInfo;
 
         public ViewHolder(View view) {
             ButterKnife.inject(this, view);

@@ -15,7 +15,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".TabsActivity" tools:node="replace"/>
+        <activity android:name=".ui.TabsActivity" tools:node="replace"/>
         <activity android:name="net.hockeyapp.android.UpdateActivity" />
     </application>
 

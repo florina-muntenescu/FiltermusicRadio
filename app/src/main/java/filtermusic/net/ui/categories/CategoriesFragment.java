@@ -97,7 +97,7 @@ public class CategoriesFragment extends Fragment implements CategoriesController
     }
 
     private void updateRadioList(List<Radio> radios) {
-        RadiosAdapter radiosAdapter = new RadiosAdapter(getActivity(),
+        CategoriesRadiosAdapter radiosAdapter = new CategoriesRadiosAdapter(getActivity(),
                 R.layout.radio_list_item, radios);
 
         mRadiosList.setAdapter(radiosAdapter);

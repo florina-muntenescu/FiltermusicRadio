@@ -17,7 +17,7 @@
         android:logo="@drawable/filtemusic_logo"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".TabsActivity"
+            android:name=".ui.TabsActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -28,9 +28,11 @@
 
         <activity android:name="net.hockeyapp.android.UpdateActivity" />
 
+        <activity android:name=".ui.details.RadioDetailActivity"/>
         <service
             android:name=".player.MediaPlayerService">
         </service>
+
         <receiver android:name=".player.MusicIntentReceiver">
             <intent-filter>
                 <action android:name="android.media.AUDIO_BECOMING_NOISY"/>

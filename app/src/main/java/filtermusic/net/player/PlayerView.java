@@ -1,6 +1,7 @@
 package filtermusic.net.player;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,11 +9,13 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
 import butterknife.ButterKnife;
 import filtermusic.net.R;
 import filtermusic.net.common.model.Radio;
+import filtermusic.net.ui.details.RadioDetailActivity;
 
 /**
  * View that contains the player
@@ -72,6 +75,21 @@ public class PlayerView extends LinearLayout implements IMediaPlayerServiceListe
         } else {
             mPlayPauseButton.setVisibility(View.GONE);
         }
+
+        mRadioTitle.setOnClickListener(
+                new OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (mRadio != null) {
+                            final String selectedRadioGson = new Gson().toJson(mRadio);
+                            Intent radioDetailIntent = new Intent(
+                                    mContext, RadioDetailActivity.class);
+                            radioDetailIntent.putExtra(
+                                    RadioDetailActivity.INTENT_RADIO_PLAYING, selectedRadioGson);
+                            mContext.startActivity(radioDetailIntent);
+                        }
+                    }
+                });
     }
 
     public void setRadio(Radio radio) {
@@ -108,7 +126,11 @@ public class PlayerView extends LinearLayout implements IMediaPlayerServiceListe
     }
 
     @Override
-    public void onStop() {
+    public void onPlayerStop() {
         mPlayPauseButton.setImageResource(R.drawable.play_arrow);
+    }
+
+    @Override
+    public void onTrackChanged(String track) {
     }
 }

@@ -1,7 +1,5 @@
 package filtermusic.net.ui.favorites;
 
-import android.content.Context;
-
 import java.util.List;
 
 import javax.inject.Inject;
@@ -13,7 +11,8 @@ import filtermusic.net.common.model.Radio;
 /**
  * Controls the list of favorites
  */
-public class FavoritesController implements DataProvider.FavoritesRetrievedListener, DataProvider.DataUpdatedListener {
+public class FavoritesController implements DataProvider.FavoritesRetrievedListener,
+        DataProvider.DataUpdatedListener {
 
     public interface DataRetrievedListener {
         void onDataRetrieved(List<Radio> radios);
@@ -34,7 +33,11 @@ public class FavoritesController implements DataProvider.FavoritesRetrievedListe
 
     public void retrieveFavorites(DataRetrievedListener listener) {
         mListener = listener;
-        mDataProvider.retrieveFavorites(this);
+        if (mFavorites == null) {
+            mDataProvider.retrieveFavorites(this);
+        } else {
+            mListener.onDataRetrieved(mFavorites);
+        }
     }
 
     @Override

@@ -1,4 +1,4 @@
-package filtermusic.net;
+package filtermusic.net.ui;
 
 /**
  * A tab class defines the fragment that is contained by the tab and the title of the tab

@@ -25,5 +25,12 @@ public interface IMediaPlayerServiceListener {
     /**
      * A callback made by a MediaPlayerService onto its clients to indicate that a player has stopped.
      */
-    public void onStop();
+    public void onPlayerStop();
+
+    /**
+     * A callback made by {@link filtermusic.net.player.MediaPlayerService} to its clients to
+     * indicate the currently playing track
+     * @param track
+     */
+    public void onTrackChanged(String track);
 }
