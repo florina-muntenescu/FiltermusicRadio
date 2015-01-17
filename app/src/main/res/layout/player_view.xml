@@ -38,16 +38,6 @@
             android:text="@string/no_radio_selected"
             />
 
-        <TextView
-            android:id="@+id/radio_track"
-            style="@style/title_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="@dimen/item_margin"
-            android:text="Track"
-            android:visibility="gone"
-            />
     </LinearLayout>
 
     <ImageView

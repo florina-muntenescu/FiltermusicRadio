@@ -15,7 +15,7 @@
         <item name="android:gravity">center</item>
     </style>
 
-    <style name="title_text">
+      <style name="title_text">
         <item name="android:textColor">@color/title_text_color</item>
         <item name="android:textSize">@dimen/title_text_size</item>
         <item name="android:layout_width">match_parent</item>

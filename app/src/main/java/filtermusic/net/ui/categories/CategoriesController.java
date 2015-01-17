@@ -1,13 +1,16 @@
 package filtermusic.net.ui.categories;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.google.common.collect.ImmutableList;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 import javax.inject.Inject;
 
@@ -23,14 +26,14 @@ import filtermusic.net.common.model.Radio;
  */
 public class CategoriesController implements DataProvider.RadioListRetrievedListener {
 
+    private static final String LOG_TAG = CategoriesController.class.getSimpleName();
+
     @Inject
     DataProvider mDataProvider;
 
     public interface DataListener {
         void onCategoriesUpdated(List<Category> categories);
     }
-
-    private static final String LOG_TAG = CategoriesController.class.getSimpleName();
 
     private static CategoriesController mInstance;
 
@@ -69,17 +72,13 @@ public class CategoriesController implements DataProvider.RadioListRetrievedList
         return mLastSelectedRadio;
     }
 
-    public Radio getLastSelectedRadio() {
-        return mLastSelectedRadio;
-    }
-
     public Category getLastSelectedCategory() {
         return mLastSelectedCategory;
     }
 
     private void updateCategories(ImmutableList<Radio> radioImmutableList) {
         mCategories.clear();
-        Map<String, List<Radio>> categoryMap = new HashMap<String, List<Radio>>();
+        Map<String, List<Radio>> categoryMap = new LinkedHashMap<>();
         for (Radio radio : radioImmutableList) {
             if (categoryMap.containsKey(radio.getGenre())) {
                 categoryMap.get(radio.getGenre()).add(radio);
@@ -87,10 +86,12 @@ public class CategoriesController implements DataProvider.RadioListRetrievedList
                 List<Radio> radios = new ArrayList<Radio>();
                 radios.add(radio);
                 categoryMap.put(radio.getGenre(), radios);
+                Log.d(LOG_TAG, radio.getGenre());
             }
         }
 
         for (String key : categoryMap.keySet()) {
+            Log.d(LOG_TAG, key);
             Category category = new Category(key, categoryMap.get(key));
             mCategories.add(category);
         }
@@ -101,8 +102,6 @@ public class CategoriesController implements DataProvider.RadioListRetrievedList
     }
 
     private void syncRadios() {
-        //        ImmutableList<Radio> radios = ImmutableList.copyOf(mDataProvider.provide(this));
-        //        updateCategories(radios);
         mDataProvider.provide(this);
     }
 

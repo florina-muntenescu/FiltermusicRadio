@@ -197,7 +197,7 @@ public class PlayerController {
         if (mService != null) {
             mService.removeListener(listener);
         } else {
-            mServiceListeners.add(listener);
+            mServiceListeners.remove(listener);
         }
     }
 

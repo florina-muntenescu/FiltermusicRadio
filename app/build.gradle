@@ -5,8 +5,6 @@ repositories {
     maven { url 'https://maven.fabric.io/public' }
 }
 
-apply plugin: 'android-apt'
-
 buildscript {
     repositories {
         mavenCentral()
@@ -21,9 +19,6 @@ buildscript {
     }
 }
 
-def hockeyAppToken = project.hasProperty("hockeyApp.token") ? project.property("hockeyApp.token") : "unspecified";
-
-
 android {
     compileSdkVersion 21
     buildToolsVersion '20.0.0'
@@ -32,8 +27,8 @@ android {
         applicationId "filtermusic.net"
         minSdkVersion 11
         targetSdkVersion 20
-        versionCode 3
-        versionName "0.7"
+        versionCode 4
+        versionName "0.8"
 
         buildConfigField "boolean", "HOCKEY_APP_ENABLED", "false"
         buildConfigField "String", "HOCKEY_APP_TOKEN", "\"9918ddd2acc2f957011f077d15ca2ad2\""
@@ -48,7 +43,6 @@ android {
         release {
             buildConfigField "boolean", "HOCKEY_APP_ENABLED", "true"
 
-            runProguard true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 
         }
@@ -60,7 +54,6 @@ android {
 
     productFlavors{
         hockeyapp{
-            packageName 'filtermusic.test'
             buildConfigField "boolean", "HOCKEY_APP_ENABLED", "true"
         }
     }
@@ -89,5 +82,4 @@ dependencies {
     compile('com.crashlytics.sdk.android:crashlytics:2.2.0@aar') {
         transitive = true;
     }
-    compile files('libs/streamscraper.jar')
 }
