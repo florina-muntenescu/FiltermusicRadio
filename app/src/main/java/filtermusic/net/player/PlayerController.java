@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 import com.android.magic.stream.player.StreamPlayer;
+import com.android.magic.stream.player.StreamPlayerError;
 import com.android.magic.stream.player.StreamPlayerFactory;
 import com.android.magic.stream.player.StreamPlayerListener;
 import com.android.magic.stream.player.TrackListener;
@@ -130,12 +131,6 @@ public class PlayerController implements StreamPlayerListener, TrackListener {
         mPlayerListeners.remove(listener);
     }
 
-
-    @Override
-    public void onInitializePlayerStart(String s) {
-
-    }
-
     @Override
     public void onPlaying(String radioUrl) {
         mRadioPlaying = mSelectedRadio;
@@ -145,11 +140,8 @@ public class PlayerController implements StreamPlayerListener, TrackListener {
     }
 
     @Override
-    public void onError() {
-        for (PlayerListener listener : mPlayerListeners) {
-            listener.onError();
-        }
-
+    public void onError(StreamPlayerError error) {
+        onPlayerStop();
     }
 
     @Override

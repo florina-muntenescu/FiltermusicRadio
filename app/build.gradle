@@ -54,7 +54,7 @@ android {
 
     productFlavors{
         hockeyapp{
-            applicationId = "filtermusic.net.test"
+            applicationId = "filtermusic.test"
             buildConfigField "boolean", "HOCKEY_APP_ENABLED", "true"
         }
     }

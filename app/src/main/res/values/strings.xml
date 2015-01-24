@@ -5,6 +5,7 @@
 
     <string name="error_unable_to_retrieve">Looks like we\'re unable to get the list of radios.</string>
 
+    <string name="no_internet">No Internet connection available</string>
 
     <!--categories tab-->
     <string name="categories_tab">Categories</string>
