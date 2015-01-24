@@ -14,16 +14,14 @@ import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.squareup.picasso.Picasso;
 
-import filtermusic.net.FiltermusicApplication;
 import filtermusic.net.R;
 import filtermusic.net.common.model.Radio;
-import filtermusic.net.player.IMediaPlayerServiceListener;
 import filtermusic.net.player.PlayerController;
 
 /**
  * Activity used to display information about a radio.
  */
-public class RadioDetailActivity extends ActionBarActivity implements IMediaPlayerServiceListener {
+public class RadioDetailActivity extends ActionBarActivity implements PlayerController.PlayerListener {
 
     private static final String LOG_TAG = RadioDetailActivity.class.getSimpleName();
 
@@ -32,6 +30,7 @@ public class RadioDetailActivity extends ActionBarActivity implements IMediaPlay
     private ImageView mRadioImage;
     private TextView mRadioTitle;
     private TextView mRadioDescription;
+    private TextView mTrack;
 
     private ImageView mPlayButton;
     private ImageView mStarButton;
@@ -50,7 +49,6 @@ public class RadioDetailActivity extends ActionBarActivity implements IMediaPlay
             final String radioGson = getIntent().getStringExtra(INTENT_RADIO_PLAYING);
             try {
                 Radio radio = new Gson().fromJson(radioGson, Radio.class);
-                Log.d(LOG_TAG, "radio " + radio.toString());
                 mController = new RadioDetailController(radio);
             }catch(JsonSyntaxException e){
                 Log.d(LOG_TAG, "json syntax ex");
@@ -60,7 +58,8 @@ public class RadioDetailActivity extends ActionBarActivity implements IMediaPlay
         if (mController != null && mController.getRadio() != null) {
             mPlayerController = PlayerController.getInstance();
             initUI();
-            initRadioViews(mController.getRadio());
+            updateRadioViews(mPlayerController.getSelectedRadio(),
+                    mPlayerController.getLastPlayingTrack());
         }
 
     }
@@ -81,6 +80,7 @@ public class RadioDetailActivity extends ActionBarActivity implements IMediaPlay
         mRadioImage = (ImageView) findViewById(R.id.radio_image);
         mRadioTitle = (TextView) findViewById(R.id.radio_title);
         mRadioDescription = (TextView) findViewById(R.id.radio_description);
+        mTrack = (TextView) findViewById(R.id.track_playing);
 
         mLoadingProgress = (ProgressBar) findViewById(R.id.loading_progress);
 
@@ -118,10 +118,10 @@ public class RadioDetailActivity extends ActionBarActivity implements IMediaPlay
     }
 
     /**
-     * Initializes the views based on a radio
+     * Updates the views based on a radio
      * @param radio the radio from where the data for the view is taken
      */
-    private void initRadioViews(final Radio radio) {
+    private void updateRadioViews(final Radio radio, final String lastPlayingTrack) {
         Picasso.with(this).load(radio.getImageUrl()).placeholder(R.drawable.station_image).into
                 (mRadioImage);
 
@@ -138,6 +138,7 @@ public class RadioDetailActivity extends ActionBarActivity implements IMediaPlay
         } else {
             mPlayButton.setImageResource(R.drawable.play_circle);
         }
+        mTrack.setText(lastPlayingTrack);
     }
 
     @Override
@@ -150,20 +151,9 @@ public class RadioDetailActivity extends ActionBarActivity implements IMediaPlay
     protected void onResume() {
         super.onResume();
         PlayerController.getInstance().addListener(this);
-    }
-
-    @Override
-    public void onInitializePlayerStart(Radio radio) {
-        Log.d(LOG_TAG, "onInitializePlayerStart");
-    }
-
-    @Override
-    public void onPlaying(Radio radio) {
-        if (mController.getRadio() != null && mController.getRadio().equals(radio)) {
-            Log.d(LOG_TAG, "onPlaying " + radio.getTitle());
-            mLoadingProgress.setVisibility(View.GONE);
-            mPlayButton.setVisibility(View.VISIBLE);
-            mPlayButton.setImageResource(R.drawable.pause_circle_fill);
+        if(PlayerController.getInstance().getSelectedRadio() != null) {
+            updateRadioViews(PlayerController.getInstance().getSelectedRadio(),
+                    PlayerController.getInstance().getLastPlayingTrack());
         }
     }
 
@@ -174,12 +164,22 @@ public class RadioDetailActivity extends ActionBarActivity implements IMediaPlay
     }
 
     @Override
-    public void onPlayerStop() {
+    public void onPlayerStartedPlaying(Radio radio) {
+        if (mController.getRadio() != null && mController.getRadio().equals(radio)) {
+            Log.d(LOG_TAG, "onPlaying " + radio.getTitle());
+            mLoadingProgress.setVisibility(View.GONE);
+            mPlayButton.setVisibility(View.VISIBLE);
+            mPlayButton.setImageResource(R.drawable.pause_circle_fill);
+        }
+    }
+
+    @Override
+    public void onPlayerStopped() {
         mPlayButton.setImageResource(R.drawable.play_circle);
     }
 
     @Override
-    public void onTrackChanged(String track) {
-
+    public void onTrackChanged(final String track) {
+        mTrack.setText(track);
     }
 }

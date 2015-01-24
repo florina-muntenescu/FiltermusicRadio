@@ -20,7 +20,6 @@ import filtermusic.net.FiltermusicApplication;
 import filtermusic.net.R;
 import filtermusic.net.common.data.DataProvider;
 import filtermusic.net.common.model.Radio;
-import filtermusic.net.player.IMediaPlayerServiceListener;
 import filtermusic.net.player.PlayerController;
 
 /**
@@ -28,7 +27,7 @@ import filtermusic.net.player.PlayerController;
  * radio
  * and saving the radio as favorite
  */
-public class RadioDetailView extends LinearLayout implements IMediaPlayerServiceListener {
+public class RadioDetailView extends LinearLayout implements PlayerController.PlayerListener {
 
     private static final String LOG_TAG = RadioDetailView.class.getSimpleName();
     private ImageView mRadioImage;
@@ -99,7 +98,7 @@ public class RadioDetailView extends LinearLayout implements IMediaPlayerService
                             mLoadingProgress.setVisibility(View.VISIBLE);
                             mPlayerController.play(mRadio);
                         } else {
-                            mPlayerController.pause();
+                            mPlayerController.stop();
                         }
                     }
                 });
@@ -152,13 +151,9 @@ public class RadioDetailView extends LinearLayout implements IMediaPlayerService
         mPlayerController.removeListener(this);
     }
 
-    @Override
-    public void onInitializePlayerStart(Radio radio) {
-        Log.d(LOG_TAG, "onInitializePlayerStart");
-    }
 
     @Override
-    public void onPlaying(Radio radio) {
+    public void onPlayerStartedPlaying(Radio radio) {
         if(mRadio != null && mRadio.equals(radio)) {
             Log.d(LOG_TAG, "onPlaying " + radio.getTitle());
             mLoadingProgress.setVisibility(View.GONE);
@@ -174,7 +169,7 @@ public class RadioDetailView extends LinearLayout implements IMediaPlayerService
     }
 
     @Override
-    public void onPlayerStop() {
+    public void onPlayerStopped() {
         mPlayButton.setImageResource(R.drawable.play_circle);
     }
 

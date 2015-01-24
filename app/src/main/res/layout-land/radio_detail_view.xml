@@ -23,11 +23,20 @@
                 android:layout_gravity="center"
                 android:src="@drawable/station_image"/>
 
+            <ImageView
+                android:id="@+id/star_button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom|left"
+                android:layout_margin="@dimen/item_margin"
+                android:src="@drawable/star_outline"/>
+
             <FrameLayout
                 android:layout_width="@dimen/play_button_size"
                 android:layout_height="@dimen/play_button_size"
                 android:layout_gravity="bottom|right"
-                android:layout_margin="@dimen/item_margin">
+                android:layout_margin="@dimen/item_margin"
+                >
 
                 <ImageView
                     android:id="@+id/play_button"
@@ -58,12 +67,6 @@
                 android:gravity="center"
                 android:text="Radio Paradise"/>
 
-
-            <ImageView
-                android:id="@+id/star_button"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@drawable/star_outline"/>
 
             <TextView
                 android:id="@+id/radio_description"

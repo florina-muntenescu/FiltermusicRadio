@@ -29,16 +29,17 @@
         <activity android:name="net.hockeyapp.android.UpdateActivity" />
 
         <activity android:name=".ui.details.RadioDetailActivity"/>
-        <service
-            android:name=".player.MediaPlayerService">
-        </service>
 
-        <receiver android:name=".player.MusicIntentReceiver">
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="1138d972ebce1d6dd304d99a658e1cac40517d47"/>
+
+        <service android:name="com.android.magic.stream.player.MediaPlayerService"></service>
+
+        <receiver android:name="com.android.magic.stream.player.MusicIntentReceiver">
             <intent-filter>
-                <action android:name="android.media.AUDIO_BECOMING_NOISY"/>
+                <action android:name="android.media.AUDIO_BECOMING_NOISY" />
             </intent-filter>
         </receiver>
-        <meta-data android:name="com.crashlytics.ApiKey" android:value="1138d972ebce1d6dd304d99a658e1cac40517d47"/>
+
     </application>
 
 

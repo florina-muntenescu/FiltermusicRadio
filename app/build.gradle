@@ -54,6 +54,7 @@ android {
 
     productFlavors{
         hockeyapp{
+            applicationId = "filtermusic.net.test"
             buildConfigField "boolean", "HOCKEY_APP_ENABLED", "true"
         }
     }
@@ -82,4 +83,5 @@ dependencies {
     compile('com.crashlytics.sdk.android:crashlytics:2.2.0@aar') {
         transitive = true;
     }
+    compile files('libs/Stream-Player-1.0.jar')
 }

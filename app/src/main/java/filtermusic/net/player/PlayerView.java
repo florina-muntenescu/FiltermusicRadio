@@ -20,7 +20,7 @@ import filtermusic.net.ui.details.RadioDetailActivity;
 /**
  * View that contains the player
  */
-public class PlayerView extends LinearLayout implements IMediaPlayerServiceListener {
+public class PlayerView extends LinearLayout implements PlayerController.PlayerListener {
 
     private PlayerController mPlayerController;
     private Context mContext;
@@ -110,23 +110,17 @@ public class PlayerView extends LinearLayout implements IMediaPlayerServiceListe
     }
 
     @Override
-    public void onInitializePlayerStart(Radio radio) {
-        setRadio(radio);
-
-    }
-
-    @Override
-    public void onPlaying(Radio radio) {
-        setRadio(radio);
-    }
-
-    @Override
     public void onError() {
 
     }
 
     @Override
-    public void onPlayerStop() {
+    public void onPlayerStartedPlaying(Radio radio) {
+        setRadio(radio);
+    }
+
+    @Override
+    public void onPlayerStopped() {
         mPlayPauseButton.setImageResource(R.drawable.play_arrow);
     }
 
