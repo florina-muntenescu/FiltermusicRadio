@@ -20,8 +20,6 @@ import filtermusic.net.R;
 import filtermusic.net.common.model.Category;
 import filtermusic.net.common.model.Radio;
 import filtermusic.net.player.PlayerController;
-import filtermusic.net.ui.RadioDetailView;
-import filtermusic.net.ui.RadiosAdapter;
 import filtermusic.net.ui.details.RadioDetailActivity;
 
 /**
@@ -37,6 +35,7 @@ public class CategoriesFragment extends Fragment implements CategoriesController
     private static final int PROGRESS_VIEW_INDEX = 0;
     private static final int CATEGORIES_VIEW_INDEX = 1;
     private static final int RADIOS_VIEW_INDEX = 2;
+    private static final int ERROR_VIEW_INDEX = 3;
 
     private ListView mCategoriesList;
     private ListView mRadiosList;
@@ -76,6 +75,13 @@ public class CategoriesFragment extends Fragment implements CategoriesController
         mCategoriesList = (ListView) rootView.findViewById(R.id.categories_list);
         mRadiosList = (ListView) rootView.findViewById(R.id.radios_list);
 
+        rootView.findViewById(R.id.retry_layout).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCategoriesController.syncRadios();
+                flipToPage(PROGRESS_VIEW_INDEX);
+            }
+        });
         mCategoriesList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -91,7 +97,7 @@ public class CategoriesFragment extends Fragment implements CategoriesController
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 final Radio selectedRadio = mCategoriesController.selectRadio(position);
-                if(!PlayerController.getInstance().radioWasPlayedInThisSession()){
+                if (!PlayerController.getInstance().radioWasPlayedInThisSession()) {
                     final String selectedRadioGson = new Gson().toJson(selectedRadio);
                     Intent radioDetailIntent = new Intent(
                             getActivity(), RadioDetailActivity.class);
@@ -119,6 +125,11 @@ public class CategoriesFragment extends Fragment implements CategoriesController
         }
     }
 
+    @Override
+    public void onError() {
+        flipToPage(ERROR_VIEW_INDEX);
+    }
+
     private void updateCategories(List<Category> categories) {
         mCategories = categories;
         CategoriesAdapter categoriesAdapter = new CategoriesAdapter(getActivity(),
@@ -129,7 +140,7 @@ public class CategoriesFragment extends Fragment implements CategoriesController
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        if(mViewFlipper != null) {
+        if (mViewFlipper != null) {
             outState.putInt(LAST_OPENED_VIEW, mViewFlipper.getDisplayedChild());
         }
     }
@@ -147,6 +158,7 @@ public class CategoriesFragment extends Fragment implements CategoriesController
                 break;
             case PROGRESS_VIEW_INDEX:
             case CATEGORIES_VIEW_INDEX:
+            case ERROR_VIEW_INDEX:
                 getActivity().finish();
         }
         updateContent(newPage);

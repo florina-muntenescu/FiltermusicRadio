@@ -22,11 +22,14 @@ import rx.schedulers.Schedulers;
 public class DataProvider {
 
     /**
-     * Listener that notifies when different radio lists was updated
+     * Listener that notifies when different radio lists was updated or when there was an error
+     * retrieving the radio list
      */
     public interface RadioListRetrievedListener {
 
         public void onRadioListRetrieved(final List<Radio> radios);
+
+        public void onError();
     }
 
     /**
@@ -74,6 +77,11 @@ public class DataProvider {
         dataProvider.provideRadioList(
                 new RadioListRetrievedListener() {
                     @Override
+                    public void onError() {
+                        listener.onError();
+                    }
+
+                    @Override
                     public void onRadioListRetrieved(List<Radio> radios) {
                         final Long timeElapsedForAddDevice = System.currentTimeMillis() - timeBefore;
                         final String timeAddDevice = String.format("%1$,.5f", (double) timeElapsedForAddDevice / 1000);
@@ -90,6 +98,7 @@ public class DataProvider {
 
                                     @Override
                                     public void onError(Throwable e) {
+                                        listener.onError();
                                     }
 
                                     @Override

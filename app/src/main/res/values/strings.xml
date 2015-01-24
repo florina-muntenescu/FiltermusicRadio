@@ -3,8 +3,8 @@
 
     <string name="app_name">filtermusic</string>
 
-    <string name="error_unable_to_retrieve">Looks like we\'re unable to get the list of radios.</string>
-
+    <string name="error_unable_to_retrieve">Looks like we can\'t get the list of radios.</string>
+    <string name="tap_to_retry">Tap to retry</string>
     <string name="no_internet">No Internet connection available</string>
 
     <!--categories tab-->
@@ -33,6 +33,7 @@
 
     <!--player view-->
     <string name="no_radio_selected">Choose a radio station</string>
+    <string name="unable_to_play">Unable to play radio</string>
 
     <!--hockey-->
     <!--crash reporting-->

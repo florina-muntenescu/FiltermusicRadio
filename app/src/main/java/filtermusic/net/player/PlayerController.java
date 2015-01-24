@@ -3,6 +3,7 @@ package filtermusic.net.player;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.widget.Toast;
 
 import com.android.magic.stream.player.StreamPlayer;
 import com.android.magic.stream.player.StreamPlayerError;
@@ -13,10 +14,12 @@ import com.android.magic.stream.player.TrackListener;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.TooManyListenersException;
 
 import javax.inject.Inject;
 
 import filtermusic.net.FiltermusicApplication;
+import filtermusic.net.R;
 import filtermusic.net.common.data.DataProvider;
 import filtermusic.net.common.model.Radio;
 
@@ -142,6 +145,7 @@ public class PlayerController implements StreamPlayerListener, TrackListener {
     @Override
     public void onError(StreamPlayerError error) {
         onPlayerStop();
+        Toast.makeText(mContext, R.string.unable_to_play, Toast.LENGTH_LONG).show();
     }
 
     @Override

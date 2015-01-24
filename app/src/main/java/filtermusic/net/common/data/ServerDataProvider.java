@@ -39,6 +39,7 @@ import rx.schedulers.Schedulers;
 
                                @Override
                                public void onError(Throwable e) {
+                                   listener.onError();
                                }
 
                                @Override

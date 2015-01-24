@@ -33,6 +33,7 @@ public class CategoriesController implements DataProvider.RadioListRetrievedList
 
     public interface DataListener {
         void onCategoriesUpdated(List<Category> categories);
+        void onError();
     }
 
     private static CategoriesController mInstance;
@@ -101,7 +102,7 @@ public class CategoriesController implements DataProvider.RadioListRetrievedList
         }
     }
 
-    private void syncRadios() {
+    public void syncRadios() {
         mDataProvider.provide(this);
     }
 
@@ -118,4 +119,8 @@ public class CategoriesController implements DataProvider.RadioListRetrievedList
         updateCategories(ImmutableList.copyOf(radios));
     }
 
+    @Override
+    public void onError() {
+        mDataListener.onError();
+    }
 }
