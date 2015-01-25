@@ -30,7 +30,7 @@
 
         <activity android:name=".ui.details.RadioDetailActivity"/>
 
-        <meta-data android:name="com.crashlytics.ApiKey" android:value="1138d972ebce1d6dd304d99a658e1cac40517d47"/>
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="a39fa07d0b5650c51fe0993719b435cc8f89c0d2"/>
 
         <service android:name="com.android.magic.stream.player.MediaPlayerService"></service>
 

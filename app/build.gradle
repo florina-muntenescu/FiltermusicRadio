@@ -27,7 +27,7 @@ android {
         applicationId "filtermusic.net"
         minSdkVersion 11
         targetSdkVersion 20
-        versionCode 5
+        versionCode 6
         versionName "0.9"
 
         buildConfigField "boolean", "HOCKEY_APP_ENABLED", "false"
