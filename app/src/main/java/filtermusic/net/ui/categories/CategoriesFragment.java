@@ -173,6 +173,9 @@ public class CategoriesFragment extends Fragment implements CategoriesController
      * @param pageIndex the page index of the view flipper
      */
     private void updateContent(int pageIndex) {
+        if(mCategoriesController == null){
+            mCategoriesController = CategoriesController.getInstance();
+        }
         switch (pageIndex) {
             case RADIOS_VIEW_INDEX:
                 updateRadioList(mCategoriesController.getLastSelectedCategory().getRadioList());

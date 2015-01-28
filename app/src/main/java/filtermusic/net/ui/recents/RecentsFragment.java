@@ -93,7 +93,9 @@ public class RecentsFragment extends Fragment implements RecentsController.DataR
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putInt(LAST_OPENED_VIEW, mViewFlipper.getDisplayedChild());
+        if(mViewFlipper != null) {
+            outState.putInt(LAST_OPENED_VIEW, mViewFlipper.getDisplayedChild());
+        }
     }
 
 }
