@@ -1,6 +1,5 @@
 package filtermusic.net.common.communication;
 
-import android.content.Context;
 import android.support.annotation.NonNull;
 
 import filtermusic.net.BuildConfig;
@@ -13,11 +12,8 @@ public class FiltermusicApi {
 
     private static final RestAdapter.LogLevel DEBUG_DEFAULT_LOG_LEVEL = RestAdapter.LogLevel.FULL;
 
-    private Context mApplicationContext;
-
-    public FiltermusicApi(Context context) {
-        mApplicationContext = context;
-
+    public FiltermusicApi() {
+        //nothing to do
     }
 
     public FiltermusicService createFromRestAdapter() {
@@ -35,7 +31,7 @@ public class FiltermusicApi {
     private void setRestAdapterLogLevel(final @NonNull RestAdapter restAdapter) {
         if (BuildConfig.DEBUG) {
             // use a special log level only when in debug mode
-//            restAdapter.setLogLevel(DEBUG_DEFAULT_LOG_LEVEL);
+            restAdapter.setLogLevel(DEBUG_DEFAULT_LOG_LEVEL);
         }
     }
 }

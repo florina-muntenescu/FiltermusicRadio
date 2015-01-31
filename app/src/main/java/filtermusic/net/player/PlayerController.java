@@ -5,16 +5,15 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.widget.Toast;
 
+import com.android.magic.stream.player.MetadataListener;
 import com.android.magic.stream.player.StreamPlayer;
 import com.android.magic.stream.player.StreamPlayerError;
 import com.android.magic.stream.player.StreamPlayerFactory;
 import com.android.magic.stream.player.StreamPlayerListener;
-import com.android.magic.stream.player.TrackListener;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.TooManyListenersException;
 
 import javax.inject.Inject;
 
@@ -26,7 +25,7 @@ import filtermusic.net.common.model.Radio;
 /**
  * Controller for the player
  */
-public class PlayerController implements StreamPlayerListener, TrackListener {
+public class PlayerController implements StreamPlayerListener, MetadataListener {
 
     private static final String LOG_TAG = PlayerController.class.getSimpleName();
 
@@ -54,6 +53,8 @@ public class PlayerController implements StreamPlayerListener, TrackListener {
     private static PlayerController mInstance;
 
     private List<PlayerListener> mPlayerListeners;
+
+    private boolean mPlayingBuffering = false;
 
     public static PlayerController getInstance() {
         if (null == mInstance) {
@@ -101,6 +102,7 @@ public class PlayerController implements StreamPlayerListener, TrackListener {
         final Date now = new Date(System.currentTimeMillis());
         radio.setPlayedDate(now);
         mDataProvider.updateRadio(radio);
+        mPlayingBuffering = true;
     }
 
     public void stop() {
@@ -140,6 +142,7 @@ public class PlayerController implements StreamPlayerListener, TrackListener {
         for (PlayerListener listener : mPlayerListeners) {
             listener.onPlayerStartedPlaying(mRadioPlaying);
         }
+        mPlayingBuffering = false;
     }
 
     @Override
@@ -150,9 +153,14 @@ public class PlayerController implements StreamPlayerListener, TrackListener {
 
     @Override
     public void onPlayerStop() {
+        mPlayingBuffering = false;
         for (PlayerListener listener : mPlayerListeners) {
             listener.onPlayerStopped();
         }
+    }
+
+    public boolean isPlayingBuffering() {
+        return mPlayingBuffering;
     }
 
     public String getLastPlayingTrack() {
@@ -160,10 +168,10 @@ public class PlayerController implements StreamPlayerListener, TrackListener {
     }
 
     @Override
-    public void onTrackChanged(@Nullable String track) {
-        mLastPlayingTrack = track;
+    public void onMetadataChanged(@Nullable String metadata) {
+        mLastPlayingTrack = metadata;
         for (PlayerListener listener : mPlayerListeners) {
-            listener.onTrackChanged(track);
+            listener.onTrackChanged(metadata);
         }
 
     }

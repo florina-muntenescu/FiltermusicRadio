@@ -6,8 +6,6 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <!--used for keeping the processor from sleeping-->
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
-    <!--used for hockey-->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".FiltermusicApplication"
@@ -26,13 +24,11 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="net.hockeyapp.android.UpdateActivity" />
-
         <activity android:name=".ui.details.RadioDetailActivity"/>
 
         <meta-data android:name="com.crashlytics.ApiKey" android:value="a39fa07d0b5650c51fe0993719b435cc8f89c0d2"/>
 
-        <service android:name="com.android.magic.stream.player.MediaPlayerService"></service>
+        <service android:name="com.android.magic.stream.player.MediaPlayerService"/>
 
         <receiver android:name="com.android.magic.stream.player.MusicIntentReceiver">
             <intent-filter>

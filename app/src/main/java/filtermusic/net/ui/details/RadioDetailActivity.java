@@ -101,6 +101,10 @@ public class RadioDetailActivity extends ActionBarActivity implements PlayerCont
                     }
                 });
 
+        if(mPlayerController.isPlayingBuffering()){
+            mLoadingProgress.setVisibility(View.VISIBLE);
+            mPlayButton.setVisibility(View.GONE);
+        }
 
         mStarButton = (ImageView) findViewById(R.id.star_button);
         mStarButton.setOnClickListener(

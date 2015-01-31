@@ -27,35 +27,15 @@ android {
         applicationId "filtermusic.net"
         minSdkVersion 11
         targetSdkVersion 20
-        versionCode 7
+        versionCode 8
         versionName "0.9"
 
-        buildConfigField "boolean", "HOCKEY_APP_ENABLED", "false"
-        buildConfigField "String", "HOCKEY_APP_TOKEN", "\"9918ddd2acc2f957011f077d15ca2ad2\""
     }
     buildTypes {
-
         debug{
-            buildConfigField "boolean", "HOCKEY_APP_ENABLED", "true"
-            buildConfigField "String", "HOCKEY_APP_TOKEN", "null"
-
         }
         release {
-            buildConfigField "boolean", "HOCKEY_APP_ENABLED", "true"
-
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-
-        }
-    }
-
-    sourceSets {
-        main.java.srcDirs = ['src/hockeyapp/source', 'src/main/java']
-    }
-
-    productFlavors{
-        hockeyapp{
-            applicationId = "filtermusic.test"
-            buildConfigField "boolean", "HOCKEY_APP_ENABLED", "true"
         }
     }
 
@@ -70,7 +50,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:21.0.2'
     compile 'com.google.android.gms:play-services:6.5.87'
     compile 'com.google.guava:guava:18.0'
-    compile 'net.hockeyapp.android:HockeySDK:3.0.2@jar'
     compile 'com.squareup.dagger:dagger:1.2.2'
     compile 'com.squareup.dagger:dagger-compiler:1.2.2'
     compile 'com.squareup.retrofit:retrofit:1.6.1'
@@ -84,5 +63,5 @@ dependencies {
     compile('com.crashlytics.sdk.android:crashlytics:2.2.0@aar') {
         transitive = true;
     }
-    compile files('libs/Stream-Player-1.0.jar')
+    compile files('libs/StreamPlayer-1.1-debug.jar')
 }

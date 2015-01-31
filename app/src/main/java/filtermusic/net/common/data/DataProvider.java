@@ -73,7 +73,7 @@ public class DataProvider {
      */
     public void provide(@NonNull final RadioListRetrievedListener listener) {
         final Long timeBefore = System.currentTimeMillis();
-        ServerDataProvider dataProvider = new ServerDataProvider(mContext);
+        ServerDataProvider dataProvider = new ServerDataProvider();
         dataProvider.provideRadioList(
                 new RadioListRetrievedListener() {
                     @Override

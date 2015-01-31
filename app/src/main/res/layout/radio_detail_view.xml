@@ -61,7 +61,7 @@
 
             <TextView
                 android:id="@+id/radio_title"
-                style="@style/title_text"
+                style="@style/header_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -70,7 +70,7 @@
 
             <TextView
                 android:id="@+id/radio_description"
-                style="@style/content_text"
+                style="@style/title_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
