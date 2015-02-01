@@ -81,6 +81,7 @@ public class RadioDetailActivity extends ActionBarActivity implements PlayerCont
         mRadioTitle = (TextView) findViewById(R.id.radio_title);
         mRadioDescription = (TextView) findViewById(R.id.radio_description);
         mTrack = (TextView) findViewById(R.id.track_playing);
+        mTrack.setText("");
 
         mLoadingProgress = (ProgressBar) findViewById(R.id.loading_progress);
 
@@ -100,11 +101,6 @@ public class RadioDetailActivity extends ActionBarActivity implements PlayerCont
                         }
                     }
                 });
-
-        if(mPlayerController.isPlayingBuffering()){
-            mLoadingProgress.setVisibility(View.VISIBLE);
-            mPlayButton.setVisibility(View.GONE);
-        }
 
         mStarButton = (ImageView) findViewById(R.id.star_button);
         mStarButton.setOnClickListener(
@@ -135,14 +131,19 @@ public class RadioDetailActivity extends ActionBarActivity implements PlayerCont
         int star = radio.isFavorite() ? R.drawable.star : R.drawable.star_outline;
         mStarButton.setImageResource(star);
 
-        mPlayButton.setVisibility(View.VISIBLE);
-        mLoadingProgress.setVisibility(View.GONE);
-        if (mPlayerController.isRadioPlaying(radio)) {
-            mPlayButton.setImageResource(R.drawable.pause_circle_fill);
-        } else {
-            mPlayButton.setImageResource(R.drawable.play_circle);
+        if(mPlayerController.isPlayingBuffering()){
+            mLoadingProgress.setVisibility(View.VISIBLE);
+            mPlayButton.setVisibility(View.GONE);
+        }else {
+            mPlayButton.setVisibility(View.VISIBLE);
+            mLoadingProgress.setVisibility(View.GONE);
+            mTrack.setText(lastPlayingTrack);
+            if (mPlayerController.isRadioPlaying(radio)) {
+                mPlayButton.setImageResource(R.drawable.pause_circle_fill);
+            } else {
+                mPlayButton.setImageResource(R.drawable.play_circle);
+            }
         }
-        mTrack.setText(lastPlayingTrack);
     }
 
     @Override
@@ -169,12 +170,13 @@ public class RadioDetailActivity extends ActionBarActivity implements PlayerCont
 
     @Override
     public void onPlayerStartedPlaying(Radio radio) {
-        if (mController.getRadio() != null && mController.getRadio().equals(radio)) {
-            Log.d(LOG_TAG, "onPlaying " + radio.getTitle());
-            mLoadingProgress.setVisibility(View.GONE);
-            mPlayButton.setVisibility(View.VISIBLE);
-            mPlayButton.setImageResource(R.drawable.pause_circle_fill);
+        if (mController.getRadio() == null || !mController.getRadio().equals(radio)) {
+            mController = new RadioDetailController(radio);
         }
+        Log.d(LOG_TAG, "onPlaying " + radio.getTitle());
+        mLoadingProgress.setVisibility(View.GONE);
+        mPlayButton.setVisibility(View.VISIBLE);
+        mPlayButton.setImageResource(R.drawable.pause_circle_fill);
     }
 
     @Override
@@ -184,6 +186,7 @@ public class RadioDetailActivity extends ActionBarActivity implements PlayerCont
 
     @Override
     public void onTrackChanged(final String track) {
+        Log.d(LOG_TAG, track);
         mTrack.setText(track);
     }
 }

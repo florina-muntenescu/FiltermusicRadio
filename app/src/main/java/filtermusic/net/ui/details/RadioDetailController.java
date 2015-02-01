@@ -31,4 +31,5 @@ public class RadioDetailController {
         mRadio.setFavorite(!mRadio.isFavorite());
         mDataProvider.updateRadio(mRadio);
     }
+
 }

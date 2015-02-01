@@ -63,10 +63,10 @@ public class TabsActivity extends ActionBarActivity implements ActionBar.TabList
         // Set up the action bar.
         final ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayShowTitleEnabled(false);
-        actionBar.setDisplayHomeAsUpEnabled(false);
-        actionBar.setDisplayShowHomeEnabled(false);
-
-        actionBar.setBackgroundDrawable(null);
+//        actionBar.setDisplayHomeAsUpEnabled(false);
+//        actionBar.setDisplayShowHomeEnabled(false);
+//
+//        actionBar.setBackgroundDrawable(null);
 
         // Specify that the Home/Up button should not be enabled, since there is no hierarchical
         // parent.

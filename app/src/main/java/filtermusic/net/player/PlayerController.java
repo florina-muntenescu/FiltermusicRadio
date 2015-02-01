@@ -3,6 +3,7 @@ package filtermusic.net.player;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.android.magic.stream.player.MetadataListener;
@@ -169,6 +170,7 @@ public class PlayerController implements StreamPlayerListener, MetadataListener 
 
     @Override
     public void onMetadataChanged(@Nullable String metadata) {
+        Log.d(LOG_TAG, "track changed " + metadata);
         mLastPlayingTrack = metadata;
         for (PlayerListener listener : mPlayerListeners) {
             listener.onTrackChanged(metadata);

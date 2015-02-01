@@ -26,8 +26,6 @@ import filtermusic.net.common.model.Radio;
  */
 public class CategoriesController implements DataProvider.RadioListRetrievedListener {
 
-    private static final String LOG_TAG = CategoriesController.class.getSimpleName();
-
     @Inject
     DataProvider mDataProvider;
 
@@ -87,12 +85,10 @@ public class CategoriesController implements DataProvider.RadioListRetrievedList
                 List<Radio> radios = new ArrayList<Radio>();
                 radios.add(radio);
                 categoryMap.put(radio.getGenre(), radios);
-                Log.d(LOG_TAG, radio.getGenre());
             }
         }
 
         for (String key : categoryMap.keySet()) {
-            Log.d(LOG_TAG, key);
             Category category = new Category(key, categoryMap.get(key));
             mCategories.add(category);
         }
