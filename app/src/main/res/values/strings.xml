@@ -27,21 +27,11 @@
     <string name="email">info@filtermusic.net</string>
     <string name="description">Filtermusic is updated (almost daily) with radio stations that stream in high quality (128Kbps)
         and play only music; you won\'t find a radio here where people having lenghty discussions
-        (just in case these are the radio stations you are especially looking for, some can be found at the \"Various/Independent\" section).\n
-        All streams presented have been filtered especially for electronic &amp; dance music from thousands of stations all over the Internet.</string>
+        (just in case these are the radio stations you are especially looking for, some can be found at the \"Various/Independent\" section).\nAll streams presented have been filtered especially for electronic &amp; dance music from thousands of stations all over the Internet.</string>
 
 
     <!--player view-->
     <string name="no_radio_selected">Choose a radio station</string>
     <string name="unable_to_play">Unable to play radio</string>
-
-    <!--hockey-->
-    <!--crash reporting-->
-    <string name="crashreporter_crashes_found_alertview_message">Please write a short description of the error and your contact details and we will fix it as soon as possible.</string>
-    <string name="crashreporter_crashes_found_alertview_button_dont_send">Don´t send report</string>
-    <string name="crashreporter_crashes_found_alertview_button_send">OK</string>
-    <string name="crashreporter_crashes_found_alert_input_default_text">Contact:\
-    What happended?\</string>
-    <string name="crashreporter_crashes_found_alertview_title">A crash occured</string>
 
 </resources>

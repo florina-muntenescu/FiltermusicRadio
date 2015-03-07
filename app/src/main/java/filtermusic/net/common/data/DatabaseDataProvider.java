@@ -4,6 +4,8 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
+import com.google.common.base.Function;
+import com.google.common.collect.Lists;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.RuntimeExceptionDao;
 import com.j256.ormlite.stmt.QueryBuilder;
@@ -11,6 +13,7 @@ import com.j256.ormlite.stmt.Where;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import filtermusic.net.common.database.DatabaseHelper;
@@ -41,22 +44,23 @@ import rx.schedulers.Schedulers;
         RuntimeExceptionDao<DbRadio, Integer> dao = databaseHelper.getDbRadioDao();
 
         List<DbRadio> dbRadios = dao.queryForAll();
-        List<Radio> radios = convert(dbRadios);
-
+        List<Radio> radios = toRadios(dbRadios);
         return radios;
     }
 
-    private List<Radio> convert(final List<DbRadio> dbRadios) {
-        List<Radio> radios = new ArrayList<Radio>();
-        for (DbRadio dbRadio : dbRadios) {
-            final Radio radio = new Radio(
-                    dbRadio.getId(), dbRadio.getTitle(), dbRadio.getURL(), dbRadio.getGenre(),
-                    dbRadio.getDescription(), dbRadio.getCategory(), dbRadio.getImageUrl(),
-                    dbRadio.isFavorite(), dbRadio.getPlayedDate());
-            radios.add(radio);
-        }
-
-        return radios;
+    /**
+     * Converts a list of {@link DbRadio} to {@link Radio}
+     */
+    private List<Radio> toRadios(final List<DbRadio> dbRadios) {
+        return Lists.transform(dbRadios, new Function<DbRadio, Radio>() {
+            @Override
+            public Radio apply(DbRadio dbRadio) {
+                return new Radio(
+                        dbRadio.getId(), dbRadio.getTitle(), dbRadio.getURL(), dbRadio.getGenre(),
+                        dbRadio.getDescription(), dbRadio.getCategory(), dbRadio.getImageUrl(),
+                        dbRadio.isFavorite(), dbRadio.getPlayedDate());
+            }
+        });
     }
 
     /**
@@ -81,7 +85,7 @@ import rx.schedulers.Schedulers;
 
                     @Override
                     public void onNext(List<DbRadio> dbRadios) {
-                        List<Radio> radios = convert(dbRadios);
+                        List<Radio> radios = toRadios(dbRadios);
                         listener.onFavoritesRetrieved(radios);
                     }
                 });
@@ -131,7 +135,7 @@ import rx.schedulers.Schedulers;
         dao.delete(dbRadios);
 
         final List<DbRadio> allDBRadios = dao.queryForAll();
-        return convert(allDBRadios);
+        return toRadios(allDBRadios);
     }
 
     /**
@@ -182,10 +186,10 @@ import rx.schedulers.Schedulers;
             exception.printStackTrace();
         }
 
-        List<DbRadio> dbRadios = null;
+        List<DbRadio> dbRadios = Collections.emptyList();
         try {
             dbRadios = dao.query(queryBuilder.prepare());
-            List<Radio> radios = convert(dbRadios);
+            List<Radio> radios = toRadios(dbRadios);
             listener.onLastPlayedRetrieved(radios);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -205,7 +209,9 @@ import rx.schedulers.Schedulers;
                     public void call(final Integer elapsedSeconds) {
                         // nothing to do
                         Log.d(LOG_TAG, "radio updated");
-                        listener.onDataChanged();
+                        if(listener != null) {
+                            listener.onDataChanged();
+                        }
                     }
                 });
     }

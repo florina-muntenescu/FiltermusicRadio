@@ -45,8 +45,6 @@ public class FavoritesFragment extends Fragment implements FavoritesController
             @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.favorites_fragment, container, false);
 
-        mController = new FavoritesController();
-
         mViewFlipper = (ViewFlipper) rootView.findViewById(R.id.view_flipper);
         mRadiosList = (ListView) rootView.findViewById(R.id.favorites);
         mRadiosList.setOnItemClickListener(
@@ -69,9 +67,23 @@ public class FavoritesFragment extends Fragment implements FavoritesController
 
         mRadiosList.setEmptyView(rootView.findViewById(android.R.id.empty));
 
+        return rootView;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        mController = new FavoritesController();
         mController.retrieveFavorites(this);
 
-        return rootView;
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        if(mController != null){
+            mController.unregisterListener();
+        }
     }
 
     public void updateRadioList(List<Radio> radios) {
@@ -100,5 +112,7 @@ public class FavoritesFragment extends Fragment implements FavoritesController
             outState.putInt(LAST_OPENED_VIEW, mViewFlipper.getDisplayedChild());
         }
     }
+    
+    
 
 }

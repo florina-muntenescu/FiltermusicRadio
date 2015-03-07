@@ -42,7 +42,6 @@ public class RecentsFragment extends Fragment implements RecentsController.DataR
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
             @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.recents_fragment, container, false);
-        mController = new RecentsController();
 
         mViewFlipper = (ViewFlipper) rootView.findViewById(R.id.view_flipper);
         mRadiosList = (ListView) rootView.findViewById(R.id.last_played);
@@ -66,9 +65,23 @@ public class RecentsFragment extends Fragment implements RecentsController.DataR
 
         mRadiosList.setEmptyView(rootView.findViewById(android.R.id.empty));
 
-        mController.retrieveRecents(this);
 
         return rootView;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        mController = new RecentsController();
+        mController.retrieveRecents(this);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        if(mController != null){
+            mController.unregisterListener();
+        }
     }
 
     public void updateRadioList(List<Radio> radios) {

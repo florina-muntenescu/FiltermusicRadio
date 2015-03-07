@@ -55,4 +55,9 @@ public class FavoritesController implements DataProvider.FavoritesRetrievedListe
         mLastSelectedRadio = mFavorites.get(radioIndex);
         return mLastSelectedRadio;
     }
+    
+    public void unregisterListener(){
+        mDataProvider.unregisterDataListener(this);
+    }
+        
 }

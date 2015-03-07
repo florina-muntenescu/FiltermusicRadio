@@ -47,6 +47,7 @@ public class RadioDetailActivity extends ActionBarActivity implements PlayerCont
 
         if (getIntent().hasExtra(INTENT_RADIO_PLAYING)) {
             final String radioGson = getIntent().getStringExtra(INTENT_RADIO_PLAYING);
+            Log.d(LOG_TAG, radioGson);
             try {
                 Radio radio = new Gson().fromJson(radioGson, Radio.class);
                 mController = new RadioDetailController(radio);
@@ -55,8 +56,10 @@ public class RadioDetailActivity extends ActionBarActivity implements PlayerCont
             }
         }
 
-        if (mController != null && mController.getRadio() != null) {
-            mPlayerController = PlayerController.getInstance();
+        mPlayerController = PlayerController.getInstance();
+
+        if (mController != null && mController.getRadio() != null
+                && mPlayerController.getSelectedRadio() != null) {
             initUI();
             updateRadioViews(mPlayerController.getSelectedRadio(),
                     mPlayerController.getLastPlayingTrack());

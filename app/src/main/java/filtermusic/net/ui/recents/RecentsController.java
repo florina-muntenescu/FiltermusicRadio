@@ -32,7 +32,11 @@ public class RecentsController implements DataProvider.LastPlayedRetrievedListen
 
     public void retrieveRecents(DataRetrievedListener listener) {
         mListener = listener;
-        mDataProvider.retrieveLastPlayed(this);
+        if (mLastPlayed == null) {
+            mDataProvider.retrieveLastPlayed(this);
+        } else {
+            onLastPlayedRetrieved(mLastPlayed);
+        }
     }
 
     @Override
@@ -53,5 +57,10 @@ public class RecentsController implements DataProvider.LastPlayedRetrievedListen
     public Radio selectRadio(int radioIndex) {
         mLastSelectedRadio = mLastPlayed.get(radioIndex);
         return mLastSelectedRadio;
+    }
+    
+    public void unregisterListener(){
+        mDataProvider.unregisterDataListener(this);
+        
     }
 }

@@ -27,8 +27,8 @@ android {
         applicationId "filtermusic.net"
         minSdkVersion 11
         targetSdkVersion 20
-        versionCode 8
-        versionName "0.9"
+        versionCode 10
+        versionName "0.10"
 
     }
     buildTypes {
@@ -39,6 +39,14 @@ android {
         }
     }
 
+    productFlavors{
+        dev{
+            applicationId "filtermusic.dev"
+        }
+        hockeyApp{
+            applicationId "filtermusic.test"
+        }
+    }
     packagingOptions {
         exclude 'META-INF/services/javax.annotation.processing.Processor'
     }
