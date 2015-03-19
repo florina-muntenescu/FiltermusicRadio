@@ -9,18 +9,25 @@ import filtermusic.net.common.model.Radio;
 /**
  * Controls the {@link filtermusic.net.ui.details.RadioDetailActivity}
  */
-public class RadioDetailController {
+public class RadioDetailController implements DataProvider.RadioRetrievedListener{
 
+    public interface RadioListener{
+        public void dataChanged();
+        
+    }
     private Radio mRadio;
 
     @Inject
     DataProvider mDataProvider;
+    
+    private RadioListener mRadioListener;
 
-    public RadioDetailController(Radio radio) {
+    public RadioDetailController(final Radio radio) {
 
         FiltermusicApplication.getInstance().inject(this);
 
         mRadio = radio;
+        mDataProvider.getRadioById(mRadio.getId(), this);
     }
 
     public Radio getRadio() {
@@ -32,4 +39,19 @@ public class RadioDetailController {
         mDataProvider.updateRadio(mRadio);
     }
 
+    public void registerRadioListener(RadioListener radioListener){
+        mRadioListener = radioListener;
+    }
+    
+    public void unregisterRadioListener(){
+        mRadioListener = null;
+        
+    }
+    @Override
+    public void onRadioRetrieved(Radio radio) {
+        mRadio = radio;
+        if(mRadioListener != null){
+            mRadioListener.dataChanged();
+        }
+    }
 }

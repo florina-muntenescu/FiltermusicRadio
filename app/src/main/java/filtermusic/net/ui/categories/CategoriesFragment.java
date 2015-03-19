@@ -63,7 +63,6 @@ public class CategoriesFragment extends Fragment implements CategoriesController
 
         if (savedInstanceState != null && savedInstanceState.containsKey(LAST_OPENED_VIEW)) {
             int lastOpenedView = savedInstanceState.getInt(LAST_OPENED_VIEW);
-            updateContent(lastOpenedView);
             flipToPage(lastOpenedView);
 
         }
@@ -147,6 +146,7 @@ public class CategoriesFragment extends Fragment implements CategoriesController
 
     private void flipToPage(int pageIndex) {
         mViewFlipper.setDisplayedChild(pageIndex);
+        updateContent(pageIndex);
     }
 
     public void onBackPressed() {
@@ -161,9 +161,7 @@ public class CategoriesFragment extends Fragment implements CategoriesController
             case ERROR_VIEW_INDEX:
                 getActivity().finish();
         }
-        updateContent(newPage);
         flipToPage(newPage);
-
     }
 
     /**
@@ -178,8 +176,11 @@ public class CategoriesFragment extends Fragment implements CategoriesController
         }
         switch (pageIndex) {
             case RADIOS_VIEW_INDEX:
-                updateRadioList(mCategoriesController.getLastSelectedCategory().getRadioList());
-                break;
+                if(mCategoriesController.getLastSelectedCategory() != null) {
+                    updateRadioList(mCategoriesController.getLastSelectedCategory().getRadioList());
+                    break;
+                }
+                // else do default
             default:
                 updateCategories(mCategoriesController.getCategories());
         }

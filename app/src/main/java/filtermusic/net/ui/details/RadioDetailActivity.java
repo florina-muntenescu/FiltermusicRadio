@@ -21,7 +21,8 @@ import filtermusic.net.player.PlayerController;
 /**
  * Activity used to display information about a radio.
  */
-public class RadioDetailActivity extends ActionBarActivity implements PlayerController.PlayerListener {
+public class RadioDetailActivity extends ActionBarActivity 
+        implements PlayerController.PlayerListener, RadioDetailController.RadioListener {
 
     private static final String LOG_TAG = RadioDetailActivity.class.getSimpleName();
 
@@ -51,7 +52,8 @@ public class RadioDetailActivity extends ActionBarActivity implements PlayerCont
             try {
                 Radio radio = new Gson().fromJson(radioGson, Radio.class);
                 mController = new RadioDetailController(radio);
-            }catch(JsonSyntaxException e){
+                mController.registerRadioListener(this);
+            } catch (JsonSyntaxException e) {
                 Log.d(LOG_TAG, "json syntax ex");
             }
         }
@@ -66,6 +68,7 @@ public class RadioDetailActivity extends ActionBarActivity implements PlayerCont
         }
 
     }
+    
 
     /**
      * Initializes the views and sets up the click listeners
@@ -94,7 +97,7 @@ public class RadioDetailActivity extends ActionBarActivity implements PlayerCont
                     @Override
                     public void onClick(View v) {
                         boolean isPlaying = mPlayerController.isRadioPlaying(mController.getRadio
-                                        ());
+                                ());
                         if (!isPlaying) {
                             mPlayButton.setVisibility(View.GONE);
                             mLoadingProgress.setVisibility(View.VISIBLE);
@@ -122,6 +125,7 @@ public class RadioDetailActivity extends ActionBarActivity implements PlayerCont
 
     /**
      * Updates the views based on a radio
+     *
      * @param radio the radio from where the data for the view is taken
      */
     private void updateRadioViews(final Radio radio, final String lastPlayingTrack) {
@@ -134,10 +138,10 @@ public class RadioDetailActivity extends ActionBarActivity implements PlayerCont
         int star = radio.isFavorite() ? R.drawable.star : R.drawable.star_outline;
         mStarButton.setImageResource(star);
 
-        if(mPlayerController.isPlayingBuffering()){
+        if (mPlayerController.isPlayingBuffering()) {
             mLoadingProgress.setVisibility(View.VISIBLE);
             mPlayButton.setVisibility(View.GONE);
-        }else {
+        } else {
             mPlayButton.setVisibility(View.VISIBLE);
             mLoadingProgress.setVisibility(View.GONE);
             mTrack.setText(lastPlayingTrack);
@@ -153,15 +157,21 @@ public class RadioDetailActivity extends ActionBarActivity implements PlayerCont
     protected void onPause() {
         super.onPause();
         PlayerController.getInstance().removeListener(this);
+        if(mController != null){
+            mController.unregisterRadioListener();
+        }
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         PlayerController.getInstance().addListener(this);
-        if(PlayerController.getInstance().getSelectedRadio() != null) {
+        if (PlayerController.getInstance().getSelectedRadio() != null) {
             updateRadioViews(PlayerController.getInstance().getSelectedRadio(),
                     PlayerController.getInstance().getLastPlayingTrack());
+        }
+        if(mController != null){
+            mController.registerRadioListener(this);
         }
     }
 
@@ -191,5 +201,11 @@ public class RadioDetailActivity extends ActionBarActivity implements PlayerCont
     public void onTrackChanged(final String track) {
         Log.d(LOG_TAG, track);
         mTrack.setText(track);
+    }
+
+    @Override
+    public void dataChanged() {
+        updateRadioViews(mPlayerController.getSelectedRadio(),
+                mPlayerController.getLastPlayingTrack());
     }
 }

@@ -68,8 +68,8 @@ import rx.schedulers.Schedulers;
      *
      * @param listener notifies the requestor object that the list of favorites was retrieved
      */
-    public void provideFavoritesList(@NonNull final DataProvider.FavoritesRetrievedListener
-            listener) {
+    public void getFavoritesList(@NonNull final DataProvider.FavoritesRetrievedListener
+                                         listener) {
         Observable<List<DbRadio>> favoritesObservable = getFavorites();
         favoritesObservable.subscribeOn(Schedulers.newThread()).observeOn(
                 AndroidSchedulers.mainThread()).subscribe(
@@ -91,7 +91,7 @@ import rx.schedulers.Schedulers;
                 });
     }
 
-    private Observable<List<DbRadio>> getFavorites() {
+    public Observable<List<DbRadio>> getFavorites() {
         return Observable.create(
                 new Observable.OnSubscribe<List<DbRadio>>() {
                     @Override
@@ -107,6 +107,25 @@ import rx.schedulers.Schedulers;
                 });
     }
 
+    public Observable<Radio> getRadioById(final int radioId) {
+        return Observable.create(
+                new Observable.OnSubscribe<Radio>() {
+                    @Override
+                    public void call(Subscriber<? super Radio> observer) {
+                        DatabaseHelper databaseHelper = new DatabaseHelper(mContext);
+                        RuntimeExceptionDao<DbRadio, Integer> dao = databaseHelper.getDbRadioDao();
+
+                        DbRadio dbRadio = dao.queryForId(radioId);
+                        Radio radio = new Radio(
+                                dbRadio.getId(), dbRadio.getTitle(), dbRadio.getURL(), dbRadio.getGenre(),
+                                dbRadio.getDescription(), dbRadio.getCategory(), dbRadio.getImageUrl(),
+                                dbRadio.isFavorite(), dbRadio.getPlayedDate());
+                        observer.onNext(radio);
+                        observer.onCompleted();
+                    }
+                });
+
+    }
 
     /**
      * Synchronizes the database by creating or updating a list of radios and deleting another list
@@ -118,9 +137,9 @@ import rx.schedulers.Schedulers;
      * @return the entire list of radios from the database
      */
     public List<Radio> syncDatabase(@NonNull final List<Radio> radiosToCreateOrUpdate,
-            @NonNull final List<Radio> radiosToDelete) {
+                                    @NonNull final List<Radio> radiosToDelete) {
         Log.d(LOG_TAG, "to create/update " + radiosToCreateOrUpdate.size()
-                        + " to delete " + radiosToDelete.size());
+                + " to delete " + radiosToDelete.size());
         DatabaseHelper databaseHelper = new DatabaseHelper(mContext);
         RuntimeExceptionDao<DbRadio, Integer> dao = databaseHelper.getDbRadioDao();
         // create or update radios
@@ -209,7 +228,7 @@ import rx.schedulers.Schedulers;
                     public void call(final Integer elapsedSeconds) {
                         // nothing to do
                         Log.d(LOG_TAG, "radio updated");
-                        if(listener != null) {
+                        if (listener != null) {
                             listener.onDataChanged();
                         }
                     }

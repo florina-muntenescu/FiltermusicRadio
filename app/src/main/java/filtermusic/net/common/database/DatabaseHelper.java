@@ -6,7 +6,6 @@ import android.util.Log;
 
 import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
 import com.j256.ormlite.dao.Dao;
-import com.j256.ormlite.dao.RuntimeExceptionDao;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
 
@@ -21,11 +20,15 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
     private static final int DATABASE_VERSION = 1;
 
     // the DAO object we use to access the DbRadio table
-    private Dao<DbRadio, Integer> mRadiosDao = null;
-    private RuntimeExceptionDao<DbRadio, Integer> radiosRuntimeDao = null;
+    private Dao<DbRadio, Integer> mRadioDao = null;
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION, R.raw.ormlite_config);
+        try {
+            mRadioDao = getDao(DbRadio.class);
+        } catch (SQLException exception) {
+            throw new DbError("Error while creating DAO for Radio ", exception);
+        }
     }
 
     /**
@@ -41,10 +44,6 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
             Log.e(DatabaseHelper.class.getName(), "Can't create database", e);
             throw new RuntimeException(e);
         }
-
-        // here we try inserting data in the on-create as a test
-        RuntimeExceptionDao<DbRadio, Integer> dao = getDbRadioDao();
-
     }
 
     /**
@@ -65,25 +64,10 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
     }
 
     /**
-     * Returns the Database Access Object (DAO) for our DbRadio class. It will create it or just give the cached
-     * value.
+     * Returns theDAO for {@link filtermusic.net.common.database.DbRadio} class.
      */
-    public Dao<DbRadio, Integer> getDao() throws SQLException {
-        if (mRadiosDao == null) {
-            mRadiosDao = getDao(DbRadio.class);
-        }
-        return mRadiosDao;
-    }
-
-    /**
-     * Returns the RuntimeExceptionDao (Database Access Object) version of a Dao for our DbRadio class. It will
-     * create it or just give the cached value. RuntimeExceptionDao only through RuntimeExceptions.
-     */
-    public RuntimeExceptionDao<DbRadio, Integer> getDbRadioDao() {
-        if (radiosRuntimeDao == null) {
-            radiosRuntimeDao = getRuntimeExceptionDao(DbRadio.class);
-        }
-        return radiosRuntimeDao;
+    public Dao<DbRadio, Integer> getRadioDao() {
+        return mRadioDao;
     }
 
     /**
@@ -92,7 +76,6 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
     @Override
     public void close() {
         super.close();
-        mRadiosDao = null;
-        radiosRuntimeDao = null;
+        mRadioDao = null;
     }
 }

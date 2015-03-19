@@ -5,10 +5,10 @@ import android.support.annotation.NonNull;
 import android.util.Log;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
+import filtermusic.net.common.database.DbRadio;
 import filtermusic.net.common.model.Radio;
 import rx.Observable;
 import rx.Subscriber;
@@ -46,6 +46,11 @@ public class DataProvider {
     public interface LastPlayedRetrievedListener {
 
         public void onLastPlayedRetrieved(final List<Radio> radios);
+    }
+    
+    public interface RadioRetrievedListener {
+        public void onRadioRetrieved(final Radio radio);
+        
     }
 
     public interface DataUpdatedListener {
@@ -231,7 +236,7 @@ public class DataProvider {
 
     public void retrieveFavorites(final @NonNull FavoritesRetrievedListener listener) {
         DatabaseDataProvider dataProvider = new DatabaseDataProvider(mContext);
-        dataProvider.provideFavoritesList(listener);
+        dataProvider.getFavoritesList(listener);
     }
 
     public void retrieveLastPlayed(final @NonNull LastPlayedRetrievedListener listener) {
@@ -239,7 +244,7 @@ public class DataProvider {
         dataProvider.provideLastPlayedList(listener);
     }
 
-    public void updateRadio(Radio radio) {
+    public void updateRadio(final Radio radio) {
         DatabaseDataProvider dataProvider = new DatabaseDataProvider(mContext);
         dataProvider.updateRadio(
                 radio, new DataUpdatedListener() {
@@ -248,6 +253,30 @@ public class DataProvider {
                         notifyDataUpdated();
                     }
                 });
+    }
+    
+    public void getRadioById(final int radioId, final RadioRetrievedListener listener){
+        DatabaseDataProvider dataProvider = new DatabaseDataProvider(mContext);
+        dataProvider.getRadioById(radioId)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Subscriber<Radio>() {
+                    @Override
+                    public void onCompleted() {
+
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        // don't do anything for now.
+                    }
+
+                    @Override
+                    public void onNext(Radio dbRadio) {
+                        listener.onRadioRetrieved(dbRadio);
+                    }
+                });
+                
     }
 
     private void notifyDataUpdated() {
