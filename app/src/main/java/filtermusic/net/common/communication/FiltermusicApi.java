@@ -12,10 +12,6 @@ public class FiltermusicApi {
 
     private static final RestAdapter.LogLevel DEBUG_DEFAULT_LOG_LEVEL = RestAdapter.LogLevel.FULL;
 
-    public FiltermusicApi() {
-        //nothing to do
-    }
-
     public FiltermusicService createFromRestAdapter() {
         RestAdapter restAdapter = new RestAdapter.Builder()
                 .setEndpoint("http://filtermusic.net")

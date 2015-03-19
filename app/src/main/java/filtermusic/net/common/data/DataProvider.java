@@ -5,10 +5,15 @@ import android.support.annotation.NonNull;
 import android.util.Log;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
+import javax.inject.Inject;
+
 import filtermusic.net.common.database.DbRadio;
+import filtermusic.net.common.database.RadioDbReadAdapter;
+import filtermusic.net.common.database.RadioDbWriteAdapter;
 import filtermusic.net.common.model.Radio;
 import rx.Observable;
 import rx.Subscriber;
@@ -65,10 +70,21 @@ public class DataProvider {
 
     private Context mContext;
     private List<DataUpdatedListener> mDataUpdatedListeners;
+    private RadioDbReadAdapter mRadioDbReadAdapter;
+    private RadioDbWriteAdapter mRadioDbWriteAdapter;
+    private RadioSynchronizer mRadioSynchronizer;
 
-    public DataProvider(Context context) {
+
+    @Inject
+    public DataProvider(Context context, 
+                        RadioDbReadAdapter radioDbReadAdapter, 
+                        RadioDbWriteAdapter radioDbWriteAdapter, 
+                        RadioSynchronizer radioSynchronizer) {
         mContext = context;
-        mDataUpdatedListeners = new ArrayList<DataUpdatedListener>();
+        mRadioDbReadAdapter = radioDbReadAdapter;
+        mRadioDbWriteAdapter = radioDbWriteAdapter;
+        mRadioSynchronizer = radioSynchronizer;
+        mDataUpdatedListeners = Collections.emptyList();
     }
 
     /**

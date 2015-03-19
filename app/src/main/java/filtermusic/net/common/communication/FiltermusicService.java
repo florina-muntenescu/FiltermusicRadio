@@ -9,4 +9,8 @@ import rx.Observable;
 public interface FiltermusicService {
     @GET("/ios-feed")
     Observable<List<Radio>> getRadios();
+
+
+    @GET("/ios-feed")
+    List<Radio> getRadiosSync();
 }

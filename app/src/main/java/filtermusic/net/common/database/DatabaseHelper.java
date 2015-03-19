@@ -14,16 +14,12 @@ import java.sql.SQLException;
 import filtermusic.net.R;
 
 public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
-    // name of the database file for your application -- change to something appropriate for your app
-    private static final String DATABASE_NAME = "filtermusic_radios.db";
-    // any time you make changes to your database objects, you may have to increase the database version
-    private static final int DATABASE_VERSION = 1;
 
     // the DAO object we use to access the DbRadio table
-    private Dao<DbRadio, Integer> mRadioDao = null;
+    private Dao<DbRadio, Integer> mRadioDao;
 
-    public DatabaseHelper(Context context) {
-        super(context, DATABASE_NAME, null, DATABASE_VERSION, R.raw.ormlite_config);
+    public DatabaseHelper(Context context, String dbName, int dbVersion) {
+        super(context, dbName, null, dbVersion, R.raw.ormlite_config);
         try {
             mRadioDao = getDao(DbRadio.class);
         } catch (SQLException exception) {

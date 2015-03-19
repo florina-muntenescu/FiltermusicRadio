@@ -47,16 +47,17 @@ public class DbRadio {
         // all persisted classes must define a no-arg constructor with at least package visibility
     }
 
-    public DbRadio(Radio radio) {
-        id = radio.getId();
-        mTitle = radio.getTitle();
-        mURL = radio.getURL();
-        mGenre = radio.getGenre();
-        mDescription = radio.getDescription();
-        mCategory = radio.getCategory();
-        mImageUrl = radio.getImageUrl();
-        mIsFavorite = radio.isFavorite();
-        mPlayedDate = radio.getPlayedDate();
+    public DbRadio(int id, String title, String URL, String genre, String description, 
+                   String category, String imageUrl, boolean isFavorite, Date playedDate) {
+        this.id = id;
+        mTitle = title;
+        mURL = URL;
+        mGenre = genre;
+        mDescription = description;
+        mCategory = category;
+        mImageUrl = imageUrl;
+        mIsFavorite = isFavorite;
+        mPlayedDate = playedDate;
     }
 
     public String getTitle() {
