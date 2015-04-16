@@ -21,7 +21,7 @@ public class RadioDbReadAdapter {
     }
 
     public List<Radio> queryRadioList() {
-        List<DbRadio> dbRadios = mDbRadioController.provideRadioList();
+        List<DbRadio> dbRadios = mDbRadioController.getRadioList();
         List<Radio> radios = toRadios(dbRadios);
         return radios;
     }

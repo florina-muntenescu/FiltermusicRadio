@@ -27,7 +27,7 @@ public class DbRadioController {
         this.mDatabaseHelper = databaseHelper;
     }
 
-    public List<DbRadio> provideRadioList() {
+    public List<DbRadio> getRadioList() {
         Dao<DbRadio, Integer> dao = mDatabaseHelper.getRadioDao();
         try {
             return dao.queryForAll();

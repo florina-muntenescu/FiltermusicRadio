@@ -10,6 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import dagger.ObjectGraph;
+import filtermusic.net.common.modules.DbModule;
 import filtermusic.net.common.modules.FiltermusicModule;
 import io.fabric.sdk.android.Fabric;
 
@@ -41,7 +42,8 @@ public class FiltermusicApplication extends Application {
     }
 
     public void buildObjectGraphAndInject() {
-        mObjectGraph = ObjectGraph.create(new FiltermusicModule());
+        mObjectGraph = ObjectGraph.create(new FiltermusicModule(this));
+        mObjectGraph = ObjectGraph.create(new DbModule());
     }
 
     public void inject(Object o) {
