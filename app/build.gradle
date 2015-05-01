@@ -20,31 +20,41 @@ buildscript {
 }
 
 android {
+    signingConfigs {
+        release {
+            // variables to be defined in gradle.properties file
+            storeFile file(RELEASE_STORE_FILE)
+            storePassword RELEASE_STORE_PASSWORD
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+        }
+    }
     compileSdkVersion 21
     buildToolsVersion '20.0.0'
-
     defaultConfig {
         applicationId "filtermusic.net"
         minSdkVersion 11
         targetSdkVersion 20
-        versionCode 10
-        versionName "0.10"
+        versionCode 11
+        versionName "1.0.0"
 
     }
     buildTypes {
-        debug{
+        debug {
         }
         release {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
-    productFlavors{
-        dev{
+    productFlavors {
+        dev {
             applicationId "filtermusic.dev"
         }
-        hockeyApp{
+        hockeyApp {
             applicationId "filtermusic.test"
+        }
+        live {
+            signingConfig signingConfigs.release
         }
     }
     packagingOptions {
